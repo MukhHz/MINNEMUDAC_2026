@@ -1,0 +1,88 @@
+FIPS,State,"County, State",Year,Overall Food Insecurity Rate,# of Food Insecure Persons Overall,Food Insecurity Rate among Black Persons (all ethnicities),Food Insecurity Rate among Hispanic Persons (any race),"Food Insecurity Rate among White, non-Hispanic Persons",SNAP Threshold,% FI ≤ SNAP Threshold,% FI > SNAP Threshold,Child Food Insecurity Rate,# of Food Insecure Children,% food insecure children in HH w/ HH incomes below 185 FPL,% food insecure children in HH w/ HH incomes above 185 FPL,Imputed Market Basket Data,Cost Per Meal,Weighted weekly $ needed by FI,Weighted Annual Food Budget Shortfall,Rural-Urban Continuum Code (2013),Rural-Urban Continuum Code (2023),Census Region,Census Division,FNS Region
+27001,MN,"Aitkin County, Minnesota",2024,0.15,2420.0,,,0.11,2.0,0.74,0.26,0.22,550.0,0.68,0.32,imputed,3.86,24.15,1773000.0,8.0,8,Midwest,West North Central,Midwest
+27003,MN,"Anoka County, Minnesota",2024,0.089,32940.0,0.3,0.21,0.07,2.0,0.545,0.455,0.143,12540.0,0.62,0.38,,3.94,24.68,24662000.0,1.0,1,Midwest,West North Central,Midwest
+27005,MN,"Becker County, Minnesota",2024,0.135,4760.0,,0.42,0.09,2.0,0.684,0.316,0.192,1580.0,0.82,0.19,,3.79,23.72,3424000.0,6.0,6,Midwest,West North Central,Midwest
+27007,MN,"Beltrami County, Minnesota",2024,0.15,7000.0,,0.29,0.11,2.0,0.758,0.242,0.207,2380.0,0.82,0.18,,3.59,22.47,4771000.0,7.0,7,Midwest,West North Central,Midwest
+27009,MN,"Benton County, Minnesota",2024,0.126,5250.0,0.45,0.24,0.09,2.0,0.6,0.4,0.179,1880.0,0.64,0.36,,4.25,26.63,4241000.0,3.0,3,Midwest,West North Central,Midwest
+27011,MN,"Big Stone County, Minnesota",2024,0.134,690.0,,,0.1,2.0,0.617,0.383,0.192,220.0,0.69,0.31,imputed,3.6,22.56,472000.0,9.0,9,Midwest,West North Central,Midwest
+27013,MN,"Blue Earth County, Minnesota",2024,0.132,9190.0,0.37,0.29,0.12,2.0,0.73,0.27,0.168,2310.0,0.7,0.3,,3.95,24.73,6894000.0,3.0,3,Midwest,West North Central,Midwest
+27015,MN,"Brown County, Minnesota",2024,0.11,2830.0,,0.25,0.08,2.0,0.633,0.367,0.141,790.0,0.72,0.28,,3.76,23.54,2021000.0,6.0,6,Midwest,West North Central,Midwest
+27017,MN,"Carlton County, Minnesota",2024,0.13,4730.0,0.54,,0.1,2.0,0.621,0.379,0.181,1420.0,0.65,0.35,,3.69,23.07,3310000.0,2.0,2,Midwest,West North Central,Midwest
+27019,MN,"Carver County, Minnesota",2024,0.078,8570.0,0.46,0.19,0.05,2.0,0.346,0.654,0.104,2900.0,0.23,0.77,,4.5,28.17,7324000.0,1.0,1,Midwest,West North Central,Midwest
+27021,MN,"Cass County, Minnesota",2024,0.132,4090.0,,0.24,0.09,2.0,0.774,0.226,0.199,1230.0,0.91,0.09,,4.18,26.18,3247000.0,9.0,9,Midwest,West North Central,Midwest
+27023,MN,"Chippewa County, Minnesota",2024,0.146,1810.0,,0.28,0.1,2.0,0.685,0.315,0.225,680.0,0.77,0.23,imputed,3.72,23.27,1278000.0,7.0,7,Midwest,West North Central,Midwest
+27025,MN,"Chisago County, Minnesota",2024,0.09,5230.0,0.31,0.21,0.07,2.0,0.479,0.521,0.138,1790.0,0.41,0.59,,5.08,31.78,5041000.0,1.0,1,Midwest,West North Central,Midwest
+27027,MN,"Clay County, Minnesota",2024,0.128,8480.0,0.39,0.23,0.11,2.0,0.573,0.427,0.165,2690.0,0.54,0.47,,3.83,23.98,6167000.0,3.0,3,Midwest,West North Central,Midwest
+27029,MN,"Clearwater County, Minnesota",2024,0.151,1300.0,,,0.11,2.0,0.725,0.275,0.208,450.0,0.75,0.25,imputed,3.59,22.47,886000.0,8.0,8,Midwest,West North Central,Midwest
+27031,MN,"Cook County, Minnesota",2024,0.12,680.0,,,0.08,2.0,0.568,0.432,0.222,180.0,0.7,0.3,imputed,3.8,23.79,491000.0,9.0,9,Midwest,West North Central,Midwest
+27033,MN,"Cottonwood County, Minnesota",2024,0.142,1630.0,,0.3,0.09,2.0,0.653,0.347,0.195,560.0,0.75,0.25,imputed,3.28,20.55,1016000.0,7.0,9,Midwest,West North Central,Midwest
+27035,MN,"Crow Wing County, Minnesota",2024,0.129,8750.0,,0.26,0.11,2.0,0.665,0.335,0.192,2660.0,0.78,0.22,,3.86,24.15,6411000.0,4.0,4,Midwest,West North Central,Midwest
+27037,MN,"Dakota County, Minnesota",2024,0.094,41960.0,0.32,0.25,0.07,2.0,0.474,0.526,0.14,15010.0,0.5,0.5,,4.13,25.83,32882000.0,1.0,1,Midwest,West North Central,Midwest
+27039,MN,"Dodge County, Minnesota",2024,0.093,1960.0,,0.24,0.06,2.0,0.526,0.474,0.137,730.0,0.51,0.49,,4.2,26.28,1562000.0,3.0,3,Midwest,West North Central,Midwest
+27041,MN,"Douglas County, Minnesota",2024,0.11,4340.0,,0.25,0.09,2.0,0.566,0.434,0.141,1200.0,0.61,0.39,,3.85,24.1,3173000.0,6.0,6,Midwest,West North Central,Midwest
+27043,MN,"Faribault County, Minnesota",2024,0.129,1800.0,,0.27,0.1,2.0,0.753,0.247,0.191,590.0,0.83,0.18,imputed,3.67,23.0,1256000.0,6.0,8,Midwest,West North Central,Midwest
+27045,MN,"Fillmore County, Minnesota",2024,0.1,2140.0,,,0.08,2.0,0.653,0.347,0.146,760.0,0.67,0.33,,4.34,27.14,1762000.0,3.0,3,Midwest,West North Central,Midwest
+27047,MN,"Freeborn County, Minnesota",2024,0.128,3910.0,,0.31,0.09,2.0,0.715,0.285,0.166,1110.0,0.73,0.27,,3.67,23.0,2728000.0,7.0,7,Midwest,West North Central,Midwest
+27049,MN,"Goodhue County, Minnesota",2024,0.109,5200.0,,0.22,0.08,2.0,0.554,0.446,0.145,1520.0,0.56,0.44,,3.89,24.32,3836000.0,4.0,6,Midwest,West North Central,Midwest
+27051,MN,"Grant County, Minnesota",2024,0.128,780.0,,,0.1,2.0,0.739,0.261,0.203,290.0,0.72,0.28,imputed,3.85,24.1,570000.0,9.0,9,Midwest,West North Central,Midwest
+27053,MN,"Hennepin County, Minnesota",2024,0.113,143160.0,0.36,0.25,0.08,2.0,0.523,0.477,0.153,41950.0,0.6,0.41,,4.56,28.56,124020000.0,1.0,1,Midwest,West North Central,Midwest
+27055,MN,"Houston County, Minnesota",2024,0.092,1720.0,,,0.07,2.0,0.62,0.38,0.119,480.0,0.57,0.43,imputed,4.06,25.38,1324000.0,3.0,3,Midwest,West North Central,Midwest
+27057,MN,"Hubbard County, Minnesota",2024,0.128,2800.0,,,0.09,2.0,0.726,0.274,0.189,860.0,0.84,0.16,,3.64,22.79,1935000.0,7.0,9,Midwest,West North Central,Midwest
+27059,MN,"Isanti County, Minnesota",2024,0.106,4500.0,,,0.08,2.0,0.585,0.415,0.145,1440.0,0.57,0.43,,3.84,24.04,3282000.0,1.0,1,Midwest,West North Central,Midwest
+27061,MN,"Itasca County, Minnesota",2024,0.139,6300.0,,0.25,0.11,2.0,0.715,0.285,0.198,1800.0,0.67,0.34,,3.67,22.98,4392000.0,6.0,6,Midwest,West North Central,Midwest
+27063,MN,"Jackson County, Minnesota",2024,0.11,1090.0,,,0.08,2.0,0.63,0.37,0.17,370.0,0.49,0.51,imputed,3.28,20.55,679000.0,7.0,9,Midwest,West North Central,Midwest
+27065,MN,"Kanabec County, Minnesota",2024,0.131,2150.0,,,0.1,2.0,0.755,0.245,0.189,660.0,0.78,0.22,imputed,3.6,22.53,1469000.0,6.0,8,Midwest,West North Central,Midwest
+27067,MN,"Kandiyohi County, Minnesota",2024,0.129,5680.0,0.37,0.31,0.09,2.0,0.652,0.348,0.186,2010.0,0.66,0.34,,3.72,23.27,4009000.0,4.0,4,Midwest,West North Central,Midwest
+27069,MN,"Kittson County, Minnesota",2024,0.098,400.0,,,0.08,2.0,0.614,0.386,0.142,130.0,0.52,0.48,imputed,3.68,23.05,280000.0,9.0,9,Midwest,West North Central,Midwest
+27071,MN,"Koochiching County, Minnesota",2024,0.143,1690.0,,,0.11,2.0,0.661,0.339,0.204,420.0,0.82,0.19,imputed,3.67,22.98,1178000.0,6.0,7,Midwest,West North Central,Midwest
+27073,MN,"Lac qui Parle County, Minnesota",2024,0.112,750.0,,,0.08,2.0,0.655,0.345,0.149,220.0,0.52,0.48,imputed,3.66,22.89,521000.0,9.0,9,Midwest,West North Central,Midwest
+27075,MN,"Lake County, Minnesota",2024,0.116,1270.0,,,0.09,2.0,0.681,0.319,0.185,380.0,0.7,0.3,imputed,3.84,24.04,926000.0,6.0,8,Midwest,West North Central,Midwest
+27077,MN,"Lake of the Woods County, Minnesota",2024,0.107,410.0,,,0.07,2.0,0.693,0.307,0.185,130.0,0.82,0.19,imputed,3.59,22.47,279000.0,9.0,9,Midwest,West North Central,Midwest
+27079,MN,"Le Sueur County, Minnesota",2024,0.106,3100.0,,0.22,0.07,2.0,0.514,0.486,0.15,1000.0,0.43,0.57,,4.4,27.53,2588000.0,1.0,1,Midwest,West North Central,Midwest
+27081,MN,"Lincoln County, Minnesota",2024,0.122,680.0,,,0.1,2.0,0.696,0.304,0.167,210.0,0.73,0.27,imputed,3.66,22.89,472000.0,9.0,9,Midwest,West North Central,Midwest
+27083,MN,"Lyon County, Minnesota",2024,0.13,3320.0,0.35,0.28,0.09,2.0,0.701,0.299,0.169,1120.0,0.74,0.26,,3.66,22.89,2305000.0,7.0,7,Midwest,West North Central,Midwest
+27085,MN,"McLeod County, Minnesota",2024,0.12,4410.0,,0.28,0.09,2.0,0.561,0.439,0.16,1290.0,0.7,0.3,,3.82,23.93,3201000.0,6.0,4,Midwest,West North Central,Midwest
+27087,MN,"Mahnomen County, Minnesota",2024,0.167,900.0,,,0.1,2.0,0.863,0.137,0.261,430.0,0.98,0.03,imputed,3.79,23.72,647000.0,8.0,8,Midwest,West North Central,Midwest
+27089,MN,"Marshall County, Minnesota",2024,0.115,1030.0,,,0.09,2.0,0.648,0.352,0.159,330.0,0.69,0.31,imputed,3.68,23.05,720000.0,8.0,8,Midwest,West North Central,Midwest
+27091,MN,"Martin County, Minnesota",2024,0.154,3040.0,,0.28,0.12,2.0,0.826,0.174,0.222,1000.0,0.97,0.03,imputed,3.95,24.73,2280000.0,7.0,6,Midwest,West North Central,Midwest
+27093,MN,"Meeker County, Minnesota",2024,0.118,2770.0,,0.28,0.09,2.0,0.64,0.36,0.159,880.0,0.68,0.32,,3.62,22.64,1902000.0,6.0,6,Midwest,West North Central,Midwest
+27095,MN,"Mille Lacs County, Minnesota",2024,0.135,3670.0,,0.26,0.09,2.0,0.688,0.312,0.194,1220.0,0.75,0.26,,3.6,22.53,2508000.0,1.0,1,Midwest,West North Central,Midwest
+27097,MN,"Morrison County, Minnesota",2024,0.127,4350.0,,0.2,0.1,2.0,0.689,0.311,0.18,1420.0,0.63,0.38,,3.64,22.81,3010000.0,6.0,6,Midwest,West North Central,Midwest
+27099,MN,"Mower County, Minnesota",2024,0.122,4930.0,0.26,0.26,0.08,2.0,0.71,0.29,0.184,1900.0,0.81,0.19,,3.58,22.43,3355000.0,4.0,4,Midwest,West North Central,Midwest
+27101,MN,"Murray County, Minnesota",2024,0.116,940.0,,,0.09,2.0,0.64,0.36,0.164,290.0,0.59,0.41,imputed,3.28,20.55,586000.0,9.0,9,Midwest,West North Central,Midwest
+27103,MN,"Nicollet County, Minnesota",2024,0.112,3840.0,,0.19,0.08,2.0,0.534,0.466,0.155,1140.0,0.48,0.52,,4.28,26.8,3122000.0,3.0,3,Midwest,West North Central,Midwest
+27105,MN,"Nobles County, Minnesota",2024,0.152,3340.0,0.32,0.26,0.08,2.0,0.776,0.224,0.206,1310.0,0.89,0.11,,3.28,20.55,2082000.0,7.0,7,Midwest,West North Central,Midwest
+27107,MN,"Norman County, Minnesota",2024,0.122,770.0,,,0.1,2.0,0.666,0.334,0.172,260.0,0.72,0.28,imputed,3.83,23.98,560000.0,8.0,8,Midwest,West North Central,Midwest
+27109,MN,"Olmsted County, Minnesota",2024,0.1,16490.0,0.38,0.24,0.08,2.0,0.496,0.504,0.139,5490.0,0.54,0.46,,3.93,24.61,12310000.0,3.0,3,Midwest,West North Central,Midwest
+27111,MN,"Otter Tail County, Minnesota",2024,0.119,7220.0,0.39,0.31,0.09,2.0,0.675,0.325,0.167,2200.0,0.78,0.22,,3.56,22.26,4876000.0,6.0,6,Midwest,West North Central,Midwest
+27113,MN,"Pennington County, Minnesota",2024,0.14,1930.0,,0.31,0.1,2.0,0.585,0.415,0.166,480.0,0.52,0.48,imputed,3.6,22.51,1318000.0,6.0,6,Midwest,West North Central,Midwest
+27115,MN,"Pine County, Minnesota",2024,0.141,4190.0,,0.28,0.1,2.0,0.68,0.32,0.202,1140.0,0.67,0.33,,3.64,22.78,2895000.0,6.0,8,Midwest,West North Central,Midwest
+27117,MN,"Pipestone County, Minnesota",2024,0.123,1150.0,,0.26,0.09,2.0,0.752,0.248,0.161,400.0,0.96,0.04,imputed,3.68,23.03,803000.0,6.0,8,Midwest,West North Central,Midwest
+27119,MN,"Polk County, Minnesota",2024,0.13,3980.0,,0.37,0.09,2.0,0.602,0.398,0.182,1360.0,0.63,0.37,,3.6,22.51,2717000.0,3.0,3,Midwest,West North Central,Midwest
+27121,MN,"Pope County, Minnesota",2024,0.112,1280.0,,,0.08,2.0,0.57,0.43,0.137,330.0,0.56,0.44,imputed,3.85,24.1,936000.0,8.0,8,Midwest,West North Central,Midwest
+27123,MN,"Ramsey County, Minnesota",2024,0.131,71270.0,0.36,0.27,0.1,2.0,0.639,0.361,0.2,25060.0,0.79,0.21,,4.33,27.11,58611000.0,1.0,1,Midwest,West North Central,Midwest
+27125,MN,"Red Lake County, Minnesota",2024,0.11,430.0,,,0.07,2.0,0.593,0.407,0.135,130.0,0.52,0.48,imputed,3.6,22.51,294000.0,8.0,8,Midwest,West North Central,Midwest
+27127,MN,"Redwood County, Minnesota",2024,0.13,1990.0,,0.21,0.09,2.0,0.692,0.308,0.164,620.0,0.78,0.22,imputed,3.66,22.89,1382000.0,7.0,9,Midwest,West North Central,Midwest
+27129,MN,"Renville County, Minnesota",2024,0.13,1890.0,,0.29,0.08,2.0,0.722,0.278,0.185,630.0,0.8,0.2,imputed,3.72,23.27,1334000.0,8.0,9,Midwest,West North Central,Midwest
+27131,MN,"Rice County, Minnesota",2024,0.11,7490.0,0.38,0.26,0.08,2.0,0.527,0.473,0.163,2370.0,0.67,0.33,,4.11,25.73,5845000.0,4.0,4,Midwest,West North Central,Midwest
+27133,MN,"Rock County, Minnesota",2024,0.105,1010.0,,,0.09,2.0,0.649,0.351,0.146,340.0,0.7,0.3,imputed,3.72,23.26,712000.0,6.0,2,Midwest,West North Central,Midwest
+27135,MN,"Roseau County, Minnesota",2024,0.118,1800.0,,,0.09,2.0,0.63,0.37,0.172,630.0,0.71,0.29,imputed,3.6,22.51,1229000.0,7.0,9,Midwest,West North Central,Midwest
+27137,MN,"St. Louis County, Minnesota",2024,0.138,27590.0,0.53,0.29,0.11,2.0,0.7,0.3,0.186,6900.0,0.68,0.32,,3.84,24.04,20119000.0,2.0,2,Midwest,West North Central,Midwest
+27139,MN,"Scott County, Minnesota",2024,0.071,11040.0,0.34,0.19,0.05,2.0,0.48,0.52,0.107,4270.0,0.51,0.49,,4.2,26.28,8801000.0,1.0,1,Midwest,West North Central,Midwest
+27141,MN,"Sherburne County, Minnesota",2024,0.083,8370.0,0.32,0.17,0.06,2.0,0.502,0.498,0.121,3130.0,0.51,0.49,,4.14,25.9,6576000.0,1.0,1,Midwest,West North Central,Midwest
+27143,MN,"Sibley County, Minnesota",2024,0.123,1850.0,,0.31,0.08,2.0,0.608,0.392,0.163,550.0,0.65,0.35,imputed,3.82,23.93,1343000.0,1.0,8,Midwest,West North Central,Midwest
+27145,MN,"Stearns County, Minnesota",2024,0.122,19670.0,0.41,0.24,0.1,2.0,0.654,0.346,0.172,6550.0,0.68,0.32,,3.72,23.26,13879000.0,3.0,3,Midwest,West North Central,Midwest
+27147,MN,"Steele County, Minnesota",2024,0.11,4100.0,0.36,0.26,0.08,2.0,0.624,0.376,0.146,1330.0,0.73,0.27,,3.94,24.68,3070000.0,5.0,5,Midwest,West North Central,Midwest
+27149,MN,"Stevens County, Minnesota",2024,0.13,1270.0,,0.25,0.09,2.0,0.65,0.35,0.172,370.0,0.67,0.33,imputed,3.85,24.1,929000.0,7.0,7,Midwest,West North Central,Midwest
+27151,MN,"Swift County, Minnesota",2024,0.157,1530.0,,0.41,0.11,2.0,0.808,0.192,0.221,480.0,0.95,0.05,imputed,3.72,23.27,1080000.0,7.0,9,Midwest,West North Central,Midwest
+27153,MN,"Todd County, Minnesota",2024,0.126,3220.0,,0.27,0.09,2.0,0.787,0.213,0.187,1180.0,0.91,0.09,,3.91,24.49,2392000.0,6.0,8,Midwest,West North Central,Midwest
+27155,MN,"Traverse County, Minnesota",2024,0.132,430.0,,,0.1,2.0,0.774,0.226,0.177,120.0,0.89,0.11,imputed,3.85,24.1,314000.0,9.0,9,Midwest,West North Central,Midwest
+27157,MN,"Wabasha County, Minnesota",2024,0.097,2080.0,,0.34,0.07,2.0,0.517,0.483,0.127,600.0,0.54,0.46,,4.13,25.85,1631000.0,3.0,3,Midwest,West North Central,Midwest
+27159,MN,"Wadena County, Minnesota",2024,0.139,1990.0,,,0.12,2.0,0.762,0.238,0.19,710.0,0.73,0.27,imputed,3.64,22.79,1376000.0,7.0,9,Midwest,West North Central,Midwest
+27161,MN,"Waseca County, Minnesota",2024,0.109,2060.0,,0.2,0.08,2.0,0.722,0.278,0.161,690.0,0.52,0.48,imputed,3.94,24.68,1542000.0,6.0,6,Midwest,West North Central,Midwest
+27163,MN,"Washington County, Minnesota",2024,0.081,22480.0,0.28,0.19,0.06,2.0,0.436,0.564,0.113,7460.0,0.4,0.6,,4.17,26.11,17807000.0,1.0,1,Midwest,West North Central,Midwest
+27165,MN,"Watonwan County, Minnesota",2024,0.149,1670.0,,0.26,0.08,2.0,0.68,0.32,0.188,550.0,0.78,0.22,imputed,3.76,23.54,1193000.0,6.0,8,Midwest,West North Central,Midwest
+27167,MN,"Wilkin County, Minnesota",2024,0.128,810.0,,,0.1,2.0,0.676,0.324,0.154,220.0,0.75,0.25,imputed,3.56,22.26,547000.0,6.0,8,Midwest,West North Central,Midwest
+27169,MN,"Winona County, Minnesota",2024,0.123,6110.0,,0.25,0.1,2.0,0.667,0.333,0.154,1350.0,0.64,0.36,,3.9,24.39,4521000.0,4.0,4,Midwest,West North Central,Midwest
+27171,MN,"Wright County, Minnesota",2024,0.079,11730.0,0.23,0.19,0.06,2.0,0.476,0.524,0.116,4680.0,0.49,0.51,,4.19,26.21,9325000.0,1.0,1,Midwest,West North Central,Midwest
+27173,MN,"Yellow Medicine County, Minnesota",2024,0.11,1040.0,,0.29,0.08,2.0,0.755,0.245,0.159,340.0,0.74,0.26,imputed,3.66,22.89,722000.0,9.0,9,Midwest,West North Central,Midwest
