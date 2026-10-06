@@ -6,6 +6,9 @@ __pycache__/
 pyproject.toml
 uv.lock
 Data/local/
+.Rproj.user/
+.Rhistory
+.RData
 
 # Data/ORIGINAL_MMG/ holds Feeding America Map the Meal Gap data (licensed).
 # It is committed only because this repo is PRIVATE. Re-ignore it before making the repo public:

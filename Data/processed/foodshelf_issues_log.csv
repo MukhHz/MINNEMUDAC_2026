@@ -1,0 +1,431 @@
+site_id,year,month_num,county_original,visits,individuals,pounds,issue,action
+1148.0,2023,15,Polk,33.0,69.0,2043.0,invalid month number (0 or 15),removed
+14810.0,2023,0,St. Louis,54.0,129.0,1785.0,invalid month number (0 or 15),removed
+1072.0,2023,0,St. Louis,183.0,421.0,8778.0,invalid month number (0 or 15),removed
+14717.0,2023,0,Carlton,332.0,755.0,11625.0,invalid month number (0 or 15),removed
+1103.0,2023,0,St. Louis,274.0,691.0,12128.0,invalid month number (0 or 15),removed
+1088.0,2023,0,St. Louis,691.0,1106.0,40515.0,invalid month number (0 or 15),removed
+1110.0,2023,0,Carlton,146.0,463.0,13535.0,invalid month number (0 or 15),removed
+1108.0,2023,0,St. Louis,97.0,202.0,5820.0,invalid month number (0 or 15),removed
+1250.0,2023,0,St. Louis,118.0,188.0,6948.0,invalid month number (0 or 15),removed
+1410.0,2023,0,St. Louis,653.0,1772.0,37695.0,invalid month number (0 or 15),removed
+1128.0,2023,0,Lake,36.0,59.0,1295.0,invalid month number (0 or 15),removed
+1413.0,2023,0,St. Louis,219.0,496.0,17332.0,invalid month number (0 or 15),removed
+1145.0,2023,0,St. Louis,46.0,118.0,3178.0,invalid month number (0 or 15),removed
+1149.0,2023,0,Cook,96.0,182.0,6330.0,invalid month number (0 or 15),removed
+14715.0,2023,0,Cook,60.0,136.0,4153.0,invalid month number (0 or 15),removed
+14742.0,2023,0,Cook,71.0,183.0,4505.0,invalid month number (0 or 15),removed
+1254.0,2023,0,St. Louis,167.0,474.0,11895.0,invalid month number (0 or 15),removed
+1135.0,2023,0,Carlton,185.0,449.0,11144.0,invalid month number (0 or 15),removed
+1226.0,2023,0,St. Louis,120.0,287.0,7284.0,invalid month number (0 or 15),removed
+1228.0,2023,0,St. Louis,809.0,2444.0,83595.0,invalid month number (0 or 15),removed
+1218.0,2023,0,St. Louis,1461.0,3577.0,103637.0,invalid month number (0 or 15),removed
+1266.0,2023,0,Lake,33.0,81.0,1684.0,invalid month number (0 or 15),removed
+1284.0,2023,0,St. Louis,80.0,262.0,3723.0,invalid month number (0 or 15),removed
+13624.0,2023,0,Carlton,79.0,176.0,8022.0,invalid month number (0 or 15),removed
+1286.0,2023,0,Lake,318.0,722.0,22447.0,invalid month number (0 or 15),removed
+1259.0,2023,0,St. Louis,20.0,60.0,1000.0,invalid month number (0 or 15),removed
+15362.0,2023,7,Rice,1206.0,3372.0,58834.0,county blank in org_FSStats,filled from Organization.xlsx
+15363.0,2023,7,Rice,1928.0,6861.0,75410.0,county blank in org_FSStats,filled from Organization.xlsx
+15362.0,2023,8,Rice,1358.0,3772.0,67642.0,county blank in org_FSStats,filled from Organization.xlsx
+15363.0,2023,8,Rice,2103.0,7495.0,86288.0,county blank in org_FSStats,filled from Organization.xlsx
+15362.0,2023,9,Rice,1218.0,3501.0,62235.0,county blank in org_FSStats,filled from Organization.xlsx
+15363.0,2023,9,Rice,2106.0,7321.0,91466.0,county blank in org_FSStats,filled from Organization.xlsx
+15362.0,2023,10,Rice,1411.0,3841.0,69718.0,county blank in org_FSStats,filled from Organization.xlsx
+15363.0,2023,10,Rice,2264.0,8143.0,108808.0,county blank in org_FSStats,filled from Organization.xlsx
+15362.0,2023,11,Rice,1433.0,4048.0,72020.0,county blank in org_FSStats,filled from Organization.xlsx
+15363.0,2023,11,Rice,1433.0,4048.0,7202.0,county blank in org_FSStats,filled from Organization.xlsx
+15362.0,2023,12,Rice,1162.0,3282.0,60389.0,county blank in org_FSStats,filled from Organization.xlsx
+15363.0,2023,12,Rice,1712.0,6049.0,85188.0,county blank in org_FSStats,filled from Organization.xlsx
+16486.0,2025,10,Ramsey,131.0,383.0,3568.0,county blank in org_FSStats,filled from Organization.xlsx
+16486.0,2025,11,Ramsey,131.0,538.0,7795.0,county blank in org_FSStats,filled from Organization.xlsx
+16486.0,2025,12,Ramsey,107.0,273.0,2119.0,county blank in org_FSStats,filled from Organization.xlsx
+16486.0,2026,1,Ramsey,87.0,220.0,3355.0,county blank in org_FSStats,filled from Organization.xlsx
+15218.0,2022,9,,,,,"county blank, not in Organization.xlsx either",removed
+15218.0,2022,7,,,,,"county blank, not in Organization.xlsx either",removed
+15218.0,2022,8,,,,,"county blank, not in Organization.xlsx either",removed
+15218.0,2022,10,,,,,"county blank, not in Organization.xlsx either",removed
+15218.0,2022,11,,,,,"county blank, not in Organization.xlsx either",removed
+15218.0,2022,12,,,,,"county blank, not in Organization.xlsx either",removed
+15218.0,2023,1,,,,,"county blank, not in Organization.xlsx either",removed
+15218.0,2023,2,,,,,"county blank, not in Organization.xlsx either",removed
+15218.0,2023,3,,,,,"county blank, not in Organization.xlsx either",removed
+15218.0,2023,4,,,,,"county blank, not in Organization.xlsx either",removed
+15218.0,2023,5,,,,,"county blank, not in Organization.xlsx either",removed
+15218.0,2023,6,,,,,"county blank, not in Organization.xlsx either",removed
+15361.0,2023,7,,574.0,1389.0,26552.0,"county blank, not in Organization.xlsx either",removed
+15364.0,2023,7,,164.0,461.0,4986.0,"county blank, not in Organization.xlsx either",removed
+15365.0,2023,7,,757.0,2145.0,40376.0,"county blank, not in Organization.xlsx either",removed
+15366.0,2023,7,,3497.0,9971.0,121410.0,"county blank, not in Organization.xlsx either",removed
+15218.0,2023,7,,,,,"county blank, not in Organization.xlsx either",removed
+15367.0,2023,7,,,,,"county blank, not in Organization.xlsx either",removed
+15361.0,2023,8,,636.0,1685.0,30033.0,"county blank, not in Organization.xlsx either",removed
+15364.0,2023,8,,194.0,606.0,6704.0,"county blank, not in Organization.xlsx either",removed
+15365.0,2023,8,,765.0,2129.0,47796.0,"county blank, not in Organization.xlsx either",removed
+15366.0,2023,8,,3752.0,8328.0,160744.0,"county blank, not in Organization.xlsx either",removed
+15218.0,2023,8,,,,,"county blank, not in Organization.xlsx either",removed
+15218.0,2023,9,,,,,"county blank, not in Organization.xlsx either",removed
+15361.0,2023,9,,535.0,1412.0,26214.0,"county blank, not in Organization.xlsx either",removed
+15364.0,2023,9,,164.0,506.0,5790.0,"county blank, not in Organization.xlsx either",removed
+15365.0,2023,9,,799.0,2195.0,42898.0,"county blank, not in Organization.xlsx either",removed
+15366.0,2023,9,,3408.0,9698.0,151562.0,"county blank, not in Organization.xlsx either",removed
+15218.0,2023,10,,,,,"county blank, not in Organization.xlsx either",removed
+15361.0,2023,10,,709.0,1740.0,38369.0,"county blank, not in Organization.xlsx either",removed
+15364.0,2023,10,,135.0,395.0,4684.0,"county blank, not in Organization.xlsx either",removed
+15365.0,2023,10,,890.0,2495.0,52530.0,"county blank, not in Organization.xlsx either",removed
+15366.0,2023,10,,3803.0,10722.0,172366.0,"county blank, not in Organization.xlsx either",removed
+15218.0,2023,11,,,,,"county blank, not in Organization.xlsx either",removed
+15361.0,2023,11,,751.0,1934.0,43122.0,"county blank, not in Organization.xlsx either",removed
+15364.0,2023,11,,181.0,514.0,5936.0,"county blank, not in Organization.xlsx either",removed
+15365.0,2023,11,,894.0,2412.0,58482.0,"county blank, not in Organization.xlsx either",removed
+15366.0,2023,11,,3864.0,10815.0,168557.0,"county blank, not in Organization.xlsx either",removed
+15361.0,2023,12,,626.0,1554.0,34687.0,"county blank, not in Organization.xlsx either",removed
+15364.0,2023,12,,101.0,251.0,3543.0,"county blank, not in Organization.xlsx either",removed
+15365.0,2023,12,,857.0,2274.0,55103.0,"county blank, not in Organization.xlsx either",removed
+15366.0,2023,12,,3525.0,10226.0,158705.0,"county blank, not in Organization.xlsx either",removed
+15389.0,2023,12,,1131.0,3103.0,,"county blank, not in Organization.xlsx either",removed
+15218.0,2023,12,,,,,"county blank, not in Organization.xlsx either",removed
+15364.0,2024,1,,148.0,393.0,5556.0,"county blank, not in Organization.xlsx either",removed
+15366.0,2024,1,,4188.0,12356.0,180317.0,"county blank, not in Organization.xlsx either",removed
+15361.0,2024,1,,620.0,1700.0,35948.0,"county blank, not in Organization.xlsx either",removed
+15365.0,2024,1,,913.0,2353.0,58330.0,"county blank, not in Organization.xlsx either",removed
+15389.0,2024,1,,,,,"county blank, not in Organization.xlsx either",removed
+15364.0,2024,2,,256.0,996.0,8184.0,"county blank, not in Organization.xlsx either",removed
+15366.0,2024,2,,3961.0,11423.0,168823.0,"county blank, not in Organization.xlsx either",removed
+15365.0,2024,2,,856.0,2234.0,56716.0,"county blank, not in Organization.xlsx either",removed
+15361.0,2024,2,,570.0,1451.0,33360.0,"county blank, not in Organization.xlsx either",removed
+15426.0,2024,2,,44.0,133.0,3728.0,"county blank, not in Organization.xlsx either",removed
+15418.0,2024,2,,50.0,118.0,4906.0,"county blank, not in Organization.xlsx either",removed
+15428.0,2024,2,,285.0,574.0,4450.0,"county blank, not in Organization.xlsx either",removed
+15433.0,2024,2,,311.0,990.0,0.0,"county blank, not in Organization.xlsx either",removed
+15424.0,2024,2,,132.0,288.0,8300.0,"county blank, not in Organization.xlsx either",removed
+15390.0,2024,2,,436.0,371.0,27251.0,"county blank, not in Organization.xlsx either",removed
+15389.0,2024,2,,141.0,283.0,7000.0,"county blank, not in Organization.xlsx either",removed
+15383.0,2024,2,,123.0,366.0,7831.0,"county blank, not in Organization.xlsx either",removed
+15393.0,2024,2,,125.0,270.0,7051.0,"county blank, not in Organization.xlsx either",removed
+15408.0,2024,2,,176.0,504.0,18101.0,"county blank, not in Organization.xlsx either",removed
+15419.0,2024,2,,64.0,130.0,3691.0,"county blank, not in Organization.xlsx either",removed
+15414.0,2024,2,,132.0,361.0,5976.0,"county blank, not in Organization.xlsx either",removed
+15399.0,2024,2,,966.0,2683.0,53145.0,"county blank, not in Organization.xlsx either",removed
+15431.0,2024,2,,34.0,71.0,1590.0,"county blank, not in Organization.xlsx either",removed
+15416.0,2024,2,,25.0,62.0,679.0,"county blank, not in Organization.xlsx either",removed
+15412.0,2024,2,,78.0,165.0,2282.0,"county blank, not in Organization.xlsx either",removed
+15417.0,2024,2,,23.0,51.0,1534.0,"county blank, not in Organization.xlsx either",removed
+15400.0,2024,2,,444.0,782.0,15291.0,"county blank, not in Organization.xlsx either",removed
+15434.0,2024,2,,47.0,112.0,940.0,"county blank, not in Organization.xlsx either",removed
+15401.0,2024,2,,145.0,391.0,12799.0,"county blank, not in Organization.xlsx either",removed
+15403.0,2024,2,,436.0,1157.0,22226.0,"county blank, not in Organization.xlsx either",removed
+15404.0,2024,2,,261.0,710.0,14225.0,"county blank, not in Organization.xlsx either",removed
+15430.0,2024,2,,82.0,173.0,2165.06,"county blank, not in Organization.xlsx either",removed
+15405.0,2024,2,,70.0,153.0,2791.0,"county blank, not in Organization.xlsx either",removed
+15406.0,2024,2,,25.0,43.0,1930.0,"county blank, not in Organization.xlsx either",removed
+15407.0,2024,2,,92.0,239.0,4593.0,"county blank, not in Organization.xlsx either",removed
+15409.0,2024,2,,99.0,240.0,4468.0,"county blank, not in Organization.xlsx either",removed
+15410.0,2024,2,,176.0,436.0,8556.0,"county blank, not in Organization.xlsx either",removed
+15432.0,2024,2,,,,,"county blank, not in Organization.xlsx either",removed
+15421.0,2024,2,,82.0,173.0,2165.06,"county blank, not in Organization.xlsx either",removed
+15425.0,2024,2,,56.0,101.0,,"county blank, not in Organization.xlsx either",removed
+15388.0,2024,2,,312.0,663.0,34692.0,"county blank, not in Organization.xlsx either",removed
+15398.0,2024,2,,,,,"county blank, not in Organization.xlsx either",removed
+15411.0,2024,2,,350.0,1135.0,29945.0,"county blank, not in Organization.xlsx either",removed
+15366.0,2024,3,,3881.0,11458.0,164751.0,"county blank, not in Organization.xlsx either",removed
+15364.0,2024,3,,152.0,282.0,5693.0,"county blank, not in Organization.xlsx either",removed
+15361.0,2024,3,,472.0,1119.0,23416.0,"county blank, not in Organization.xlsx either",removed
+15365.0,2024,3,,866.0,2278.0,54354.0,"county blank, not in Organization.xlsx either",removed
+15383.0,2024,3,,86.0,247.0,3326.0,"county blank, not in Organization.xlsx either",removed
+15364.0,2024,4,,151.0,362.0,5709.0,"county blank, not in Organization.xlsx either",removed
+15361.0,2024,4,,575.0,1452.0,21666.0,"county blank, not in Organization.xlsx either",removed
+15366.0,2024,4,,4290.0,12654.0,176360.0,"county blank, not in Organization.xlsx either",removed
+15365.0,2024,4,,898.0,2378.0,51685.0,"county blank, not in Organization.xlsx either",removed
+15364.0,2024,5,,188.0,546.0,7469.0,"county blank, not in Organization.xlsx either",removed
+15366.0,2024,5,,4624.0,14022.0,192385.0,"county blank, not in Organization.xlsx either",removed
+15361.0,2024,5,,680.0,1695.0,32934.0,"county blank, not in Organization.xlsx either",removed
+15365.0,2024,5,,871.0,2314.0,54260.0,"county blank, not in Organization.xlsx either",removed
+15364.0,2024,6,,186.0,435.0,6335.0,"county blank, not in Organization.xlsx either",removed
+15366.0,2024,6,,4434.0,13751.0,174915.0,"county blank, not in Organization.xlsx either",removed
+15361.0,2024,6,,547.0,1362.0,28852.0,"county blank, not in Organization.xlsx either",removed
+15365.0,2024,6,,856.0,2360.0,54925.0,"county blank, not in Organization.xlsx either",removed
+15366.0,2024,7,,5522.0,16876.0,218027.0,"county blank, not in Organization.xlsx either",removed
+15364.0,2024,7,,131.0,311.0,5187.0,"county blank, not in Organization.xlsx either",removed
+15361.0,2024,7,,470.0,1166.0,28852.0,"county blank, not in Organization.xlsx either",removed
+15365.0,2024,7,,1101.0,3162.0,63682.0,"county blank, not in Organization.xlsx either",removed
+16597.0,2026,1,,532.0,2276.0,25800.0,"county blank, not in Organization.xlsx either",removed
+16597.0,2026,2,,609.0,2618.0,30450.0,"county blank, not in Organization.xlsx either",removed
+16597.0,2026,3,,459.0,1854.0,22900.0,"county blank, not in Organization.xlsx either",removed
+16597.0,2026,4,,417.0,1678.0,20900.0,"county blank, not in Organization.xlsx either",removed
+16597.0,2026,5,,332.0,1412.0,16600.0,"county blank, not in Organization.xlsx either",removed
+15218.0,2026,5,,,,,"county blank, not in Organization.xlsx either",removed
+16597.0,2026,6,,434.0,1797.0,21700.0,"county blank, not in Organization.xlsx either",removed
+16597.0,2026,7,,399.0,1654.0,19950.0,"county blank, not in Organization.xlsx either",removed
+1088.0,2022,1,St. Louis,,,,duplicate site-month: blank copy of a reported row,removed blank copy
+14453.0,2022,3,Houston,,,,duplicate site-month: blank copy of a reported row,removed blank copy
+14502.0,2022,1,Ramsey-Suburbs,,,,duplicate site-month: blank copy of a reported row,removed blank copy
+15677.0,2025,2,Clay,,,,duplicate site-month: blank copy of a reported row,removed blank copy
+1103.0,2025,4,St. Louis,,,,duplicate site-month: blank copy of a reported row,removed blank copy
+1088.0,2022,2,St. Louis,501.0,1078.0,56647.0,duplicate site-month: exact copy,removed copy
+14483.0,2022,2,Norman,3.0,7.0,158.0,duplicate site-month: exact copy,removed copy
+11384.0,2022,3,Dakota,0.0,0.0,0.0,duplicate site-month: exact copy,removed copy
+14695.0,2022,2,Koochiching,,,,duplicate site-month: exact copy,removed copy
+14695.0,2022,2,Koochiching,,,,duplicate site-month: exact copy,removed copy
+14919.0,2023,6,Beltrami,,,,duplicate site-month: exact copy,removed copy
+1267.0,2023,7,Hennepin-Minneapolis,0.0,0.0,0.0,duplicate site-month: exact copy,removed copy
+1189.0,2024,2,Kanabec,261.0,710.0,14225.0,duplicate site-month: exact copy,removed copy
+1365.0,2024,2,Kanabec,92.0,239.0,4593.0,duplicate site-month: exact copy,removed copy
+1365.0,2025,1,Kanabec,89.0,204.0,2945.0,duplicate site-month: exact copy,removed copy
+1365.0,2025,2,Kanabec,85.0,186.0,3522.0,duplicate site-month: exact copy,removed copy
+15291.0,2023,7,Jackson,39.0,165.0,4938.0,duplicate site-month: two different values,summed into one row
+15291.0,2023,7,Jackson,39.0,191.0,5402.0,duplicate site-month: two different values,summed into one row
+14502.0,2024,5,Ramsey-Suburbs,370.0,1064.0,22399.0,duplicate site-month: two different values,summed into one row
+14502.0,2024,5,Ramsey-Suburbs,413.0,1228.0,27265.0,duplicate site-month: two different values,summed into one row
+15828.0,2024,8,Mahnomen,464.0,637.0,21294.0,duplicate site-month: two different values,summed into one row
+15828.0,2024,8,Mahnomen,0.0,0.0,0.0,duplicate site-month: two different values,summed into one row
+14109.0,2024,2,Itasca,82.0,173.0,2165.06,duplicate site-month: two different values,summed into one row
+14109.0,2024,2,Itasca,82.0,173.0,2165.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,3,Kanabec,0.0,0.0,0.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,3,Kanabec,80.0,210.0,7737.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,4,Kanabec,36.0,82.0,1772.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,4,Kanabec,89.0,207.0,1772.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,5,Kanabec,26.0,55.0,2621.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,5,Kanabec,71.0,110.0,13206.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,6,Kanabec,32.0,71.0,1703.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,6,Kanabec,92.0,207.0,3348.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,7,Kanabec,31.0,63.0,1995.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,7,Kanabec,101.0,249.0,8499.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,8,Kanabec,46.0,89.0,3551.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,8,Kanabec,92.0,252.0,3681.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,9,Kanabec,57.0,116.0,2247.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,9,Kanabec,92.0,252.0,3681.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,10,Kanabec,97.0,205.0,4837.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,10,Kanabec,70.0,156.0,9423.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,11,Kanabec,62.0,136.0,3472.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,11,Kanabec,101.0,238.0,3906.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,12,Kanabec,47.0,96.0,2006.0,duplicate site-month: two different values,summed into one row
+1365.0,2024,12,Kanabec,71.0,145.0,7567.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,1,St. Louis,211.0,541.0,11466.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,1,St. Louis,58.0,123.0,2050.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,2,St. Louis,212.0,782.0,11208.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,2,St. Louis,59.0,124.0,1781.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,3,St. Louis,215.0,563.0,10600.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,3,St. Louis,58.0,120.0,2516.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,4,St. Louis,215.0,558.0,10382.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,4,St. Louis,60.0,124.0,2209.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,5,St. Louis,200.0,543.0,10170.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,5,St. Louis,60.0,122.0,2019.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,6,St. Louis,222.0,621.0,10929.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,6,St. Louis,61.0,122.0,2310.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,7,St. Louis,191.0,545.0,9591.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,7,St. Louis,56.0,113.0,2121.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,8,St. Louis,216.0,556.0,9502.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,8,St. Louis,54.0,107.0,2280.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,9,St. Louis,197.0,550.0,10373.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,9,St. Louis,52.0,105.0,1981.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,10,St. Louis,200.0,547.0,10517.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,10,St. Louis,45.0,91.0,5450.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,11,St. Louis,188.0,510.0,10089.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,11,St. Louis,51.0,98.0,1825.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,12,St. Louis,170.0,478.0,9241.0,duplicate site-month: two different values,summed into one row
+1103.0,2024,12,St. Louis,46.0,91.0,1678.0,duplicate site-month: two different values,summed into one row
+1103.0,2025,1,St. Louis,181.0,488.0,8594.0,duplicate site-month: two different values,summed into one row
+1103.0,2025,1,St. Louis,45.0,95.0,1695.0,duplicate site-month: two different values,summed into one row
+1103.0,2025,3,St. Louis,168.0,461.0,8022.0,duplicate site-month: two different values,summed into one row
+1103.0,2025,3,St. Louis,47.0,97.0,1882.0,duplicate site-month: two different values,summed into one row
+15310.0,2025,7,Anoka,0.0,0.0,-1.0,negative pounds,pounds set to missing
+15211.0,2025,8,Anoka,0.0,0.0,-1.0,negative pounds,pounds set to missing
+1364.0,2026,3,Sherburne,93.0,167.0,-4415.0,negative pounds,pounds set to missing
+15310.0,2026,7,Anoka,0.0,0.0,-2.0,negative pounds,pounds set to missing
+16381.0,2026,3,Anoka,393.0,568.0,11739.0,negative seniors,seniors set to missing
+1245.0,2023,6,Polk,2247.0,706.0,36550.0,visits typo: >10x site median and more households than individuals,visits set to missing
+1197.0,2023,7,Waseca,273385.0,646.0,12053.0,visits typo: >10x site median and more households than individuals,visits set to missing
+15306.0,2024,4,Dakota,3257.0,371.0,3257.0,visits typo: >10x site median and more households than individuals,visits set to missing
+1083.0,2024,11,Hennepin-Suburbs,4203.0,1882.0,27039.0,visits typo: >10x site median and more households than individuals,visits set to missing
+1304.0,2025,3,Ramsey-Suburbs,83909.0,13735.0,83909.0,visits typo: >10x site median and more households than individuals,visits set to missing
+1277.0,2025,7,Marshall,1590.0,49.0,,visits typo: >10x site median and more households than individuals,visits set to missing
+1417.0,2025,11,Hubbard,6670.0,239.0,,visits typo: >10x site median and more households than individuals,visits set to missing
+13633.0,2022,4,Chisago,49.0,147.0,59960.0,value >10x site median (not a clear typo),"flagged, kept"
+14811.0,2022,5,Hennepin-Minneapolis,184.0,1225.0,2375.0,value >10x site median (not a clear typo),"flagged, kept"
+14811.0,2022,6,Hennepin-Minneapolis,369.0,1854.0,37646.0,value >10x site median (not a clear typo),"flagged, kept"
+14811.0,2022,7,Hennepin-Minneapolis,539.0,2110.0,21405.0,value >10x site median (not a clear typo),"flagged, kept"
+14811.0,2022,8,Hennepin-Minneapolis,1633.0,6657.0,39801.0,value >10x site median (not a clear typo),"flagged, kept"
+15278.0,2022,11,Hennepin-Minneapolis,586.0,1017.0,235965.0,value >10x site median (not a clear typo),"flagged, kept"
+14810.0,2022,12,St. Louis,1129.0,1129.0,9285.0,value >10x site median (not a clear typo),"flagged, kept"
+14660.0,2023,10,Clay,333.0,1527.0,21613.0,value >10x site median (not a clear typo),"flagged, kept"
+14660.0,2023,12,Clay,287.0,1452.0,13744.0,value >10x site median (not a clear typo),"flagged, kept"
+1309.0,2024,1,Goodhue,1140.0,3369.0,26661.0,value >10x site median (not a clear typo),"flagged, kept"
+14621.0,2024,3,McLeod,79.0,1587.0,2404.0,value >10x site median (not a clear typo),"flagged, kept"
+14737.0,2024,9,Clay,,2022.0,,value >10x site median (not a clear typo),"flagged, kept"
+14737.0,2024,10,Clay,,1734.0,,value >10x site median (not a clear typo),"flagged, kept"
+14737.0,2024,11,Clay,,2713.0,,value >10x site median (not a clear typo),"flagged, kept"
+14132.0,2024,12,Hennepin-Minneapolis,343.0,832.0,52194.0,value >10x site median (not a clear typo),"flagged, kept"
+14737.0,2024,12,Clay,,2092.0,,value >10x site median (not a clear typo),"flagged, kept"
+14737.0,2025,1,Clay,,2608.0,,value >10x site median (not a clear typo),"flagged, kept"
+14674.0,2025,2,Hennepin-Suburbs,1115.0,1116.0,3890.0,value >10x site median (not a clear typo),"flagged, kept"
+14737.0,2025,2,Clay,,2713.0,,value >10x site median (not a clear typo),"flagged, kept"
+14737.0,2025,3,Clay,,3209.0,,value >10x site median (not a clear typo),"flagged, kept"
+14674.0,2025,4,Hennepin-Suburbs,1688.0,1688.0,7623.0,value >10x site median (not a clear typo),"flagged, kept"
+14737.0,2025,4,Clay,1109.0,2856.0,,value >10x site median (not a clear typo),"flagged, kept"
+14737.0,2025,5,Clay,,3122.0,,value >10x site median (not a clear typo),"flagged, kept"
+14737.0,2025,6,Clay,787.0,2030.0,33700.0,value >10x site median (not a clear typo),"flagged, kept"
+1328.0,2025,7,Ramsey-Saint Paul,1316.0,4679.0,42957.0,value >10x site median (not a clear typo),"flagged, kept"
+15308.0,2025,7,Dakota,1508.0,3919.0,19281.0,value >10x site median (not a clear typo),"flagged, kept"
+1301.0,2025,9,Stearns,88.0,299.0,113455.0,value >10x site median (not a clear typo),"flagged, kept"
+1259.0,2025,9,St. Louis,31.0,1361.0,1147.0,value >10x site median (not a clear typo),"flagged, kept"
+14737.0,2025,9,Clay,,4124.0,,value >10x site median (not a clear typo),"flagged, kept"
+14737.0,2025,7,Clay,,2534.0,,value >10x site median (not a clear typo),"flagged, kept"
+14737.0,2025,8,Clay,,2763.0,,value >10x site median (not a clear typo),"flagged, kept"
+11275.0,2025,7,Clay,,1929.0,,value >10x site median (not a clear typo),"flagged, kept"
+1307.0,2025,11,Wright,259.0,9028.0,10671.0,value >10x site median (not a clear typo),"flagged, kept"
+15308.0,2026,2,Dakota,1432.0,4021.0,14794.0,value >10x site median (not a clear typo),"flagged, kept"
+1233.0,2026,2,Renville,241.0,682.0,191118.0,value >10x site median (not a clear typo),"flagged, kept"
+14188.0,2026,2,Dakota,7336.0,25993.0,233570.0,value >10x site median (not a clear typo),"flagged, kept"
+15309.0,2026,2,Scott,1519.0,4370.0,43320.0,value >10x site median (not a clear typo),"flagged, kept"
+15308.0,2026,3,Dakota,1420.0,4041.0,20809.0,value >10x site median (not a clear typo),"flagged, kept"
+1328.0,2026,3,Ramsey-Saint Paul,1146.0,4693.0,40254.0,value >10x site median (not a clear typo),"flagged, kept"
+15309.0,2026,3,Scott,1351.0,4268.0,54244.0,value >10x site median (not a clear typo),"flagged, kept"
+14680.1,2026,4,Koochiching,210.0,534.0,171535.0,value >10x site median (not a clear typo),"flagged, kept"
+15309.0,2026,4,Scott,1367.0,3935.0,38312.0,value >10x site median (not a clear typo),"flagged, kept"
+15308.0,2026,6,Dakota,1458.0,4042.0,14054.0,value >10x site median (not a clear typo),"flagged, kept"
+14681.1,2022,1,Hennepin-Suburbs,3118.0,670.0,15311.0,more households than individuals,"flagged, kept"
+1257.0,2022,1,Hennepin-Minneapolis,158.0,157.0,5250.0,more households than individuals,"flagged, kept"
+1267.0,2022,1,Hennepin-Minneapolis,704.0,686.0,27400.0,more households than individuals,"flagged, kept"
+14167.0,2022,2,Hennepin-Minneapolis,238.0,235.0,4311.0,more households than individuals,"flagged, kept"
+1263.0,2022,2,Hennepin-Minneapolis,294.0,266.0,8720.0,more households than individuals,"flagged, kept"
+1267.0,2022,2,Hennepin-Minneapolis,704.0,686.0,27400.0,more households than individuals,"flagged, kept"
+14495.0,2022,2,Hennepin-Suburbs,306.0,297.0,2628.0,more households than individuals,"flagged, kept"
+14467.0,2022,1,Ramsey-Saint Paul,166.0,149.0,3725.0,more households than individuals,"flagged, kept"
+14122.0,2022,1,Lincoln,829.0,782.0,734.0,more households than individuals,"flagged, kept"
+1267.0,2022,3,Hennepin-Minneapolis,957.0,517.0,26975.0,more households than individuals,"flagged, kept"
+1263.0,2022,3,Hennepin-Minneapolis,308.0,305.0,9233.0,more households than individuals,"flagged, kept"
+14431.0,2022,3,Mower,75.0,58.0,1529.2,more households than individuals,"flagged, kept"
+14168.0,2022,3,Ramsey-Saint Paul,1036.0,1035.0,26635.0,more households than individuals,"flagged, kept"
+1263.0,2022,4,Hennepin-Minneapolis,330.0,323.0,9265.0,more households than individuals,"flagged, kept"
+14029.0,2022,4,Houston,23.0,22.0,940.0,more households than individuals,"flagged, kept"
+14485.0,2022,5,Hennepin-Suburbs,89.0,88.0,7893.0,more households than individuals,"flagged, kept"
+1267.0,2022,5,Hennepin-Minneapolis,827.0,705.0,27665.0,more households than individuals,"flagged, kept"
+1263.0,2022,5,Hennepin-Minneapolis,313.0,311.0,8687.0,more households than individuals,"flagged, kept"
+1278.0,2022,5,Todd,101.0,88.0,2677.0,more households than individuals,"flagged, kept"
+14029.0,2022,6,Houston,34.0,25.0,904.0,more households than individuals,"flagged, kept"
+1259.0,2022,6,St. Louis,41.0,22.0,2050.0,more households than individuals,"flagged, kept"
+13857.0,2022,7,Dakota,194.0,173.0,6704.0,more households than individuals,"flagged, kept"
+1347.0,2022,7,Le Sueur,396.0,389.0,9193.0,more households than individuals,"flagged, kept"
+1267.0,2022,7,Hennepin-Minneapolis,697.0,597.0,25770.0,more households than individuals,"flagged, kept"
+14472.0,2022,8,Ramsey-Saint Paul,196.0,184.0,13720.0,more households than individuals,"flagged, kept"
+1263.0,2022,8,Hennepin-Minneapolis,368.0,355.0,10860.0,more households than individuals,"flagged, kept"
+15052.0,2022,8,Hennepin-Suburbs,803.0,694.0,762.0,more households than individuals,"flagged, kept"
+14681.1,2022,2,Hennepin-Suburbs,3828.0,699.0,15514.0,more households than individuals,"flagged, kept"
+14472.0,2022,9,Ramsey-Saint Paul,193.0,184.0,13150.0,more households than individuals,"flagged, kept"
+1263.0,2022,9,Hennepin-Minneapolis,386.0,360.0,10005.0,more households than individuals,"flagged, kept"
+14506.0,2022,9,Mille Lacs,47.0,45.0,4336.0,more households than individuals,"flagged, kept"
+14378.0,2022,9,Clay,112.0,102.0,12500.0,more households than individuals,"flagged, kept"
+15052.0,2022,10,Hennepin-Suburbs,4622.0,4596.0,3633.0,more households than individuals,"flagged, kept"
+14378.0,2022,10,Clay,84.0,80.0,11450.0,more households than individuals,"flagged, kept"
+14005.0,2022,11,Dakota,4395.0,4321.0,107073.0,more households than individuals,"flagged, kept"
+1267.0,2022,11,Hennepin-Minneapolis,750.0,732.0,30550.0,more households than individuals,"flagged, kept"
+1263.0,2022,11,Hennepin-Minneapolis,377.0,367.0,11025.0,more households than individuals,"flagged, kept"
+1137.0,2022,11,Koochiching,435.0,398.0,21237.0,more households than individuals,"flagged, kept"
+14763.0,2022,11,Koochiching,59.0,37.0,269.0,more households than individuals,"flagged, kept"
+14378.0,2022,11,Clay,98.0,92.0,11300.0,more households than individuals,"flagged, kept"
+15298.0,2022,11,Hennepin-Suburbs,2147.0,985.0,50279.0,more households than individuals,"flagged, kept"
+1244.0,2022,12,Hennepin-Minneapolis,1137.0,1136.0,3219.0,more households than individuals,"flagged, kept"
+1267.0,2022,12,Hennepin-Minneapolis,500.0,104.0,7380.0,more households than individuals,"flagged, kept"
+15298.0,2022,12,Hennepin-Suburbs,5364.0,2737.0,32060.0,more households than individuals,"flagged, kept"
+14472.0,2022,12,Ramsey-Saint Paul,185.0,179.0,12950.0,more households than individuals,"flagged, kept"
+14472.0,2023,1,Ramsey-Saint Paul,275.0,197.0,24750.0,more households than individuals,"flagged, kept"
+14485.0,2023,1,Hennepin-Suburbs,36.0,25.0,1222.0,more households than individuals,"flagged, kept"
+14763.0,2023,1,Koochiching,70.0,46.0,1268.0,more households than individuals,"flagged, kept"
+14148.0,2023,2,Hennepin-Minneapolis,1860.0,1806.0,65374.0,more households than individuals,"flagged, kept"
+14378.0,2023,3,Clay,112.0,87.0,11500.0,more households than individuals,"flagged, kept"
+14919.0,2023,3,Beltrami,22.0,0.0,595.0,more households than individuals,"flagged, kept"
+14763.0,2023,4,Koochiching,53.0,33.0,1200.0,more households than individuals,"flagged, kept"
+14919.0,2023,4,Beltrami,39.0,0.0,1298.0,more households than individuals,"flagged, kept"
+14625.0,2023,4,Hennepin-Minneapolis,1998.0,1603.0,69761.0,more households than individuals,"flagged, kept"
+14625.0,2023,5,Hennepin-Minneapolis,2416.0,2240.0,89529.0,more households than individuals,"flagged, kept"
+14378.0,2023,6,Clay,113.0,105.0,10750.0,more households than individuals,"flagged, kept"
+14922.0,2023,6,Hennepin-Minneapolis,405.0,96.0,,more households than individuals,"flagged, kept"
+15293.0,2023,7,Ramsey-Saint Paul,20.0,19.0,1079.0,more households than individuals,"flagged, kept"
+16486.0,2023,7,Ramsey,89.0,84.0,600.0,more households than individuals,"flagged, kept"
+14763.0,2023,8,Koochiching,31.0,28.0,1220.0,more households than individuals,"flagged, kept"
+14132.0,2023,6,Hennepin-Minneapolis,28.0,14.0,840.0,more households than individuals,"flagged, kept"
+1307.0,2023,9,Wright,1157.0,454.0,10382.0,more households than individuals,"flagged, kept"
+14763.0,2023,10,Koochiching,36.0,32.0,846.0,more households than individuals,"flagged, kept"
+14763.0,2023,11,Koochiching,25.0,23.0,956.0,more households than individuals,"flagged, kept"
+15349.0,2023,11,Hennepin-Minneapolis,2753.0,2752.0,11572.0,more households than individuals,"flagged, kept"
+14681.1,2023,12,Hennepin-Suburbs,1128.0,999.0,5305.0,more households than individuals,"flagged, kept"
+14055.0,2024,1,Traverse,55.0,40.0,2285.0,more households than individuals,"flagged, kept"
+13836.0,2024,1,McLeod,706.0,0.0,34900.0,more households than individuals,"flagged, kept"
+14621.0,2024,1,McLeod,74.0,0.0,2543.0,more households than individuals,"flagged, kept"
+14394.0,2024,1,Wabasha,21.0,19.0,1827.0,more households than individuals,"flagged, kept"
+1155.0,2024,2,Marshall,21.0,15.0,1171.0,more households than individuals,"flagged, kept"
+1364.0,2024,2,Sherburne,315.0,306.0,6078.0,more households than individuals,"flagged, kept"
+14498.0,2024,2,Ramsey-Saint Paul,145.0,45.0,1125.0,more households than individuals,"flagged, kept"
+14496.0,2024,2,Ramsey-Saint Paul,165.0,65.0,2340.0,more households than individuals,"flagged, kept"
+1253.0,2024,4,Otter Tail,58.0,57.0,2450.0,more households than individuals,"flagged, kept"
+15308.0,2024,4,Dakota,259.0,211.0,4242.0,more households than individuals,"flagged, kept"
+1151.0,2024,6,Grant,132.0,127.0,5265.0,more households than individuals,"flagged, kept"
+15055.0,2024,6,Hennepin-Minneapolis,81.0,72.0,1800.0,more households than individuals,"flagged, kept"
+15505.0,2024,6,Stearns,163.0,162.0,1824.0,more households than individuals,"flagged, kept"
+14485.0,2024,7,Hennepin-Suburbs,55.0,49.0,2523.0,more households than individuals,"flagged, kept"
+1083.0,2024,8,Hennepin-Suburbs,146.0,112.0,3306.0,more households than individuals,"flagged, kept"
+14484.0,2024,8,Hennepin-Minneapolis,146.0,136.0,3400.0,more households than individuals,"flagged, kept"
+1083.0,2024,9,Hennepin-Suburbs,143.0,74.0,5272.0,more households than individuals,"flagged, kept"
+1069.0,2024,9,Hennepin-Minneapolis,273.0,89.0,20291.0,more households than individuals,"flagged, kept"
+1364.0,2024,9,Sherburne,182.0,160.0,2952.0,more households than individuals,"flagged, kept"
+1267.0,2024,10,Hennepin-Minneapolis,969.0,877.0,30200.0,more households than individuals,"flagged, kept"
+1219.0,2024,11,Hennepin-Minneapolis,2202.0,98.0,94686.0,more households than individuals,"flagged, kept"
+1192.0,2024,11,Hennepin-Suburbs,5831.0,5830.0,132032.0,more households than individuals,"flagged, kept"
+1364.0,2024,12,Sherburne,114.0,110.0,2824.0,more households than individuals,"flagged, kept"
+1083.0,2024,12,Hennepin-Suburbs,775.0,757.0,22184.0,more households than individuals,"flagged, kept"
+15505.0,2025,11,Stearns,1086.0,1085.0,10824.0,more households than individuals,"flagged, kept"
+14763.0,2024,2,Koochiching,62.0,52.0,91.0,more households than individuals,"flagged, kept"
+15769.0,2024,6,Koochiching,176.0,38.0,2173.0,more households than individuals,"flagged, kept"
+14763.0,2024,12,Koochiching,197.0,129.0,398.0,more households than individuals,"flagged, kept"
+1083.0,2025,1,Hennepin-Suburbs,841.0,677.0,24434.0,more households than individuals,"flagged, kept"
+1069.0,2025,2,Hennepin-Minneapolis,522.0,450.0,25128.0,more households than individuals,"flagged, kept"
+15278.0,2025,2,Hennepin-Minneapolis,732.0,511.0,28402.0,more households than individuals,"flagged, kept"
+1069.0,2025,3,Hennepin-Minneapolis,506.0,350.0,26159.0,more households than individuals,"flagged, kept"
+15278.0,2025,3,Hennepin-Minneapolis,691.0,428.0,17322.0,more households than individuals,"flagged, kept"
+1364.0,2025,3,Sherburne,135.0,118.0,4100.0,more households than individuals,"flagged, kept"
+15278.0,2025,4,Hennepin-Minneapolis,680.0,430.0,17676.0,more households than individuals,"flagged, kept"
+15293.0,2025,4,Ramsey-Saint Paul,99.0,98.0,1953.0,more households than individuals,"flagged, kept"
+15679.0,2025,5,Sherburne,193.0,177.0,454.0,more households than individuals,"flagged, kept"
+15293.0,2025,5,Ramsey-Saint Paul,84.0,83.0,1772.0,more households than individuals,"flagged, kept"
+15278.0,2025,5,Hennepin-Minneapolis,640.0,327.0,19139.0,more households than individuals,"flagged, kept"
+14378.0,2025,5,Clay,167.0,67.0,2249.0,more households than individuals,"flagged, kept"
+15506.0,2025,5,Clay,679.0,418.0,5600.0,more households than individuals,"flagged, kept"
+15278.0,2025,6,Hennepin-Minneapolis,476.0,303.0,12214.0,more households than individuals,"flagged, kept"
+15293.0,2025,7,Ramsey-Saint Paul,86.0,85.0,1974.0,more households than individuals,"flagged, kept"
+15679.0,2025,7,Sherburne,40.0,28.0,568.0,more households than individuals,"flagged, kept"
+15505.0,2025,7,Stearns,895.0,894.0,9826.0,more households than individuals,"flagged, kept"
+1267.0,2025,7,Hennepin-Minneapolis,1412.0,1293.0,46300.0,more households than individuals,"flagged, kept"
+15505.0,2025,8,Stearns,929.0,928.0,9825.0,more households than individuals,"flagged, kept"
+1226.0,2025,8,St. Louis,212.0,204.0,6016.0,more households than individuals,"flagged, kept"
+15505.0,2025,9,Stearns,964.0,963.0,10084.0,more households than individuals,"flagged, kept"
+15851.0,2025,10,Hennepin-Minneapolis,254.0,235.0,1261.0,more households than individuals,"flagged, kept"
+1267.0,2025,11,Hennepin-Minneapolis,1393.0,1357.0,49400.0,more households than individuals,"flagged, kept"
+15293.0,2025,12,Ramsey-Saint Paul,81.0,77.0,1753.0,more households than individuals,"flagged, kept"
+15287.0,2025,12,Aitkin,42.0,35.0,2610.0,more households than individuals,"flagged, kept"
+15293.0,2026,1,Ramsey-Saint Paul,77.0,68.0,1601.0,more households than individuals,"flagged, kept"
+1141.0,2026,1,Otter Tail,537.0,534.0,20060.0,more households than individuals,"flagged, kept"
+1253.0,2026,2,Otter Tail,47.0,40.0,338.0,more households than individuals,"flagged, kept"
+15293.0,2026,2,Ramsey-Saint Paul,72.0,64.0,1503.0,more households than individuals,"flagged, kept"
+1168.0,2026,2,Mille Lacs,855.0,185.0,3947.0,more households than individuals,"flagged, kept"
+15293.0,2026,3,Ramsey-Saint Paul,67.0,62.0,1234.0,more households than individuals,"flagged, kept"
+14122.0,2026,3,Lincoln,404.0,154.0,3265.0,more households than individuals,"flagged, kept"
+15505.0,2026,3,Stearns,1222.0,1214.0,21806.0,more households than individuals,"flagged, kept"
+1267.0,2026,3,Hennepin-Minneapolis,1028.0,968.0,56200.0,more households than individuals,"flagged, kept"
+14625.0,2026,4,Hennepin-Minneapolis,7659.0,6662.0,173594.0,more households than individuals,"flagged, kept"
+1267.0,2026,4,Hennepin-Minneapolis,1025.0,1015.0,33600.0,more households than individuals,"flagged, kept"
+1069.0,2026,4,Hennepin-Minneapolis,445.0,381.0,32049.0,more households than individuals,"flagged, kept"
+15293.0,2026,4,Ramsey-Saint Paul,82.0,71.0,1530.0,more households than individuals,"flagged, kept"
+15505.0,2026,4,Stearns,1296.0,1293.0,12300.0,more households than individuals,"flagged, kept"
+1069.0,2026,5,Hennepin-Minneapolis,426.0,343.0,28746.0,more households than individuals,"flagged, kept"
+15293.0,2026,5,Ramsey-Saint Paul,70.0,55.0,1340.0,more households than individuals,"flagged, kept"
+14160.0,2026,5,Chisago,353.0,255.0,14802.0,more households than individuals,"flagged, kept"
+14334.0,2026,5,Crow Wing,584.0,503.0,5650.0,more households than individuals,"flagged, kept"
+1069.0,2026,6,Hennepin-Minneapolis,433.0,365.0,29300.0,more households than individuals,"flagged, kept"
+15851.0,2026,6,Hennepin-Minneapolis,345.0,340.0,2582.0,more households than individuals,"flagged, kept"
+15293.0,2026,6,Ramsey-Saint Paul,64.0,47.0,1225.0,more households than individuals,"flagged, kept"
+14160.0,2026,6,Chisago,386.0,384.0,15116.0,more households than individuals,"flagged, kept"
+15505.0,2026,6,Stearns,1255.0,1252.0,12025.0,more households than individuals,"flagged, kept"
+1069.0,2026,7,Hennepin-Minneapolis,404.0,403.0,33939.0,more households than individuals,"flagged, kept"
+15293.0,2026,7,Ramsey-Saint Paul,81.0,57.0,1419.0,more households than individuals,"flagged, kept"
+15308.0,2026,7,Dakota,1406.0,1074.0,16553.0,more households than individuals,"flagged, kept"
