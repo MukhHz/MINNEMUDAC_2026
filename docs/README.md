@@ -14,7 +14,10 @@ When a new notebook is added, add a matching `docs/NN_name.md` and a row here.
 | File | One row = | Made by |
 |---|---|---|
 | `mmg_mn_county_2022_2024.csv` | county × year | 01 |
-| `MMG2025_County_MN_2022-2023_raw.csv`, `MMG2026_County_MN_2024_raw.csv` | county × year (original columns) | 01 |
 | `foodshelf_site_month.csv` | food shelf site × month | 02 |
 | `foodshelf_county_month.csv` | county × month (87 × 55) | 02 |
 | `foodshelf_issues_log.csv` | one data problem | 02 |
+| `poverty_2022_2024_clean.csv`, `vehicle_access_2022_2024_clean.csv` | county × year (Census ACS 5-year) | teammate |
+| `snap_2022_2026_clean.csv`, `snap_2022_2024_clean.csv` | county agency × month (MN DHS) | teammate |
+
+See `Data/processed/README.md` for what's in each file.

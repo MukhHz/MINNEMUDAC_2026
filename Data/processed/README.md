@@ -14,7 +14,10 @@ Full explanation of every cleaning decision: `docs/02_clean_foodshelf.md`
 | `foodshelf_site_month.csv` | 1 food shelf, 1 month | Detail about individual food shelves (maps, distance) |
 | `foodshelf_issues_log.csv` | 1 data problem found | Checking what we fixed, raising issues with the organizers |
 | `mmg_mn_county_2022_2024.csv` ⭐ | 1 county, 1 year | **Need** (food insecurity) for Q1 and Q6 |
-| `MMG2025_County_MN_2022-2023_raw.csv`, `MMG2026_County_MN_2024_raw.csv` | 1 county, 1 year | Checking against the original Feeding America columns |
+| `poverty_2022_2024_clean.csv` | 1 county, 1 year | Poverty rates: explaining mismatches (Q1, Q6) |
+| `vehicle_access_2022_2024_clean.csv` | 1 county, 1 year | Households without a car: access barriers (Q1, Q6) |
+| `snap_2022_2026_clean.csv` | 1 county **agency**, 1 month | SNAP enrollment and benefits (Q5, also Q1/Q6) |
+| `snap_2022_2024_clean.csv` | 1 county agency, 1 month | Same as above, 2022–2024 only |
 
 ⭐ = start here
 
@@ -85,10 +88,50 @@ Full explanation of every cleaning decision: `docs/02_clean_foodshelf.md`
 
 ---
 
-## 5. `MMG2025_County_MN_2022-2023_raw.csv` and `MMG2026_County_MN_2024_raw.csv`
+To double-check a number, open the original Excel files in `Data/ORIGINAL_MMG/` ("County" tab).
 
-- The same Map the Meal Gap data, **only filtered** (Minnesota + year). All original columns and names kept, not combined.
-- Use these only to **double-check** a number against the original file. For analysis, use `mmg_mn_county_2022_2024.csv`.
+---
+
+## 5. `poverty_2022_2024_clean.csv`
+
+- **Poverty by county** from the US Census Bureau **American Community Survey (ACS) 5-year estimates**, table S1701.
+- 87 counties × 3 years = 261 rows. Column definitions: `poverty_2022_2024_data_dictionary.csv`.
+- Main columns:
+  - `population`: people whose poverty status is known (a good population number for per-person rates)
+  - `poverty_rate`, `poverty_count`: below the poverty line
+  - `deep_poverty_rate`: income below 50% of the poverty line
+  - `below_185_rate`, `below_200_rate`: below 185% / 200% of the poverty line (roughly SNAP and school-meal eligibility levels)
+  - `child_poverty_rate`, `adult_poverty_rate`, `senior_60_poverty_rate`, `senior_65_poverty_rate`
+- ⚠️ **`year` is the last year of a 5-year window**: `2022` = data from 2018–2022, `2024` = 2020–2024. The years overlap, so they change slowly and aren't independent.
+- ⚠️ The county ID column is called **`county_geoid`** (same thing as `fips`), and county names are UPPERCASE. Join on the ID, not the name.
+
+---
+
+## 6. `vehicle_access_2022_2024_clean.csv`
+
+- **Households without a car**, from the same Census ACS 5-year estimates, table B08201.
+- 87 counties × 3 years = 261 rows. Column definitions: `vehicle_access_2022_2024_data_dictionary.csv`.
+- Main columns:
+  - `no_vehicle_rate`: % of households with **no** vehicle (`no_vehicle_households` / `total_households`)
+  - `no_vehicle_rate_moe`: margin of error for that rate (90%). Small counties have bigger error.
+  - `limited_vehicle_rate`: % of households with **0 or 1** vehicle
+- Useful for the "can people actually get to a food shelf?" story, especially in rural counties.
+- ⚠️ Same notes as poverty: `year` = end of a 5-year window, ID column is `county_geoid`, names are UPPERCASE.
+
+---
+
+## 7. `snap_2022_2026_clean.csv` and `snap_2022_2024_clean.csv`
+
+- **SNAP (food stamps) by month**, from the Minnesota Department of Human Services, Financial reports and forecasts: https://mn.gov/dhs/about-us/forms-resources/reports/financial-reports-and-forecasts/
+- `snap_2022_2026_clean.csv`: Jan 2022 – **Mar 2026**. `snap_2022_2024_clean.csv` is exactly the same data, 2022–2024 only.
+- Columns: `year`, `month` (written out, e.g. `January`), `county_code`, `county`, `snap_cases` (households), `snap_people`, `snap_expenditure` (dollars of benefits).
+- ⚠️ **These are 87 county *agencies*, not the 87 counties.** Some counties are combined, and tribal nations are listed separately:
+  - `MNPRAIRIE` = Dodge + Steele + Waseca
+  - `WPHS` = Grant + Pope
+  - `MILLE-LACS-BAND TRIBE`, `WHITE EARTH NATION`, `RED LAKE INDIAN RESV`: tribal agencies, separate from their counties
+- ⚠️ `county_code` is the **state's own 1–93 numbering, not FIPS**, and there's no FIPS column yet, so this **can't be joined to the other files directly**. How to match agencies to counties is still being decided.
+- Benefit dollars drop sharply after **Feb 2023**, when the COVID emergency SNAP boost ended. That's a real event, not an error (useful for Q5).
+- Data ends in **Mar 2026**: the state publishes with a delay of a few months.
 
 ---
 
@@ -109,4 +152,17 @@ mmg    <- readr::read_csv("Data/processed/mmg_mn_county_2022_2024.csv", col_type
 
 Always read `fips` as **text** so `27001` stays `27001`.
 
-**Made by:** `notebooks/01_data_cleaning_mmg.ipynb` (Map the Meal Gap files) and `notebooks/02_clean_foodshelf.ipynb` (food shelf files)
+To join the Census files to the others, rename their ID column:
+
+```python
+poverty = pd.read_csv("Data/processed/poverty_2022_2024_clean.csv", dtype={"county_geoid": str}).rename(columns={"county_geoid": "fips"})
+```
+```r
+poverty <- readr::read_csv("Data/processed/poverty_2022_2024_clean.csv", col_types = readr::cols(county_geoid = "c")) |>
+  dplyr::rename(fips = county_geoid)
+```
+
+**Made by:**
+- `notebooks/01_data_cleaning_mmg.ipynb`: Map the Meal Gap file
+- `notebooks/02_clean_foodshelf.ipynb`: food shelf files
+- Poverty, vehicle access and SNAP files: cleaned by teammates (see each file's data dictionary / source above)
