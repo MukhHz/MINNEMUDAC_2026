@@ -1,0 +1,10 @@
+column,type,units,census_code,description
+year,integer,year,,Last year of the ACS 5 year window (2022 = 2018 to 2022 data)
+county_geoid,text,,GEO_ID,5 digit county FIPS code (state 27 + county); stored as text to keep leading zeros
+county,text,,NAME,"County name in uppercase with "" County, Minnesota"" removed"
+total_households,number,households,B08201_001E,Total households (Estimate!!Total:)
+no_vehicle_households,number,households,B08201_002E,Households with no vehicle available
+no_vehicle_rate,number,percent,derived,no_vehicle_households / total_households x 100
+no_vehicle_rate_moe,number,percentage points,"derived from B08201_001M, B08201_002M",90% margin of error for no_vehicle_rate (ACS proportion formula)
+limited_vehicle_households,number,households,B08201_002E + B08201_003E,Households with 0 or 1 vehicle available
+limited_vehicle_rate,number,percent,derived,limited_vehicle_households / total_households x 100

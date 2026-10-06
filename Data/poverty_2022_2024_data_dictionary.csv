@@ -1,0 +1,17 @@
+column,type,units,census_code,description
+year,integer,year,,Last year of the ACS 5 year window (2022 = 2018 to 2022 data)
+county_geoid,text,,GEO_ID,5 digit county FIPS code (state 27 + county); stored as text to keep leading zeros
+county,text,,NAME,County name in uppercase with " County, Minnesota" removed
+population,number,people,S1701_C01_001E,Total population for whom poverty status is determined
+poverty_rate,number,percent,S1701_C03_001E,Percent of population below the poverty level
+poverty_count,number,people,S1701_C02_001E,Number of people below the poverty level
+deep_poverty_count,number,people,S1701_C01_038E,Number of people with income below 50% of the poverty level
+below_185_count,number,people,S1701_C01_041E,Number of people with income below 185% of the poverty level
+below_200_count,number,people,S1701_C01_042E,Number of people with income below 200% of the poverty level
+deep_poverty_rate,number,percent,derived,deep_poverty_count / population x 100 (rounded to 1 decimal)
+below_185_rate,number,percent,derived,below_185_count / population x 100 (rounded to 1 decimal)
+below_200_rate,number,percent,derived,below_200_count / population x 100 (rounded to 1 decimal)
+child_poverty_rate,number,percent,S1701_C03_002E,Percent of people under 18 below the poverty level
+adult_poverty_rate,number,percent,S1701_C03_006E,Percent of people aged 18 to 64 below the poverty level
+senior_60_poverty_rate,number,percent,S1701_C03_009E,Percent of people aged 60 and over below the poverty level
+senior_65_poverty_rate,number,percent,S1701_C03_010E,Percent of people aged 65 and over below the poverty level
