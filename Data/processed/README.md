@@ -16,6 +16,7 @@ Full explanation of every cleaning decision: `docs/02_clean_foodshelf.md`
 | `mmg_mn_county_2022_2024.csv` ⭐ | 1 county, 1 year | **Need** (food insecurity) for Q1 and Q6 |
 | `poverty_2022_2024_clean.csv` | 1 county, 1 year | Poverty rates: explaining mismatches (Q1, Q6) |
 | `vehicle_access_2022_2024_clean.csv` | 1 county, 1 year | Households without a car: access barriers (Q1, Q6) |
+| `rural_share_2020_clean.csv` | 1 county | % of people living in rural areas (Q1 "rural share", Q5, Q6) |
 | `snap_2022_2026_clean.csv` | 1 county **agency**, 1 month | SNAP enrollment and benefits (Q5, also Q1/Q6) |
 | `snap_2022_2024_clean.csv` | 1 county agency, 1 month | Same as above, 2022–2024 only |
 
@@ -120,7 +121,17 @@ To double-check a number, open the original Excel files in `Data/ORIGINAL_MMG/` 
 
 ---
 
-## 7. `snap_2022_2026_clean.csv` and `snap_2022_2024_clean.csv`
+## 7. `rural_share_2020_clean.csv`
+
+- **% of each county's population living in rural areas**, from the US Census Bureau *2020 Census Urban and Rural* county file (original: `Data/2020_UA_COUNTY.xlsx`).
+- 87 counties, one row each. Join on `fips`.
+- Columns: `pop_2020`, `pop_urban_2020`, `pop_rural_2020`, **`pct_rural_2020`** (0–100), `land_sq_mi`, `pop_per_sq_mi`, `rural_band` (mostly urban <25% / mixed 25–50% / mostly rural 50–75% / rural >75%).
+- **Only 2020:** the Census Bureau redraws urban/rural areas once a decade (2010 → 2020 → 2030), so this is the latest official version and covers our whole period.
+- **Why use it instead of the yes/no `rural` column:** it's a percentage. 13 counties that USDA calls "metro" have **over 40% rural residents**. Fillmore is "metro" but **100% rural**, Le Sueur 86%, Mille Lacs 82%.
+
+---
+
+## 8. `snap_2022_2026_clean.csv` and `snap_2022_2024_clean.csv`
 
 > 🚨 **DO NOT re-download the 2026 SNAP PDF.** The DHS page now updates every month, so a new copy may include **August 2026**, and using **any August 2026 data from any source disqualifies the team** (brief, Q7). Keep the copy we have (`Data/SNAP_2026_RAW.pdf`, which ends **March 2026**).
 
@@ -171,4 +182,5 @@ poverty <- readr::read_csv("Data/processed/poverty_2022_2024_clean.csv", col_typ
 **Made by:**
 - `notebooks/01_data_cleaning_mmg.ipynb`: Map the Meal Gap file
 - `notebooks/02_clean_foodshelf.ipynb`: food shelf files
+- `notebooks/03_clean_rural_share.ipynb`: rural share file
 - Poverty, vehicle access and SNAP files: cleaned by teammates (see each file's data dictionary / source above)

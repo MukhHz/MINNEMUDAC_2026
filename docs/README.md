@@ -6,6 +6,8 @@ Each notebook in `notebooks/` has short notes on every step. The files here expl
 |---|---|---|
 | `01_data_cleaning_mmg.ipynb` | *(to write)* | Feeding America Map the Meal Gap → MN counties 2022–2024 |
 | `02_clean_foodshelf.ipynb` | [02_clean_foodshelf.md](02_clean_foodshelf.md) | Food shelf activity (`org_FSStats`) → clean site-month and county-month files + issues log |
+| `03_clean_rural_share.ipynb` | *(short; notes are in the notebook)* | Census 2020 urban/rural → % rural per county |
+| `05_q5_snap_foodshelf.ipynb` | plan: [q5_plan.md](q5_plan.md) | Q5: SNAP and food shelf use (in progress) |
 
 When a new notebook is added, add a matching `docs/NN_name.md` and a row here.
 
@@ -19,5 +21,6 @@ When a new notebook is added, add a matching `docs/NN_name.md` and a row here.
 | `foodshelf_issues_log.csv` | one data problem | 02 |
 | `poverty_2022_2024_clean.csv`, `vehicle_access_2022_2024_clean.csv` | county × year (Census ACS 5-year) | teammate |
 | `snap_2022_2026_clean.csv`, `snap_2022_2024_clean.csv` | county agency × month (MN DHS) | teammate |
+| `rural_share_2020_clean.csv` | county (Census 2020) | 03 |
 
 See `Data/processed/README.md` for what's in each file.
