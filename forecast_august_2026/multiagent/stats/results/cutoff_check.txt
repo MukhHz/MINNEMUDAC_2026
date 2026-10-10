@@ -1,0 +1,3 @@
+PASS every training slice ends the month before its target (asserted in make_context)
+PASS actuals retrieved only after each prediction was produced
+PASS source max month <= 2026-07-31; no August 2026 data loaded

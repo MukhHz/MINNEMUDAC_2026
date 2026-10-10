@@ -1,0 +1,5 @@
+PASS source maximum month 2026-07 <= 2026-07-31
+PASS every forecast (backtest and final) built from months strictly before its target
+PASS backtest actuals retrieved only after each forecast was produced
+PASS no external predictors used
+NOTE counties with no food-shelf site, predicted 0: ['Wilkin']

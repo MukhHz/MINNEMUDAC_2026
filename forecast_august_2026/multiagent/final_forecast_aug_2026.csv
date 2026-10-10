@@ -1,0 +1,4 @@
+metric,forecast,lo80,hi80,backtest_monthly_mape,backtest_aug_mape
+visits,236166,227912,260363,0.0553,0.0482
+pounds,12880048,12064586,14213852,0.047,0.0415
+individuals,730569,695031,811501,0.0578,0.0641

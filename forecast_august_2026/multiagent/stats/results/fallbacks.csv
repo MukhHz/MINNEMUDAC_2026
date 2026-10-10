@@ -1,0 +1,22 @@
+model,target,metric,reason
+sf_ets_log,2023-08-01,visits,n=19<24
+sf_ets_log,2023-08-01,pounds,n=19<24
+sf_ets_log,2023-08-01,individuals,n=19<24
+sf_ets_level,2023-08-01,visits,n=19<24
+sf_ets_level,2023-08-01,pounds,n=19<24
+sf_ets_level,2023-08-01,individuals,n=19<24
+sf_arima_log,2023-08-01,visits,n=19<24
+sf_arima_log,2023-08-01,pounds,n=19<24
+sf_arima_log,2023-08-01,individuals,n=19<24
+sf_theta_log,2023-08-01,visits,n=19<24
+sf_theta_log,2023-08-01,pounds,n=19<24
+sf_theta_log,2023-08-01,individuals,n=19<24
+sf_ces_log,2023-08-01,visits,n=19<24
+sf_ces_log,2023-08-01,pounds,n=19<24
+sf_ces_log,2023-08-01,individuals,n=19<24
+sf_mstl_log,2023-08-01,visits,n=19<24
+sf_mstl_log,2023-08-01,pounds,n=19<24
+sf_mstl_log,2023-08-01,individuals,n=19<24
+seasonal_index_level,2023-08-01,visits,no seasonal index
+seasonal_index_level,2023-08-01,pounds,no seasonal index
+seasonal_index_level,2023-08-01,individuals,no seasonal index
