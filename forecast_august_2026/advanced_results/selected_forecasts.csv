@@ -1,0 +1,4 @@
+forecast_year,cutoff,target_month,metric,model,forecast,eligible_for_primary,model_detail,selected
+2026,2026-07-31,2026-08-01,visits,seasonal_naive,240280.0,True,,True
+2026,2026-07-31,2026-08-01,pounds,seasonal_naive,12821474.42,True,,True
+2026,2026-07-31,2026-08-01,individuals,core_median_ensemble,721409.7900206139,True,"median(seasonal_naive, ets, elastic_net_panel, lightgbm_panel)",True

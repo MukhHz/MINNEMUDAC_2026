@@ -1,0 +1,24 @@
+{
+  "input": "Data/processed/foodshelf_site_month.csv",
+  "input_sha256": "446c36b7467f95ec715ddd4308a06ace0ad1d99deacfcd1e11bb7bad9c911c9e",
+  "forecast_cutoff": "2026-07-31",
+  "backtest_years": [
+    2023,
+    2024,
+    2025
+  ],
+  "primary_metric": "MAPE (provisional until organizer scoring rule arrives)",
+  "outlier_policy": "Retain flag_outlier and flag_hh_gt_indiv rows; no clipping, winsorization, or post-backtest exclusions.",
+  "preprocessing_policy": "Use prepared site-month data, which resolves documented duplicates and clear impossible/typo values.",
+  "flag_counts": {
+    "flag_outlier": 43,
+    "flag_hh_gt_indiv": 145,
+    "flag_dup_summed": 28,
+    "flag_typo_fixed": 7
+  },
+  "selected_models": {
+    "visits": "seasonal_naive",
+    "pounds": "seasonal_naive",
+    "individuals": "seasonal_naive"
+  }
+}

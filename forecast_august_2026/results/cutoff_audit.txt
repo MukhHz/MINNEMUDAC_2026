@@ -1,0 +1,10 @@
+PASS source maximum month is 2026-07
+PASS no August 2026 outcome is present
+PASS no external predictors are used
+PASS visits maps to prepared HouseholdsReg-based visits
+PASS flagged high observations are retained without clipping or winsorization
+PASS 2023 fold trained only through 2023-07-31
+PASS 2024 fold trained only through 2024-07-31
+PASS 2025 fold trained only through 2025-07-31
+PASS final forecast trained only through 2026-07-31
+PASS final output does not contain or merge an August 2026 actual

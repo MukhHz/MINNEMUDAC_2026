@@ -1,0 +1,4 @@
+metric,selected,reason,forecast_aug_2026
+individuals,combo:panel_ml:mmf_select_county+deep_foundation:mlp_county+stats:sf_ets_log,equal-weight combination of 3 qualifying models,748747.6932745198
+pounds,combo:panel_ml:mmf_select_site+deep_foundation:mlp_county+stats:sf_theta_log,equal-weight combination of 3 qualifying models,12762472.170977464
+visits,combo:panel_ml:global_lgbm_site_churn+structural:panel_carry_d05+stats:dyoy_w3_d0.25,equal-weight combination of 3 qualifying models,235796.72288813037

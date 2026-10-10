@@ -1,0 +1,42 @@
+forecast_year,cutoff,target_month,metric,model,forecast,eligible_for_primary,model_detail,selected
+2026,2026-07-31,2026-08-01,visits,seasonal_naive,240280.0,True,,True
+2026,2026-07-31,2026-08-01,visits,ytd_growth,242520.36330019523,True,,False
+2026,2026-07-31,2026-08-01,visits,aug_jul_ratio,255518.68629002315,True,,False
+2026,2026-07-31,2026-08-01,visits,trend_month_regression,289987.2105263156,True,,False
+2026,2026-07-31,2026-08-01,visits,robust_ensemble,249019.52479510917,True,,False
+2026,2026-07-31,2026-08-01,visits,ets,241362.73911944585,True,level_only,False
+2026,2026-07-31,2026-08-01,visits,sarima,235153.5872368935,True,"SARIMA(1, 0, 0)x(1, 0, 0, 12)",False
+2026,2026-07-31,2026-08-01,visits,ridge_panel,238254.78955264334,True,"{""alpha"": 1.0, ""inner_wape"": 0.18184160989217305}",False
+2026,2026-07-31,2026-08-01,visits,lasso_panel,215283.97889843676,True,"{""alpha"": 0.001, ""inner_wape"": 0.1921260606277382}",False
+2026,2026-07-31,2026-08-01,visits,elastic_net_panel,222377.76328612797,True,"{""alpha"": 0.001, ""inner_wape"": 0.15322021781740738, ""l1_ratio"": 0.2}",False
+2026,2026-07-31,2026-08-01,visits,lightgbm_panel,225113.61914342557,True,{},False
+2026,2026-07-31,2026-08-01,visits,lightgbm_panel_snap_sensitivity,223977.82823325405,False,{},False
+2026,2026-07-31,2026-08-01,pounds,seasonal_naive,12821474.42,True,,True
+2026,2026-07-31,2026-08-01,pounds,ytd_growth,13243577.185721356,True,,False
+2026,2026-07-31,2026-08-01,pounds,aug_jul_ratio,13829690.838460555,True,,False
+2026,2026-07-31,2026-08-01,pounds,trend_month_regression,14525670.087157894,True,,False
+2026,2026-07-31,2026-08-01,pounds,robust_ensemble,13536634.012090955,True,,False
+2026,2026-07-31,2026-08-01,pounds,ets,12653883.780729007,True,level_only,False
+2026,2026-07-31,2026-08-01,pounds,sarima,13031108.31736634,True,"SARIMA(1, 0, 0)x(1, 0, 0, 12)",False
+2026,2026-07-31,2026-08-01,pounds,ridge_panel,11719274.937017838,True,"{""alpha"": 1.0, ""inner_wape"": 0.16265630212543913}",False
+2026,2026-07-31,2026-08-01,pounds,lasso_panel,11105783.892182972,True,"{""alpha"": 0.001, ""inner_wape"": 0.18047064066706725}",False
+2026,2026-07-31,2026-08-01,pounds,elastic_net_panel,11396231.498114187,True,"{""alpha"": 0.001, ""inner_wape"": 0.1549337466877545, ""l1_ratio"": 0.2}",False
+2026,2026-07-31,2026-08-01,pounds,lightgbm_panel,12284852.064524973,True,{},False
+2026,2026-07-31,2026-08-01,pounds,lightgbm_panel_snap_sensitivity,12209370.045017434,False,{},False
+2026,2026-07-31,2026-08-01,individuals,seasonal_naive,724407.0,True,,False
+2026,2026-07-31,2026-08-01,individuals,ytd_growth,751854.1661134973,True,,False
+2026,2026-07-31,2026-08-01,individuals,aug_jul_ratio,785546.8706436869,True,,False
+2026,2026-07-31,2026-08-01,individuals,trend_month_regression,889945.9999999999,True,,False
+2026,2026-07-31,2026-08-01,individuals,robust_ensemble,768700.5183785921,True,,False
+2026,2026-07-31,2026-08-01,individuals,ets,745284.6993963658,True,level_only,False
+2026,2026-07-31,2026-08-01,individuals,sarima,728024.2467932086,True,"SARIMA(1, 0, 0)x(1, 0, 0, 12)",False
+2026,2026-07-31,2026-08-01,individuals,ridge_panel,756867.0702864246,True,"{""alpha"": 1.0, ""inner_wape"": 0.1938540278350394}",False
+2026,2026-07-31,2026-08-01,individuals,lasso_panel,681786.2973643941,True,"{""alpha"": 0.001, ""inner_wape"": 0.19646337443488687}",False
+2026,2026-07-31,2026-08-01,individuals,elastic_net_panel,718412.5800412279,True,"{""alpha"": 0.001, ""inner_wape"": 0.1437179215259485, ""l1_ratio"": 0.5}",False
+2026,2026-07-31,2026-08-01,individuals,lightgbm_panel,700953.0053398892,True,{},False
+2026,2026-07-31,2026-08-01,individuals,lightgbm_panel_snap_sensitivity,701442.6331948683,False,{},False
+2026,2026-07-31,2026-08-01,pounds,structural_elastic_visits_x_ratio,12447326.930548796,True,,False
+2026,2026-07-31,2026-08-01,individuals,structural_elastic_visits_x_ratio,677226.9624436494,True,,False
+2026,2026-07-31,2026-08-01,visits,core_median_ensemble,232696.8095717128,True,"median(seasonal_naive, ets, elastic_net_panel, lightgbm_panel)",False
+2026,2026-07-31,2026-08-01,pounds,core_median_ensemble,12469367.92262699,True,"median(seasonal_naive, ets, elastic_net_panel, lightgbm_panel)",False
+2026,2026-07-31,2026-08-01,individuals,core_median_ensemble,721409.7900206139,True,"median(seasonal_naive, ets, elastic_net_panel, lightgbm_panel)",True

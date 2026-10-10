@@ -1,0 +1,270 @@
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+Seed set to 1
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+`Trainer.fit` stopped: `max_steps=300` reached.
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
