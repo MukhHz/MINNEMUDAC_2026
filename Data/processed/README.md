@@ -122,8 +122,14 @@ To double-check a number, open the original Excel files in `Data/ORIGINAL_MMG/` 
 
 ## 7. `snap_2022_2026_clean.csv` and `snap_2022_2024_clean.csv`
 
-- **SNAP (food stamps) by month**, from the Minnesota Department of Human Services, Financial reports and forecasts: https://mn.gov/dhs/about-us/forms-resources/reports/financial-reports-and-forecasts/
+> 🚨 **DO NOT re-download the 2026 SNAP PDF.** The DHS page now updates every month, so a new copy may include **August 2026**, and using **any August 2026 data from any source disqualifies the team** (brief, Q7). Keep the copy we have (`Data/SNAP_2026_RAW.pdf`, which ends **March 2026**).
+
+- **SNAP (food stamps) by month**, from the Minnesota Department of Human Services (Reports and Forecasts Division), report *"Supplemental Nutrition Assistance Program (SNAP) and State-Funded Food: Minnesota Cases, Recipients, and Payments"*: https://mn.gov/dhs/about-us/forms-resources/reports/financial-reports-and-forecasts/
+- **Original PDFs:** `Data/SNAP_2022_RAW.pdf` … `Data/SNAP_2026_RAW.pdf`, one per year with one page per month by county agency. The CSV was checked against them (spot checks match exactly).
+- Covers **SNAP plus Minnesota's state-funded food benefit** (for people who don't qualify for federal SNAP).
+- **Publication lag:** monthly figures appear about **3 weeks** after the month ends (the 2026 PDF with data through March was created 2026-04-20). Final full-year versions come out the following January.
 - `snap_2022_2026_clean.csv`: Jan 2022 – **Mar 2026**. `snap_2022_2024_clean.csv` is exactly the same data, 2022–2024 only.
+- `snap_expenditure` = the PDF's **"Net Expenditure"**: benefit dollars paid that calendar month (issued minus cancelled), counted by the month paid, not the benefit month. Benefit money only, no admin costs.
 - Columns: `year`, `month` (written out, e.g. `January`), `county_code`, `county`, `snap_cases` (households), `snap_people`, `snap_expenditure` (dollars of benefits).
 - ⚠️ **These are 87 county *agencies*, not the 87 counties.** Some counties are combined, and tribal nations are listed separately:
   - `MNPRAIRIE` = Dodge + Steele + Waseca
