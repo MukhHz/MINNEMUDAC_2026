@@ -1,7 +1,0 @@
-feature_group,status,reason
-food-shelf lag and rolling features,primary,Computed with shift(1) or earlier within each cutoff.
-county and calendar month,primary,Known before the forecast month.
-lagged reporting-site coverage,primary,Only prior-month counts are used; same-month coverage is prohibited.
-SNAP,sensitivity only,"Conservative three-month availability lag used, but exact release dates remain unverified."
-poverty and MMG,excluded,No consistent point-in-time history is available for all three outer August folds.
-"same-month outcomes, coverage, or flags",prohibited,Unknown at the July 31 cutoff and would leak target-month information.

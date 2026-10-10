@@ -28,7 +28,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
 SITE_FILE = ROOT / "Data" / "processed" / "foodshelf_site_month.csv"
-TEMPLATE = ROOT / "Undergraduate_Predictions_Submit.csv"
+TEMPLATE = Path(__file__).resolve().parent / "submission_template.csv"
 OUT_DIR = Path(__file__).resolve().parent
 CUTOFF = pd.Timestamp("2026-07-31")
 TARGET = pd.Timestamp("2026-08-01")

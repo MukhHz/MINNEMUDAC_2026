@@ -163,7 +163,51 @@ def damped_yoy_3m(ctx: ForecastContext, damping: float = 0.5) -> float:
     return float(y.loc[t - pd.DateOffset(years=1)] * (1 + damping * (g - 1)))
 
 
-BASELINES = {"seasonal_naive": seasonal_naive, "damped_yoy_3m": damped_yoy_3m}
+# ---------------- the five models Question 7 requires ----------------
+# Written for any target month; for an August target they are exactly the Q7 definitions.
+def ytd_growth(ctx: ForecastContext) -> float:
+    """Same month last year x year-to-date growth (Jan..cutoff month vs same months last year).
+    For a January target the trailing 12-month growth is used."""
+    y, t = ctx.y, ctx.target_month
+    last = t - pd.DateOffset(months=1)
+    start = pd.Timestamp(last.year, 1, 1) if t.month > 1 else last - pd.DateOffset(months=11)
+    cur = y.loc[start:last].sum()
+    prev = y.loc[start - pd.DateOffset(years=1):last - pd.DateOffset(years=1)].sum()
+    return float(y.loc[t - pd.DateOffset(years=1)] * cur / prev)
+
+
+def aug_jul_ratio(ctx: ForecastContext) -> float:
+    """Last month x median historical (target month / previous month) ratio.
+    For August this is July x the median August/July ratio before the cutoff."""
+    y, t = ctx.y, ctx.target_month
+    ratios = []
+    k = t - pd.DateOffset(years=1)
+    while k - pd.DateOffset(months=1) >= y.index.min():
+        ratios.append(y.loc[k] / y.loc[k - pd.DateOffset(months=1)])
+        k -= pd.DateOffset(years=1)
+    return float(y.loc[t - pd.DateOffset(months=1)] * np.median(ratios))
+
+
+def trend_month_regression(ctx: ForecastContext) -> float:
+    """OLS with a linear trend and month-of-year indicators."""
+    y = ctx.y
+    t = np.arange(len(y))
+    month = y.index.month.to_numpy()
+    X = np.column_stack([np.ones(len(y)), t] + [(month == m).astype(float) for m in range(2, 13)])
+    x_new = np.array([1.0, len(y)] + [float(ctx.target_month.month == m) for m in range(2, 13)])
+    beta, *_ = np.linalg.lstsq(X, y.to_numpy(float), rcond=None)
+    return float(x_new @ beta)
+
+
+def robust_ensemble(ctx: ForecastContext) -> float:
+    """Median of the four models above."""
+    return float(np.median([f(ctx) for f in (seasonal_naive, ytd_growth, aug_jul_ratio,
+                                             trend_month_regression)]))
+
+
+BASELINES = {"seasonal_naive": seasonal_naive, "damped_yoy_3m": damped_yoy_3m,
+             "ytd_growth": ytd_growth, "aug_jul_ratio": aug_jul_ratio,
+             "trend_month_regression": trend_month_regression, "robust_ensemble": robust_ensemble}
 
 if __name__ == "__main__":
     s = evaluate(BASELINES, Path(__file__).parent / "baselines" / "results")

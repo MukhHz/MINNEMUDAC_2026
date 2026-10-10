@@ -44,5 +44,6 @@ MMF selection alone scores better over the whole backtest, mainly because it ada
 | `county_forecast_components.csv` | each county's three component forecasts and the blend |
 | `county_backtest_summary.csv`, `county_backtest_detail.csv` | backtest metrics |
 | `cutoff_check.txt` | cutoff assertions |
+| `submission_template.csv` | blank official template the script fills in |
 
 Statewide sums of the submission: visits 236,300, pounds 12,899,236, individuals 730,575.
