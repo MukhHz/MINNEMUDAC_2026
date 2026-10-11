@@ -7,7 +7,7 @@ Each notebook in `notebooks/` has short notes on every step. The files here expl
 | `01_data_cleaning_mmg.ipynb` | *(to write)* | Feeding America Map the Meal Gap → MN counties 2022–2024 |
 | `02_clean_foodshelf.ipynb` | [02_clean_foodshelf.md](02_clean_foodshelf.md) | Food shelf activity (`org_FSStats`) → clean site-month and county-month files + issues log |
 | `03_clean_rural_share.ipynb` | *(short; notes are in the notebook)* | Census 2020 urban/rural → % rural per county |
-| `05_q5_snap_foodshelf.ipynb` | plan: [q5_plan.md](q5_plan.md) | Q5: SNAP and food shelf use (in progress) |
+| `05_q5_snap_foodshelf.ipynb` | [05_q5_snap_foodshelf.md](05_q5_snap_foodshelf.md) (plan: [q5_plan.md](q5_plan.md)) | Q5: SNAP and food shelf use. Charts in `outputs/q5/` |
 
 When a new notebook is added, add a matching `docs/NN_name.md` and a row here.
 
