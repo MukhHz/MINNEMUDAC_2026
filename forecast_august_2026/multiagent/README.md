@@ -26,7 +26,13 @@ harness (`harness.py`) under the same cutoff rules.
 5. **August seasonality has changed.** The August/July ratio fell from 1.11–1.13 in 2022–23 to 1.03 and 0.92 in 2024–25, so July × ratio models fail.
 6. **Credible models agree closely on August 2026:** visits 234k–244k, pounds 12.7M–12.9M, individuals 725k–759k.
 
-## Recommended forecast (`final_forecast.py` → `final_forecast_aug_2026.csv`)
+> **Update:** the submitted model is now the *county-by-county selection* in
+> `../submission/make_submission.py`. It picks, for each county, the best of these components (plus
+> the recent 3-month mean) based on that county's last 12 months. It lowers county WAPE from about
+> 10.7% to 9.5% / 8.9% / 9.1%; see `../submission/README.md`. The blend below is kept as one of its
+> candidates and as the fallback.
+
+## Statewide blend from this study (`final_forecast.py` → `final_forecast_aug_2026.csv`)
 The recommendation is an equal-weight mean of three model families: seasonal naive, damped 3-month YoY and per-county model selection (`mmf_select_county`).
 No weights are fitted, and each member covers a different failure mode: seasonal anchor, recent drift, and regime adaptation.
 

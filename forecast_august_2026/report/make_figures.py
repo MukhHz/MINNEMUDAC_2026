@@ -27,7 +27,7 @@ AGENT_COLORS = {"baselines": "#555555", "stats": "#1f77b4", "panel_ml": "#2ca02c
                 "deep_foundation": "#9467bd", "structural": "#ff7f0e"}
 
 monthly = load_monthly().set_index("month")
-final = pd.read_csv(FA / "multiagent" / "final_forecast_aug_2026.csv").set_index("metric")
+final = pd.read_csv(FA / "submission" / "statewide_forecast.csv").set_index("metric")
 
 
 def fig_series():
@@ -140,7 +140,7 @@ def fig_county_backtest():
     d = pd.read_csv(FA / "submission" / "county_backtest_detail.csv", parse_dates=["target"])
     d = d[d.protocol == "monthly"]
     fig, axes = plt.subplots(1, 3, figsize=(7.4, 2.5), sharey=True)
-    styles = {"blend": ("black", "-"), "mmf_select": ("#2ca02c", "--"),
+    styles = {"final": ("#d62728", "-"), "blend": ("black", "--"),
               "damped_yoy_3m": ("#ff7f0e", ":"), "seasonal_naive": ("#7f7f7f", "-.")}
     for ax, m in zip(axes, METRICS):
         g = d[d.metric == m].pivot(index="target", columns="model", values="county_wape")

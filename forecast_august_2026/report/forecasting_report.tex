@@ -37,11 +37,16 @@ question, then ran a multi-agent study in which four specialist workflows (stati
 machine learning, deep learning and foundation models, and structural/data-quality) built 101 model
 variants that were all scored by one shared, leakage-safe harness. Many sophisticated models beat
 the seasonal-naive baseline on the historical record, but none did so with statistical significance,
-and an out-of-sample replay of ``pick the best model'' performed worse than simple methods. The
-submitted forecast is therefore an unweighted blend of three robust county-level forecasts (seasonal
-naive, damped year-over-year growth, and per-county local-model selection). It implies statewide
-totals of 236{,}300 visits, 12.90 million pounds, and 730{,}575 individuals, and it reduces
-county-level error relative to seasonal naive by roughly 30\% in rolling backtests.
+and an out-of-sample replay of ``pick the best model'' performed worse than simple methods. We
+therefore built the forecast from a small set of robust county-level methods (seasonal naive,
+damped year-over-year growth, per-county local-model selection, their blend, and a recent
+three-month mean), letting \emph{each county} use the method that tracked it best over the
+previous twelve months. Against the plain blend, this county-by-county selection lowers county-level
+WAPE from 10.7\% to 9.5\% (visits), 10.8\% to 8.9\% (pounds), and 10.6\% to 9.1\% (individuals)
+across 31 rolling one-month-ahead tests, removes systematic under-forecasting, and is
+significantly better in paired tests. The submission implies statewide totals of 237{,}861 visits,
+12.99 million pounds, and 738{,}532 individuals, and it cuts county-level error relative to seasonal
+naive by about 40\%.
 \end{abstract}
 
 \section{Task and information cutoff}
@@ -197,7 +202,7 @@ harness (Figure~\ref{fig:pipeline}).
 \node[box=42mm, fill=violet!12] (a3) at (9.2,-0.6) {Deep learning \& foundation (17)};
 \node[box=42mm, fill=orange!15] (a4) at (9.2,-1.8) {Structural \& data quality (22)};
 \node[box, fill=red!10]    (sel)  at (4.2,-3.4) {Pre-registered rule\\+ online selection check};
-\node[box, fill=blue!10]   (sub)  at (0,-3.4)   {County blend\\submission (87 rows)};
+\node[box, fill=blue!10]   (sub)  at (0,-3.4)   {County-by-county\\submission (87 rows)};
 \draw[->] (data) -- (h);
 \foreach \a in {a1,a2,a3,a4} {\draw[->] (h.east) -- (\a.west);}
 \draw[->] (a4.south) |- (sel.east);
@@ -259,61 +264,81 @@ using damped YoY or seasonal naive, so most of the apparent improvement is selec
 \end{figure}
 
 \section{Final model}
-Given this evidence, we avoided picking a single winner and used an unweighted average of three
-forecasts that fail in different ways:
-\begin{enumerate}
-  \item \textbf{Seasonal naive}, last year's August: a stable seasonal anchor.
-  \item \textbf{Damped YoY}: last August scaled by half of recent three-month growth, which
-        captures drift without extrapolating it.
-  \item \textbf{Per-county local-model selection}: for each county, whichever of five simple local models
-        (seasonal naive, damped YoY, full YoY, recent three-month mean, recent level times last year's
-        seasonal shape) had the lowest error over the six months before the cutoff. This adapts quickly
-        when a county's level shifts.
-\end{enumerate}
-All three are computed for each county from that county's own monthly totals. No weights are
-estimated, so the blend cannot overfit the backtest. The blend was chosen after the results were
-seen, from about six candidate combinations; the fully pre-specified two-model blend (seasonal naive
-+ damped YoY) differs by less than 1\% statewide.
+\subsection{From one recipe to county-by-county selection}
+The study above pointed to simple, robust methods rather than a single sophisticated winner. Our first
+candidate was an unweighted blend of three such forecasts, applied identically to every county:
+seasonal naive (last year's August), damped YoY (last August scaled by half of recent three-month
+growth), and per-county local-model selection (whichever of five simple local models had the lowest
+error over the six months before the cutoff).
+
+Because the submission is scored by county, we then examined where the county errors come from.
+They are concentrated: four counties (Hennepin, Washington, Anoka, Dakota) account for half of all
+absolute error and fifteen for 80\%. The counties forecast worst each had an identifiable site-level
+event, which one recipe for every county handles poorly:
+\begin{itemize}
+  \item \textbf{Mille Lacs.} A new site opened in April 2026 with about 1{,}100 visits per month,
+        roughly tripling the county; seasonal naive still anchors on August 2025 (512 visits).
+  \item \textbf{Rice.} A one-off spike in August 2024 (8.1k vs.\ about 4k normally) became ``last August''
+        for the 2025 forecast.
+  \item \textbf{Scott and Dakota.} Individual sites with temporary jumps or erratic reporting.
+\end{itemize}
+
+We tested four county-tailoring variants under the same cutoff rules: forecasting each site and
+summing to counties, the same with spike-capping, and per-county selection with a 12-month window. The
+best was \textbf{county-by-county selection}, which became the final model. For each county it scores
+five candidates (seasonal naive, damped YoY, local-model selection, the blend, and the recent
+three-month mean) on that county's 12 one-month-ahead forecasts before the cutoff, and uses the
+candidate with the lowest absolute error. All 12 scoring origins lie before the target month. When a
+county has too little history to score all 12 (the August 2023 fold), the blend is used.
+
+For August 2026 the visits forecasts used the recent mean in 33 counties, damped YoY in 21, the
+blend in 14, seasonal naive in 10, and local-model selection in 8. Counties with a recent level
+shift move to the recent mean; for example, Mille Lacs is forecast at 1{,}550 visits (July 2026:
+1{,}623) instead of the blend's 991.
+
+\subsection{County-level validation}
+Table~\ref{tab:metrics} compares the final model with the blend on the full set of standard metrics
+over the 31 monthly origins, and Table~\ref{tab:county} breaks county WAPE down by period.
 
 \begin{table}[H]\centering\small
-\caption{Statewide view of the blend: forecast, empirical 80\% interval, and backtest MAPE (\%).}\label{tab:final}
-\begin{tabular}{lrcrrr}
+\caption{County-level metrics over 31 one-month-ahead origins (Jan 2024--Jul 2026): blend $\rightarrow$ final.}\label{tab:metrics}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccc}
 \toprule
-Outcome & Forecast & 80\% interval & Monthly MAPE & Aug MAPE & Naive Aug MAPE\\
+Metric & Visits & Pounds & Individuals\\
 \midrule
-Visits & 236{,}166 & 227{,}912 -- 260{,}363 & 5.53 & 4.82 & 7.20\\
-Pounds & 12{,}880{,}048 & 12.06M -- 14.21M & 4.70 & 4.15 & 7.03\\
-Individuals & 730{,}569 & 695{,}031 -- 811{,}501 & 5.78 & 6.41 & 10.32\\
+WAPE (\%) & 10.67 $\rightarrow$ \best{9.51} & 10.75 $\rightarrow$ \best{8.91} & 10.64 $\rightarrow$ \best{9.13}\\
+County MAPE (\%) & 15.37 $\rightarrow$ \best{13.62} & 20.28 $\rightarrow$ \best{17.36} & 15.46 $\rightarrow$ \best{13.76}\\
+Median APE (\%) & 9.71 $\rightarrow$ \best{8.42} & 10.93 $\rightarrow$ \best{9.80} & 10.11 $\rightarrow$ \best{9.10}\\
+MAE & 306 $\rightarrow$ \best{272} & 15{,}958 $\rightarrow$ \best{13{,}214} & 941 $\rightarrow$ \best{807}\\
+RMSE & 1{,}057 $\rightarrow$ \best{970} & 46{,}939 $\rightarrow$ \best{39{,}524} & 3{,}222 $\rightarrow$ \best{2{,}775}\\
+Bias (\%) & $-3.0$ $\rightarrow$ \best{$-0.5$} & $-1.2$ $\rightarrow$ \best{$+0.1$} & $-2.7$ $\rightarrow$ \best{$+0.1$}\\
+Statewide APE (\%) & 5.51 $\rightarrow$ \best{4.79} & 4.72 $\rightarrow$ \best{3.71} & 5.74 $\rightarrow$ \best{4.73}\\
+\midrule
+Months final better & 21 / 31 & 24 / 31 & 19 / 31\\
+Wilcoxon $p$ (WAPE) & 0.036 & $<0.001$ & 0.006\\
 \bottomrule
 \end{tabular}
 \end{table}
-\noindent The intervals are empirical quantiles of the blend's signed errors over the 31 monthly origins.
-They are skewed upward because the 2024 settling period produced several under-forecasts.
-
-\subsection{County-level validation}
-The submission is scored by county, so we repeated the backtest at county level
-(Table~\ref{tab:county}, Figure~\ref{fig:county}).
 
 \begin{table}[H]\centering\small
-\caption{County-level WAPE (\%). Monthly columns are Protocol B; ``2026'' covers January--July 2026 only.}\label{tab:county}
-\begin{tabular}{llrrr}
+\caption{County-level WAPE (\%) by period. Monthly columns are Protocol B; ``2026'' covers January--July 2026 only.}\label{tab:county}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrr}
 \toprule
-Outcome & Model & Aug 2023--25 & Monthly 2024--26 & Monthly 2026\\
+Outcome & Model & Aug 2023 & Aug 2024 & Aug 2025 & Monthly 2024--26 & Monthly 2026\\
 \midrule
-Visits & \textbf{Blend (submitted)} & 11.5 & 10.7 & \best{12.3}\\
- & Per-county selection only & \best{8.0} & \best{9.7} & 12.7\\
- & Damped YoY & 12.5 & 10.8 & 12.2\\
- & Seasonal naive & 18.8 & 15.3 & 13.6\\
+Visits & \textbf{Final (submitted)} & 20.7 & 8.0 & \best{6.1} & \best{9.5} & 12.3\\
+ & Blend & 20.7 & \best{7.4} & 6.6 & 10.7 & 12.3\\
+ & Seasonal naive & 36.6 & 10.5 & 9.4 & 15.3 & 13.6\\
 \midrule
-Pounds & \textbf{Blend (submitted)} & 12.0 & 10.8 & \best{10.4}\\
- & Per-county selection only & \best{9.8} & \best{9.4} & 11.1\\
- & Damped YoY & 12.8 & 11.5 & 10.7\\
- & Seasonal naive & 15.8 & 14.5 & 11.3\\
+Pounds & \textbf{Final (submitted)} & 14.3 & \best{7.9} & \best{10.5} & \best{8.9} & 10.4\\
+ & Blend & 14.3 & 10.2 & 11.5 & 10.8 & 10.4\\
+ & Seasonal naive & 20.8 & 11.8 & 14.9 & 14.5 & 11.3\\
 \midrule
-Individuals & \textbf{Blend (submitted)} & 11.3 & 10.6 & \best{11.7}\\
- & Per-county selection only & \best{6.6} & \best{9.4} & 12.6\\
- & Damped YoY & 12.5 & 10.8 & 11.6\\
- & Seasonal naive & 17.9 & 15.4 & 13.0\\
+Individuals & \textbf{Final (submitted)} & 20.3 & 8.1 & \best{4.1} & \best{9.1} & 11.7\\
+ & Blend & 20.3 & \best{7.5} & 6.2 & 10.6 & 11.7\\
+ & Seasonal naive & 34.3 & 10.1 & 9.3 & 15.4 & 13.0\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -323,16 +348,34 @@ Individuals & \textbf{Blend (submitted)} & 11.3 & 10.6 & \best{11.7}\\
 \caption{County-level WAPE over the monthly backtest (three-month rolling mean).}\label{fig:county}
 \end{figure}
 
-\noindent Per-county selection alone has the lowest error over the full backtest, but most of that
-advantage comes from adapting faster after the 2022--23 ramp-up. In 2026, the stable period most like
-August 2026, the blend beats it for all three outcomes, so we submit the blend as the more robust
-choice. Both improve substantially on seasonal naive.
+\noindent The final model improves every metric in Table~\ref{tab:metrics}, removes the blend's
+systematic under-forecasting, and is significantly better in paired tests. It ties the blend in
+2026 and is slightly worse in the August 2024 fold for visits and individuals ($+0.6$ points).
+Because it was chosen from four variants after seeing their scores, its advantage is somewhat
+optimistic; after a correction for the four comparisons, pounds and individuals remain significant
+and visits becomes borderline ($p\approx0.14$). Relative to seasonal naive, the final model reduces
+county error by about 40\% (the blend by about 30\%).
 
 \subsection{Submitted forecast}
-The 87-row file \texttt{Undergraduate\_}\allowbreak\texttt{Predictions\_Submit.csv} sums to 236{,}300 visits, 12{,}899{,}236
-pounds, and 730{,}575 individuals statewide. These totals differ slightly from Table~\ref{tab:final}
-because the growth and selection components are computed per county and then summed.
-Figure~\ref{fig:counties} compares the fifteen largest counties with August 2025.
+The 87-row file \texttt{Undergraduate\_}\allowbreak\texttt{Predictions\_Submit.csv} sums to the
+statewide totals in Table~\ref{tab:final}. In the August 2023/2024/2025 backtests, the summed county
+forecasts were within 10.8/1.4/3.8\% of the statewide actual for visits, 10.5/1.0/1.9\% for pounds,
+and 15.6/1.2/1.6\% for individuals. Figure~\ref{fig:counties} compares the fifteen largest counties
+with August 2025.
+
+\begin{table}[H]\centering\small
+\caption{Statewide sums of the submission with empirical 80\% ranges (quantiles of the final model's
+signed statewide errors over the 31 monthly origins).}\label{tab:final}
+\begin{tabular}{lrc}
+\toprule
+Outcome & August 2026 forecast & 80\% range\\
+\midrule
+Visits & 237{,}861 & 221{,}209 -- 258{,}297\\
+Pounds & 12{,}994{,}439 & 12{,}186{,}624 -- 13{,}615{,}187\\
+Individuals & 738{,}532 & 696{,}924 -- 802{,}298\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{figure}[H]\centering
 \includegraphics[width=0.75\textwidth]{top_counties.pdf}
@@ -345,8 +388,8 @@ Figure~\ref{fig:counties} compares the fifteen largest counties with August 2025
         We add 31 monthly origins as a check, but those are not August-specific.
   \item With 101 variants tested, small differences are within noise; our recommendation relies on
         robustness rather than on the single best score.
-  \item The blend was selected after looking at results, from a small set of candidate combinations.
-        The pre-specified alternative is reported for transparency.
+  \item The blend and the county-by-county selection were each chosen after looking at results, from
+        small sets of candidates. All candidates and their scores are reported for transparency.
   \item The data are a single snapshot. Later revisions to July 2026 reports cannot be observed,
         although every completeness diagnostic was normal.
   \item No external drivers (for example SNAP policy changes or prices) are included, because their

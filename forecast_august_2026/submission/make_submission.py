@@ -1,15 +1,20 @@
 """County-level August 2026 forecast for the MinneMUDAC undergraduate submission.
 
-Model (selected in ../multiagent, see ../multiagent/README.md): for every county,
-the equal-weight mean of three local forecasts built from that county's
-monthly totals (sum of its food-shelf sites):
+Final model: county-by-county selection.  Each county uses whichever of five
+candidate forecasts had the lowest absolute error on that county over the 12
+one-step origins before the cutoff:
 
-  1. seasonal naive      : the county's August of the previous year
-  2. damped 3-month YoY  : last August x (1 + 0.5 x (recent-3-month YoY growth - 1))
-  3. MMF local selection : per county, whichever of {seasonal naive, damped YoY,
-                           full YoY, recent 3-month mean, recent level x last-year
-                           seasonal shape} had the lowest absolute error over the
-                           last 6 one-step origins before the cutoff
+  1. seasonal naive      : the county's same month last year
+  2. damped 3-month YoY  : last year x (1 + 0.5 x (recent-3-month YoY growth - 1))
+  3. MMF local selection : whichever of {seasonal naive, damped YoY, full YoY,
+                           recent 3-month mean, recent level x last-year seasonal
+                           shape} had the lowest error over the last 6 origins
+  4. blend               : equal-weight mean of 1-3 (the earlier submitted model,
+                           chosen in ../multiagent)
+  5. recent 3-month mean
+
+When a county has too little history to score the candidates (fewer than 27
+months, e.g. the August 2023 backtest fold), the blend is used.
 
 Information cutoff: July 31, 2026.  The script refuses to run if the source holds
 any later month, and every backtest fold is built only from months before its target.
@@ -78,6 +83,8 @@ def recent_mean(Y, i, w=3):
 
 
 def seasonal_level(Y, i):
+    if i < 15:  # no last-year shape available yet -> neutral shape (recent level only)
+        return Y[i - 3:i].mean(0)
     den = Y[i - 15:i - 12].mean(0)
     with np.errstate(divide="ignore", invalid="ignore"):
         shape = np.clip(np.where(den > 0, Y[i - 12] / den, 1.0), 0.5, 2.0)
@@ -99,14 +106,45 @@ def mmf_select(Y, i):
 
 
 MODELS = {"seasonal_naive": snaive, "damped_yoy_3m": damped, "mmf_select": mmf_select}
+N_SELECT = 12   # inner origins used by the county-by-county selection (fixed a priori)
+
+
+def blend(Y, i):
+    return np.mean([f(Y, i) for f in MODELS.values()], axis=0)
+
+
+SELECT_CANDIDATES = {"seasonal_naive": snaive, "damped_yoy_3m": damped, "mmf_select": mmf_select,
+                     "blend": blend, "recent_mean": recent_mean}
+
+
+def county_select(Y, i):
+    """Per county, the candidate with the lowest absolute error over the last
+    N_SELECT one-step origins (all strictly before row i).  Returns forecasts
+    and the chosen candidate name per county; falls back to the blend when the
+    history is too short to score every origin."""
+    names = list(SELECT_CANDIDATES)
+    if i - N_SELECT < 12:
+        return blend(Y, i), np.array(["blend (fallback)"] * Y.shape[1])
+    err = np.zeros((len(names), Y.shape[1]))
+    for j in range(i - N_SELECT, i):
+        for c, f in enumerate(SELECT_CANDIDATES.values()):
+            err[c] += np.abs(f(Y, j) - Y[j])
+    best = err.argmin(0)
+    fc = np.stack([f(Y, i) for f in SELECT_CANDIDATES.values()])
+    return fc[best, np.arange(Y.shape[1])], np.array(names)[best]
 
 
 def forecast(site, metric, target):
+    """All component forecasts per county; column 'final' is the submitted model."""
     Y, counties = county_panel(site, metric, target)
     i = len(Y)
-    parts = {name: f(Y, i) for name, f in MODELS.items()}
-    parts["blend"] = np.mean([parts[n] for n in MODELS], axis=0)
-    return pd.DataFrame(parts, index=counties).clip(lower=0)
+    with np.errstate(divide="ignore", invalid="ignore"):
+        parts = {name: f(Y, i) for name, f in MODELS.items()}
+        parts["blend"] = np.mean([parts[n] for n in MODELS], axis=0)
+        parts["final"], choice = county_select(Y, i)
+    out = pd.DataFrame(parts, index=counties).clip(lower=0)
+    out["final_choice"] = choice
+    return out
 
 
 # ---------------------------------------------------------------- backtest
@@ -120,15 +158,18 @@ def backtest(site) -> pd.DataFrame:
             # actuals looked up only after the forecast exists
             act = (site[site["month"] == t].groupby("county_key")[metric].sum()
                    .reindex(fc.index).fillna(0.0))
-            for model in fc.columns:
+            for model in fc.columns.drop("final_choice"):
                 e = fc[model] - act
                 pos = act > 0
                 rows.append(dict(protocol=protocol, target=t.date(), metric=metric, model=model,
                                  county_wape=e.abs().sum() / act.sum(),
                                  county_mape=(e[pos].abs() / act[pos]).mean(),
                                  county_median_ape=(e[pos].abs() / act[pos]).median(),
+                                 county_mae=float(e.abs().mean()),
                                  county_rmse=float(np.sqrt((e ** 2).mean())),
-                                 state_ape=abs(fc[model].sum() / act.sum() - 1)))
+                                 county_bias=e.sum() / act.sum(),
+                                 state_ape=abs(fc[model].sum() / act.sum() - 1),
+                                 state_actual_over_pred=act.sum() / fc[model].sum() - 1))
     return pd.DataFrame(rows)
 
 
@@ -142,7 +183,8 @@ def main() -> None:
     bt = backtest(site)
     bt.to_csv(OUT_DIR / "county_backtest_detail.csv", index=False)
     summary = (bt.groupby(["metric", "model", "protocol"])
-               [["county_wape", "county_mape", "county_median_ape", "county_rmse", "state_ape"]]
+               [["county_wape", "county_mape", "county_median_ape", "county_mae", "county_rmse",
+                 "county_bias", "state_ape"]]
                .mean().round(4).reset_index())
     summary.to_csv(OUT_DIR / "county_backtest_summary.csv", index=False)
 
@@ -155,9 +197,23 @@ def main() -> None:
         fc = forecast(site, metric, TARGET)
         detail.append(fc.add_prefix(f"{metric}_"))
         # Wilkin has no food-shelf site in the data -> 0 predicted activity
-        template[col] = key.map(fc["blend"]).fillna(0.0).round().astype(int)
+        template[col] = key.map(fc["final"]).fillna(0.0).round().astype(int)
     template["YourTeamID"] = args.team_id
     pd.concat(detail, axis=1).round(1).to_csv(OUT_DIR / "county_forecast_components.csv")
+    print("County-by-county choices for Aug 2026:")
+    for d, metric in zip(detail, COLUMNS.values()):
+        print(f"  {metric:12s}", d[f"{metric}_final_choice"].value_counts().to_dict())
+
+    # statewide totals with an empirical 80% range from the final model's monthly backtest errors
+    state = []
+    for col, metric in COLUMNS.items():
+        e = bt[(bt.protocol == "monthly") & (bt.metric == metric) & (bt.model == "final")]
+        e = e["state_actual_over_pred"]
+        total = template[col].sum()
+        state.append(dict(metric=metric, forecast=int(total),
+                          lo80=round(total * (1 + e.quantile(0.10))),
+                          hi80=round(total * (1 + e.quantile(0.90)))))
+    pd.DataFrame(state).to_csv(OUT_DIR / "statewide_forecast.csv", index=False)
 
     missing = sorted(set(template.loc[~key.isin(fc.index), "County"]))
     unused = sorted(set(fc.index) - set(key))
