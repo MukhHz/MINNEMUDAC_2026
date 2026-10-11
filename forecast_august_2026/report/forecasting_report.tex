@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{array}
 \usepackage{float}
 \usepackage{amsmath}
 \usepackage[table]{xcolor}
@@ -382,6 +383,34 @@ Individuals & 738{,}532 & 696{,}924 -- 802{,}298\\
 \caption{Fifteen largest counties: August 2026 visit forecast vs.\ August 2025 actual.}\label{fig:counties}
 \end{figure}
 
+\section{External predictors tested}
+We also tested whether external indicators could anticipate county-level changes. Each was
+evaluated in two ways: applied as a ratio to seasonal naive, and offered as an extra candidate in the
+county-by-county selection so that a county would use it only where it had worked. Every forecast used
+only predictor values that would have been published before its target month
+(Table~\ref{tab:external}).
+
+\begin{table}[H]\centering\small
+\caption{External predictors (county WAPE over 31 monthly origins unless noted; visits / pounds / individuals).}\label{tab:external}
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{5.2cm}c>{\raggedright\arraybackslash}X}
+\toprule
+Predictor & Lag & Result\\
+\midrule
+None (final model) & -- & \textbf{9.51 / 8.91 / 9.13}\\
+MN county SNAP enrolment (DHS) & 5 mo & With SNAP candidate: 9.49 / 8.81 / 9.11; wins about half the months, $p\approx0.8$. As a ratio: worse than seasonal naive.\\
+MN DHS SNAP dashboard: persons, inverse persons, inverse benefit per person & 2 / 4 mo & No gain: 9.53--9.56 / 8.93--9.00 / 9.11--9.14; pounds significantly worse at lag 2 ($p=0.014$).\\
+Incoming calls (statewide, effect fitted on past data only) & 2 mo & Statewide MAPE 5.6 / 5.5 / 6.2\% vs.\ 5.4 / 3.7 / 5.5\% for damped YoY.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\noindent None improved the forecast. SNAP enrolment changes by a few percent a year, and the
+correlation between county SNAP growth and county food-shelf growth is essentially zero, whereas county
+food-shelf changes are driven by site-level events. The one large SNAP shock in the sample, the end of
+pandemic emergency allotments in 2023 (Minnesota benefit per person fell 32\%), coincides with the
+food-shelf surge but occurred only once, so its effect cannot be estimated reliably.
+
 \section{Limitations}
 \begin{itemize}
   \item There are only three historical August holdouts, and the first lies in a different regime.
@@ -392,8 +421,11 @@ Individuals & 738{,}532 & 696{,}924 -- 802{,}298\\
         small sets of candidates. All candidates and their scores are reported for transparency.
   \item The data are a single snapshot. Later revisions to July 2026 reports cannot be observed,
         although every completeness diagnostic was normal.
-  \item No external drivers (for example SNAP policy changes or prices) are included, because their
-        availability before the cutoff could not be verified.
+  \item The model uses food-shelf history only; external predictors were tested and rejected
+        (Table~\ref{tab:external}). It therefore cannot anticipate shocks that have not yet appeared in
+        food-shelf data. National SNAP participation fell about 13\% year over year by mid-2026 (Minnesota
+        about 4\%), yet Minnesota food-shelf visits through July 2026 show no corresponding rise. If reduced
+        SNAP access shifts demand to food shelves with a delay, August 2026 activity could exceed the forecast.
 \end{itemize}
 
 \section{Reproducibility}
@@ -407,7 +439,9 @@ Command & Output\\
 \texttt{python multiagent/<agent>/run.py} & each agent's predictions and \texttt{REPORT.md}\\
 \texttt{python multiagent/combine.py} & pooled leaderboards and pre-registered selection\\
 \texttt{python multiagent/honest\_selection.py} & out-of-sample selection replay\\
-\texttt{python submission/make\_submission.py --team-id ID} & county backtest and the submission file\\
+\texttt{python submission/make\_submission.py --team-id ID} & final model, county backtest, submission file\\
+\texttt{python experiments/county\_tailoring.py} & county-tailoring comparison (Tables~\ref{tab:metrics}--\ref{tab:county})\\
+\texttt{python experiments/external\_predictors.py} & SNAP and call predictor tests (Table~\ref{tab:external})\\
 \texttt{python report/make\_figures.py} & all figures in this report\\
 \bottomrule
 \end{tabularx}

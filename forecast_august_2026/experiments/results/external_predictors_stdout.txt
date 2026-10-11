@@ -1,0 +1,61 @@
+SNAP (repo county file)
+ period                            Aug2023  Aug2024  Aug2025  mo2024  mo2025  mo2026  monthly_all
+metric      model                                                                               
+individuals final_current           20.30     8.09     4.11    9.10    7.66   11.68         9.13
+            final_plus_snap_lag5    20.30     8.10     4.17    9.10    7.58   11.74         9.11
+            naive_x_persons_lag5    29.69    12.77     9.77   20.84   12.81   12.65        15.88
+pounds      final_current           14.30     7.87    10.52    8.65    8.33   10.36         8.91
+            final_plus_snap_lag5    14.30     7.94    10.52    8.65    8.34    9.90         8.81
+            naive_x_persons_lag5    16.47    12.91    14.04   18.87   12.79   11.08        14.76
+visits      final_current           20.67     8.00     6.11    8.54    8.82   12.32         9.51
+            final_plus_snap_lag5    20.67     8.04     6.09    8.55    8.82   12.26         9.49
+            naive_x_persons_lag5    32.59    12.89    10.19   19.62   13.73   12.86        15.82 
+
+SNAP dashboard
+ period                                           Aug2023  Aug2024  Aug2025  mo2024  mo2025  mo2026  monthly_all
+metric      model                                                                                              
+individuals final_current                          20.30     8.09     4.11    9.10    7.66   11.68         9.13
+            final_plus_snap_lag2                   20.30     8.01     4.11    9.20    7.69   11.49         9.13
+            final_plus_snap_lag4                   20.30     8.13     4.17    9.22    7.70   11.51         9.15
+            naive_x_inv_benefit_per_person_lag2    23.71    12.75     9.34   18.40   12.47   13.21        14.93
+            naive_x_inv_benefit_per_person_lag4    32.14    34.68     9.22   21.76   12.82   13.11        16.35
+            naive_x_inv_persons_lag2               35.99    10.86     9.15   19.10   12.21   13.53        15.18
+            naive_x_inv_persons_lag4               37.68    11.40     9.39   19.60   12.20   13.81        15.43
+            naive_x_persons_lag2                   32.50    10.61     9.77   21.50   12.68   13.08        16.19
+            naive_x_persons_lag4                   30.62    11.84     9.77   21.08   12.78   12.69        15.97
+pounds      final_current                          14.30     7.87    10.52    8.65    8.33   10.36         8.91
+            final_plus_snap_lag2                   14.30     7.87    10.51    8.68    8.42   10.59         9.01
+            final_plus_snap_lag4                   14.30     8.07    10.47    8.69    8.35   10.32         8.93
+            naive_x_inv_benefit_per_person_lag2    21.38    12.35    15.11   21.20   12.57   11.50        15.67
+            naive_x_inv_benefit_per_person_lag4    19.40    38.49    14.63   25.35   12.38   11.51        17.20
+            naive_x_inv_persons_lag2               23.25    12.62    15.25   17.18   13.12   12.31        14.51
+            naive_x_inv_persons_lag4               24.94    14.06    15.53   17.71   13.22   12.37        14.77
+            naive_x_persons_lag2                   19.02    11.95    14.77   19.43   12.79   11.53        15.08
+            naive_x_persons_lag4                   17.17    12.56    14.38   19.10   12.75   11.19        14.85
+visits      final_current                          20.67     8.00     6.11    8.54    8.82   12.32         9.51
+            final_plus_snap_lag2                   20.67     8.13     6.14    8.62    8.89   12.11         9.51
+            final_plus_snap_lag4                   20.67     8.03     6.22    8.73    8.82   12.14         9.53
+            naive_x_inv_benefit_per_person_lag2    30.54    13.53     9.02   18.97   12.94   13.50        15.40
+            naive_x_inv_benefit_per_person_lag4    34.89    35.17     9.36   22.63   13.40   13.53        17.00
+            naive_x_inv_persons_lag2               39.18    11.43     8.84   17.67   12.41   14.82        14.99
+            naive_x_inv_persons_lag4               40.57    11.90     8.98   18.14   12.31   14.73        15.12
+            naive_x_persons_lag2                   34.87    10.82    10.28   20.21   13.54   13.29        16.06
+            naive_x_persons_lag4                   33.22    11.96    10.21   19.82   13.66   12.91        15.88 
+
+Incoming calls, statewide MAPE (%), 17 origins Mar 2025 - Jul 2026
+ metric                 individuals  pounds  visits
+model                                             
+calls_damped_lag2             9.20    7.47   10.68
+calls_regression_lag2         6.19    5.50    5.59
+damped_yoy                    5.47    3.73    5.43
+seasonal_naive                5.08    4.21    6.05 
+
+snap_county_repo lag5 visits       final+SNAP vs final: better 13, worse 15; mean -0.015 pts; p=0.779
+snap_county_repo lag5 pounds       final+SNAP vs final: better 13, worse 17; mean -0.099 pts; p=0.824
+snap_county_repo lag5 individuals  final+SNAP vs final: better 15, worse 16; mean -0.023 pts; p=0.765
+snap_dashboard lag2 visits       final+SNAP vs final: better 14, worse 17; mean +0.009 pts; p=0.636
+snap_dashboard lag2 pounds       final+SNAP vs final: better 10, worse 21; mean +0.097 pts; p=0.014
+snap_dashboard lag2 individuals  final+SNAP vs final: better 10, worse 21; mean +0.007 pts; p=0.055
+snap_dashboard lag4 visits       final+SNAP vs final: better 13, worse 18; mean +0.028 pts; p=0.410
+snap_dashboard lag4 pounds       final+SNAP vs final: better 13, worse 18; mean +0.015 pts; p=0.111
+snap_dashboard lag4 individuals  final+SNAP vs final: better 11, worse 20; mean +0.021 pts; p=0.076

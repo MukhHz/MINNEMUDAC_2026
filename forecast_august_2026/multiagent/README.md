@@ -26,23 +26,10 @@ harness (`harness.py`) under the same cutoff rules.
 5. **August seasonality has changed.** The August/July ratio fell from 1.11–1.13 in 2022–23 to 1.03 and 0.92 in 2024–25, so July × ratio models fail.
 6. **Credible models agree closely on August 2026:** visits 234k–244k, pounds 12.7M–12.9M, individuals 725k–759k.
 
-> **Update:** the submitted model is now the *county-by-county selection* in
-> `../submission/make_submission.py`. It picks, for each county, the best of these components (plus
-> the recent 3-month mean) based on that county's last 12 months. It lowers county WAPE from about
-> 10.7% to 9.5% / 8.9% / 9.1%; see `../submission/README.md`. The blend below is kept as one of its
-> candidates and as the fallback.
+## Outcome of this study
+The study showed that no single advanced model reliably beats simple methods. It identified three robust components: seasonal naive, damped 3-month YoY and per-county local-model selection (MMF).
+An earlier statewide blend of these three was superseded and removed.
 
-## Statewide blend from this study (`final_forecast.py` → `final_forecast_aug_2026.csv`)
-The recommendation is an equal-weight mean of three model families: seasonal naive, damped 3-month YoY and per-county model selection (`mmf_select_county`).
-No weights are fitted, and each member covers a different failure mode: seasonal anchor, recent drift, and regime adaptation.
-
-| Metric | Forecast | 80% interval | Monthly MAPE | Aug MAPE (2023 / 2024 / 2025) |
-|---|---:|---:|---:|---|
-| Visits | 236,166 | 227,912 – 260,363 | 5.5% | 4.8% (10.6 / 0.2 / 3.6) |
-| Pounds | 12,880,048 | 12.06M – 14.21M | 4.7% | 4.2% (10.7 / 1.3 / 0.5) |
-| Individuals | 730,569 | 695,031 – 811,501 | 5.8% | 6.4% (15.6 / 1.6 / 2.0) |
-
-Seasonal naive scores 8.5 / 6.6 / 8.8% monthly MAPE and 7.2 / 7.0 / 10.3% August MAPE (visits / pounds / individuals).
-The intervals are skewed upward because the backtest includes the 2024 period, when the series was still settling after the ramp-up.
-
-**Caveat:** this combination was chosen after looking at the results, from about six candidate hedges. Gains over the fully pre-specified seasonal naive + damped YoY hedge (237,393 / 12,836,048 / 726,251) are within noise. Both hedges are within 2% of the seasonal-naive baselines.
+**The final submitted model** is the *county-by-county selection* in `../submission/make_submission.py`. For each county it picks whichever of those components (plus their blend and the recent 3-month mean) forecast that county best over the previous 12 months.
+- It lowers county WAPE from about 10.7% to **9.5% / 8.9% / 9.1%** (visits / pounds / individuals), significantly (paired Wilcoxon p = 0.036 / <0.001 / 0.006).
+- See `../submission/README.md` and `../experiments/`.

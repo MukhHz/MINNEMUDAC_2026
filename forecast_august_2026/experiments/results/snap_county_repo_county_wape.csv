@@ -1,0 +1,10 @@
+metric,model,Aug2023,Aug2024,Aug2025,mo2024,mo2025,mo2026,monthly_all
+individuals,final_current,20.3,8.09,4.11,9.1,7.66,11.68,9.13
+individuals,final_plus_snap_lag5,20.3,8.1,4.17,9.1,7.58,11.74,9.11
+individuals,naive_x_persons_lag5,29.69,12.77,9.77,20.84,12.81,12.65,15.88
+pounds,final_current,14.3,7.87,10.52,8.65,8.33,10.36,8.91
+pounds,final_plus_snap_lag5,14.3,7.94,10.52,8.65,8.34,9.9,8.81
+pounds,naive_x_persons_lag5,16.47,12.91,14.04,18.87,12.79,11.08,14.76
+visits,final_current,20.67,8.0,6.11,8.54,8.82,12.32,9.51
+visits,final_plus_snap_lag5,20.67,8.04,6.09,8.55,8.82,12.26,9.49
+visits,naive_x_persons_lag5,32.59,12.89,10.19,19.62,13.73,12.86,15.82

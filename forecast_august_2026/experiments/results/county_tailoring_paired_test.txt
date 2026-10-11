@@ -1,0 +1,3 @@
+visits       final better in 21/31 months; mean diff -1.17 pts; Wilcoxon p=0.036
+pounds       final better in 24/31 months; mean diff -1.84 pts; Wilcoxon p=0.000
+individuals  final better in 19/31 months; mean diff -1.52 pts; Wilcoxon p=0.006

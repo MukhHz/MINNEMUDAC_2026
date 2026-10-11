@@ -1,0 +1,5 @@
+model,individuals,pounds,visits
+calls_damped_lag2,9.2,7.47,10.68
+calls_regression_lag2,6.19,5.5,5.59
+damped_yoy,5.47,3.73,5.43
+seasonal_naive,5.08,4.21,6.05

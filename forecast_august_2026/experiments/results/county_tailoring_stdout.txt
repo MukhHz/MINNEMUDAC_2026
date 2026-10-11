@@ -1,0 +1,19 @@
+County WAPE (%) by period
+ period                                 Aug2023  Aug2024  Aug2025  mo2024  mo2025  mo2026  monthly_all
+metric      model                                                                                    
+individuals A_blend_all_counties         20.30     7.51     6.22   11.81    8.84   11.74        10.64
+            B_site_level_blend           19.59     8.57     6.20   10.82    8.69   11.52        10.16
+            C_site_level_blend_capped    21.22     8.35     7.12   10.99    8.80   11.65        10.29
+            D_county_by_county_FINAL     20.30     8.09     4.11    9.10    7.66   11.68         9.13
+pounds      A_blend_all_counties         14.30    10.24    11.53   12.00    9.71   10.41        10.75
+            B_site_level_blend           14.95    10.79    13.97   12.05   11.21   11.18        11.53
+            C_site_level_blend_capped    14.95    10.53    14.23   11.98   11.02   11.30        11.45
+            D_county_by_county_FINAL     14.30     7.87    10.52    8.65    8.33   10.36         8.91
+visits      A_blend_all_counties         20.67     7.37     6.59   11.20    9.20   12.29        10.67
+            B_site_level_blend           16.81     7.85     6.55   10.20    9.22   12.30        10.29
+            C_site_level_blend_capped    18.67     8.24     6.24   10.30    9.44   12.22        10.40
+            D_county_by_county_FINAL     20.67     8.00     6.11    8.54    8.82   12.32         9.51 
+
+visits       final better in 21/31 months; mean diff -1.17 pts; Wilcoxon p=0.036
+pounds       final better in 24/31 months; mean diff -1.84 pts; Wilcoxon p=0.000
+individuals  final better in 19/31 months; mean diff -1.52 pts; Wilcoxon p=0.006

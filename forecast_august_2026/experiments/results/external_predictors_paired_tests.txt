@@ -1,0 +1,9 @@
+snap_county_repo lag5 visits       final+SNAP vs final: better 13, worse 15; mean -0.015 pts; p=0.779
+snap_county_repo lag5 pounds       final+SNAP vs final: better 13, worse 17; mean -0.099 pts; p=0.824
+snap_county_repo lag5 individuals  final+SNAP vs final: better 15, worse 16; mean -0.023 pts; p=0.765
+snap_dashboard lag2 visits       final+SNAP vs final: better 14, worse 17; mean +0.009 pts; p=0.636
+snap_dashboard lag2 pounds       final+SNAP vs final: better 10, worse 21; mean +0.097 pts; p=0.014
+snap_dashboard lag2 individuals  final+SNAP vs final: better 10, worse 21; mean +0.007 pts; p=0.055
+snap_dashboard lag4 visits       final+SNAP vs final: better 13, worse 18; mean +0.028 pts; p=0.410
+snap_dashboard lag4 pounds       final+SNAP vs final: better 13, worse 18; mean +0.015 pts; p=0.111
+snap_dashboard lag4 individuals  final+SNAP vs final: better 11, worse 20; mean +0.021 pts; p=0.076
