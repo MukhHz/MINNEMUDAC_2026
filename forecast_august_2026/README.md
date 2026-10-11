@@ -11,7 +11,7 @@ This is the isolated prediction pipeline. Information cutoff: **July 31, 2026**,
 | `submission/` | **The final model**, its county backtest and the filled `Undergraduate_Predictions_Submit.csv`. |
 | `multiagent/` | Shared leakage-safe harness, the five required Q7 reference models, and 101 challenger models (statistical, panel ML, deep learning/foundation, structural). Also the selection rule and the out-of-sample selection check. |
 | `experiments/` | The county-tailoring comparison that chose the final model, and the external predictors (SNAP, calls) that were tested and rejected. |
-| `report/` | `forecasting_report.tex` / `.pdf` (full write-up) and `make_figures.py`. |
+| `report/` | `forecasting_report.tex` / `.pdf` (methods and results), `pipeline_flow.tex` / `.pdf` (how the pipeline is structured: stages, scripts, data flow, cutoff checks), and `make_figures.py`. |
 
 Run from this folder:
 
