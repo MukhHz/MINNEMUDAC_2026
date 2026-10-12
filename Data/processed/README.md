@@ -19,6 +19,14 @@ Full explanation of every cleaning decision: `docs/02_clean_foodshelf.md`
 | `rural_share_2020_clean.csv` | 1 county | % of people living in rural areas (Q1 "rural share", Q5, Q6) |
 | `snap_2022_2026_clean.csv` | 1 county **agency**, 1 month | SNAP enrollment and benefits (Q5, also Q1/Q6) |
 | `snap_2022_2024_clean.csv` | 1 county agency, 1 month | Same as above, 2022–2024 only |
+| `organization_clean.csv` | 1 organization | Site type, county, food bank, status, map location (Q6, Q8, joins) |
+| `marketbucks_market_day.csv` | 1 farmers market, 1 market day | SNAP spending at farmers markets (Q5, Q6) |
+| `marketbucks_county_month.csv` | 1 county, 1 month | Same, added up per county (located markets only) |
+| `calls_clean.csv` | 1 helpline contact | Food / SNAP helpline requests by caller county (Q5, Q6) |
+| `calls_county_month.csv` | 1 county, 1 month | Helpline contacts per county per month, Jan 2023 – Jul 2026 |
+| `q1_county_year_mismatch.csv` | 1 county, 1 year | Q1 results: expected vs. actual food shelf activity |
+| `q1_county_mismatch_summary.csv` | 1 county | Q1 results: persistent mismatches, shortlist |
+| `q1_county_profiles.csv` | 1 county | Q1 results: mismatch + county characteristics (distance, rural share, food bank…) |
 
 ⭐ = start here
 
@@ -152,6 +160,51 @@ To double-check a number, open the original Excel files in `Data/ORIGINAL_MMG/` 
 
 ---
 
+## 9. `organization_clean.csv`
+
+- Every partner organization: **1,202 rows**, from `Organization.xlsx`.
+- `org_id` = the raw `__ID`. **Keep the decimals**: `14681` and `14681.1` are different sites. It joins to `site_id` in `foodshelf_site_month.csv` and in the Market Bucks files.
+- `org_group`: `food_shelf`, `farmers_market`, `outreach`, `meal`, `agency` (mostly parent organizations), `food_bank`, `other`, `unknown`.
+- `county` / `fips`: the 87 official counties (city/suburb splits merged; 10 filled from the Census block). **52 records have no county**, mostly farmers markets with no address.
+- `food_bank`: name of the supplying food bank. Matches `foodshelf_site_month.csv` once `*` and ` Inc.` are removed from that file's `food_bank`.
+- `lat` / `lon`: center of the organization's 2020 Census block (the street address was replaced by the block before release). `is_zip_centroid = True` means the location is only the ZIP center. `flag_block_county_differs = True` means the block is in a different county than stated (border towns, office addresses).
+- Also: `status` / `is_active`, `tefap_status`, `supershelf_status`, `findhelp_category`, `zip` (5-digit text), `has_foodshelf_stats`.
+
+---
+
+## 10. `marketbucks_market_day.csv` and `marketbucks_county_month.csv`
+
+- **Market Bucks** lets SNAP users spend EBT at farmers markets and matches each $1 with $1 in Market Bucks (up to $10 per visit). `pb_…` = Produce Bucks (separate incentive); `rc_…` = Ramsey County incentives.
+- `marketbucks_market_day.csv`: **13,294 market days, 155 markets**, Jan 2022 – Jul 2026. Exact duplicate entries removed; several entries for one market day were **added together** (`n_entries`).
+- **Redeemed can be larger than distributed**, because tokens from earlier visits can be spent later. That is not an error.
+- ⚠️ **Use `transactions`, not `customers`.** `customers` is 0 or blank in about half the rows (`flag_customers_unreliable`).
+- ⚠️ **31 markets have no location** (5.6% of market days, 0.9% of SNAP dollars). They are in the market-day file with blank county, but **not** in the county-month file.
+- `marketbucks_county_month.csv`: totals per county per month for located markets (**51 counties**). No row = no Market Bucks activity recorded. Very seasonal (May–October).
+
+---
+
+## 11. `calls_clean.csv` and `calls_county_month.csv`
+
+- The Food Group's **food and SNAP helpline** log: one row per contact (call, voicemail, email, chat, text, or a **SNAP Rx** clinic referral). **49,725 contacts.**
+- `county` / `fips` = the **caller's** county (where they live). `county_status`: `mn_county`, `out_of_state`, `unknown`.
+- `reason_group`: `snap_rx`, `snap_help`, `food_shelf`, `other_food`, `other` (full label in `reason`). `ref_…` columns = True if referred to that destination (food shelf, MNBenefits, county office, meal program…).
+- `calls_county_month.csv`: **all 87 counties × Jan 2023 – Jul 2026**. **0 = no contact logged** that month.
+- ⚠️ **Starts in 2023:** only 41 contacts in 2022.
+- ⚠️ **Twin Cities heavy:** 87% of contacts with a county come from the 7-county metro, largely clinic and WIC referral partners (SNAP Rx). Compare counties per resident, and look at `contacts_snap_rx` separately from people contacting the helpline themselves.
+
+---
+
+## 12. Q1 analysis outputs (`q1_*.csv`)
+
+**Analysis results, not cleaned source data.** Made by `notebooks/q1_need_vs_foodshelf_activity.ipynb`; re-run it to regenerate them. 2022–2024.
+
+- `q1_county_year_mismatch.csv`: per county and year, expected vs. actual activity for each metric (`{metric}_gap` = log2 of actual ÷ expected: +1 = 2×, −1 = half), flags and reporting concerns.
+- `q1_county_mismatch_summary.csv`: per county, persistent mismatch pattern, direction and `priority` (`shortlist` / `second tier`).
+- `q1_county_profiles.csv`: the summary plus county characteristics (distance to nearest food shelf, % nearest in another county, rural share, poverty, vehicle access, SNAP, food bank, commuting) and a cautious `possible_explanation`.
+- Wilkin has no food shelf: it is in each file but not scored.
+
+---
+
 ## How to load
 
 **Python**
@@ -183,4 +236,8 @@ poverty <- readr::read_csv("Data/processed/poverty_2022_2024_clean.csv", col_typ
 - `notebooks/01_data_cleaning_mmg.ipynb`: Map the Meal Gap file
 - `notebooks/02_clean_foodshelf.ipynb`: food shelf files
 - `notebooks/03_clean_rural_share.ipynb`: rural share file
+- `notebooks/04_clean_organization.ipynb`: organization file
+- `notebooks/05_clean_marketbucks.ipynb`: Market Bucks files (run after 04)
+- `notebooks/06_clean_calls.ipynb`: helpline files
+- `notebooks/q1_need_vs_foodshelf_activity.ipynb`: the three `q1_*.csv` analysis outputs
 - Poverty, vehicle access and SNAP files: cleaned by teammates (see each file's data dictionary / source above)
