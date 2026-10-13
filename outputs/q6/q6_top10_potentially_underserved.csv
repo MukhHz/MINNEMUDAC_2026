@@ -1,0 +1,11 @@
+,County,Population,Need pctile,Activity pctile,Div. visits,Div. pounds,Div. individuals,Robust (share of versions),% nearest shelf other county,Flags
+1,Swift,9700,94,12,77,86,77,100%,24,small
+2,Nobles,22000,92,16,79,80,53,94%,16,
+3,Wadena,14300,90,27,63,67,58,100%,15,
+4,Chippewa,12300,85,22,55,71,52,100%,35,
+5,Norman,6300,66,5,63,65,62,100%,8,small
+6,Todd,25800,73,14,62,52,58,100%,22,
+7,Aitkin,16200,98,42,48,69,58,100%,16,
+8,Clearwater,8600,99,47,47,45,52,94%,7,small
+9,Grant,6100,71,20,51,36,57,100%,0,"small, data quality"
+10,Carlton,36700,81,35,43,55,51,100%,5,

@@ -83,7 +83,7 @@ Plan and decisions: `docs/q5_plan.md`. Charts: `outputs/q5/`.
 - **Why not month-to-month changes:** both go up and down with the seasons, which would create a fake "together" link.
 - **Found:**
   - March 2022 → March 2026: SNAP enrollment **−3%**, food shelf visits **+92%**, individuals **+99%**.
-  - Month-by-month link: rho **−0.06** (visits), **+0.07** (individuals), **+0.15** (pounds), all **≈ 0** (p-values 0.4–0.7).
+  - Month-by-month link: rho **−0.06** (visits), **+0.07** (individuals), **+0.15** (pounds), all **≈ 0** (p-values 0.38–0.73).
 - **Meaning:** food shelf visits nearly doubled **while SNAP enrollment barely moved**. Food shelf growth came from something other than SNAP enrollment.
 
 ### A2. Across counties

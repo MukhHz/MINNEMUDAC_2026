@@ -1,0 +1,4853 @@
+{
+ "retrieved": "2026-10-11",
+ "source": "BLS Public Data API v2, https://api.bls.gov/publicAPI/v2/timeseries/data/, startyear 2019, endyear 2026",
+ "cutoff_rule": "Only months <= 2026-07 kept; later months were dropped in memory before saving (MinneMUDAC August-2026 rule).",
+ "series": [
+  {
+   "seriesID": "CUUR0200SAF11",
+   "title": "Midwest food at home (NSA)",
+   "data": [
+    {
+     "year": 2026,
+     "month": 7,
+     "value": "302.475"
+    },
+    {
+     "year": 2026,
+     "month": 6,
+     "value": "302.643"
+    },
+    {
+     "year": 2026,
+     "month": 5,
+     "value": "304.128"
+    },
+    {
+     "year": 2026,
+     "month": 4,
+     "value": "302.196"
+    },
+    {
+     "year": 2026,
+     "month": 3,
+     "value": "300.276"
+    },
+    {
+     "year": 2026,
+     "month": 2,
+     "value": "301.197"
+    },
+    {
+     "year": 2026,
+     "month": 1,
+     "value": "297.340"
+    },
+    {
+     "year": 2025,
+     "month": 12,
+     "value": "296.429"
+    },
+    {
+     "year": 2025,
+     "month": 11,
+     "value": "296.341"
+    },
+    {
+     "year": 2025,
+     "month": 10,
+     "value": "-"
+    },
+    {
+     "year": 2025,
+     "month": 9,
+     "value": "299.475"
+    },
+    {
+     "year": 2025,
+     "month": 8,
+     "value": "298.807"
+    },
+    {
+     "year": 2025,
+     "month": 7,
+     "value": "295.847"
+    },
+    {
+     "year": 2025,
+     "month": 6,
+     "value": "297.298"
+    },
+    {
+     "year": 2025,
+     "month": 5,
+     "value": "295.100"
+    },
+    {
+     "year": 2025,
+     "month": 4,
+     "value": "294.130"
+    },
+    {
+     "year": 2025,
+     "month": 3,
+     "value": "296.054"
+    },
+    {
+     "year": 2025,
+     "month": 2,
+     "value": "293.462"
+    },
+    {
+     "year": 2025,
+     "month": 1,
+     "value": "294.516"
+    },
+    {
+     "year": 2024,
+     "month": 12,
+     "value": "291.229"
+    },
+    {
+     "year": 2024,
+     "month": 11,
+     "value": "292.523"
+    },
+    {
+     "year": 2024,
+     "month": 10,
+     "value": "292.313"
+    },
+    {
+     "year": 2024,
+     "month": 9,
+     "value": "292.066"
+    },
+    {
+     "year": 2024,
+     "month": 8,
+     "value": "290.118"
+    },
+    {
+     "year": 2024,
+     "month": 7,
+     "value": "291.065"
+    },
+    {
+     "year": 2024,
+     "month": 6,
+     "value": "289.560"
+    },
+    {
+     "year": 2024,
+     "month": 5,
+     "value": "289.396"
+    },
+    {
+     "year": 2024,
+     "month": 4,
+     "value": "289.107"
+    },
+    {
+     "year": 2024,
+     "month": 3,
+     "value": "289.478"
+    },
+    {
+     "year": 2024,
+     "month": 2,
+     "value": "289.635"
+    },
+    {
+     "year": 2024,
+     "month": 1,
+     "value": "289.498"
+    },
+    {
+     "year": 2023,
+     "month": 12,
+     "value": "287.002"
+    },
+    {
+     "year": 2023,
+     "month": 11,
+     "value": "286.562"
+    },
+    {
+     "year": 2023,
+     "month": 10,
+     "value": "288.130"
+    },
+    {
+     "year": 2023,
+     "month": 9,
+     "value": "288.729"
+    },
+    {
+     "year": 2023,
+     "month": 8,
+     "value": "288.105"
+    },
+    {
+     "year": 2023,
+     "month": 7,
+     "value": "288.763"
+    },
+    {
+     "year": 2023,
+     "month": 6,
+     "value": "287.256"
+    },
+    {
+     "year": 2023,
+     "month": 5,
+     "value": "288.196"
+    },
+    {
+     "year": 2023,
+     "month": 4,
+     "value": "286.499"
+    },
+    {
+     "year": 2023,
+     "month": 3,
+     "value": "286.052"
+    },
+    {
+     "year": 2023,
+     "month": 2,
+     "value": "286.503"
+    },
+    {
+     "year": 2023,
+     "month": 1,
+     "value": "285.715"
+    },
+    {
+     "year": 2022,
+     "month": 12,
+     "value": "283.100"
+    },
+    {
+     "year": 2022,
+     "month": 11,
+     "value": "282.201"
+    },
+    {
+     "year": 2022,
+     "month": 10,
+     "value": "282.059"
+    },
+    {
+     "year": 2022,
+     "month": 9,
+     "value": "281.284"
+    },
+    {
+     "year": 2022,
+     "month": 8,
+     "value": "280.226"
+    },
+    {
+     "year": 2022,
+     "month": 7,
+     "value": "278.158"
+    },
+    {
+     "year": 2022,
+     "month": 6,
+     "value": "274.159"
+    },
+    {
+     "year": 2022,
+     "month": 5,
+     "value": "271.278"
+    },
+    {
+     "year": 2022,
+     "month": 4,
+     "value": "267.001"
+    },
+    {
+     "year": 2022,
+     "month": 3,
+     "value": "263.145"
+    },
+    {
+     "year": 2022,
+     "month": 2,
+     "value": "258.599"
+    },
+    {
+     "year": 2022,
+     "month": 1,
+     "value": "255.381"
+    },
+    {
+     "year": 2021,
+     "month": 12,
+     "value": "250.622"
+    },
+    {
+     "year": 2021,
+     "month": 11,
+     "value": "249.142"
+    },
+    {
+     "year": 2021,
+     "month": 10,
+     "value": "249.139"
+    },
+    {
+     "year": 2021,
+     "month": 9,
+     "value": "245.802"
+    },
+    {
+     "year": 2021,
+     "month": 8,
+     "value": "243.148"
+    },
+    {
+     "year": 2021,
+     "month": 7,
+     "value": "241.889"
+    },
+    {
+     "year": 2021,
+     "month": 6,
+     "value": "239.911"
+    },
+    {
+     "year": 2021,
+     "month": 5,
+     "value": "238.169"
+    },
+    {
+     "year": 2021,
+     "month": 4,
+     "value": "237.832"
+    },
+    {
+     "year": 2021,
+     "month": 3,
+     "value": "236.421"
+    },
+    {
+     "year": 2021,
+     "month": 2,
+     "value": "235.863"
+    },
+    {
+     "year": 2021,
+     "month": 1,
+     "value": "235.377"
+    },
+    {
+     "year": 2020,
+     "month": 12,
+     "value": "233.262"
+    },
+    {
+     "year": 2020,
+     "month": 11,
+     "value": "232.725"
+    },
+    {
+     "year": 2020,
+     "month": 10,
+     "value": "234.245"
+    },
+    {
+     "year": 2020,
+     "month": 9,
+     "value": "232.725"
+    },
+    {
+     "year": 2020,
+     "month": 8,
+     "value": "234.738"
+    },
+    {
+     "year": 2020,
+     "month": 7,
+     "value": "236.510"
+    },
+    {
+     "year": 2020,
+     "month": 6,
+     "value": "238.991"
+    },
+    {
+     "year": 2020,
+     "month": 5,
+     "value": "238.881"
+    },
+    {
+     "year": 2020,
+     "month": 4,
+     "value": "236.431"
+    },
+    {
+     "year": 2020,
+     "month": 3,
+     "value": "230.242"
+    },
+    {
+     "year": 2020,
+     "month": 2,
+     "value": "229.829"
+    },
+    {
+     "year": 2020,
+     "month": 1,
+     "value": "228.471"
+    },
+    {
+     "year": 2019,
+     "month": 12,
+     "value": "227.074"
+    },
+    {
+     "year": 2019,
+     "month": 11,
+     "value": "227.343"
+    },
+    {
+     "year": 2019,
+     "month": 10,
+     "value": "227.603"
+    },
+    {
+     "year": 2019,
+     "month": 9,
+     "value": "227.677"
+    },
+    {
+     "year": 2019,
+     "month": 8,
+     "value": "227.101"
+    },
+    {
+     "year": 2019,
+     "month": 7,
+     "value": "226.822"
+    },
+    {
+     "year": 2019,
+     "month": 6,
+     "value": "227.950"
+    },
+    {
+     "year": 2019,
+     "month": 5,
+     "value": "228.000"
+    },
+    {
+     "year": 2019,
+     "month": 4,
+     "value": "226.719"
+    },
+    {
+     "year": 2019,
+     "month": 3,
+     "value": "227.372"
+    },
+    {
+     "year": 2019,
+     "month": 2,
+     "value": "228.347"
+    },
+    {
+     "year": 2019,
+     "month": 1,
+     "value": "226.291"
+    }
+   ]
+  },
+  {
+   "seriesID": "CUUR0000SAF11",
+   "title": "U.S. city average food at home (NSA)",
+   "data": [
+    {
+     "year": 2026,
+     "month": 7,
+     "value": "321.643"
+    },
+    {
+     "year": 2026,
+     "month": 6,
+     "value": "321.631"
+    },
+    {
+     "year": 2026,
+     "month": 5,
+     "value": "321.047"
+    },
+    {
+     "year": 2026,
+     "month": 4,
+     "value": "320.859"
+    },
+    {
+     "year": 2026,
+     "month": 3,
+     "value": "318.755"
+    },
+    {
+     "year": 2026,
+     "month": 2,
+     "value": "318.898"
+    },
+    {
+     "year": 2026,
+     "month": 1,
+     "value": "317.431"
+    },
+    {
+     "year": 2025,
+     "month": 12,
+     "value": "315.664"
+    },
+    {
+     "year": 2025,
+     "month": 11,
+     "value": "313.954"
+    },
+    {
+     "year": 2025,
+     "month": 10,
+     "value": "-"
+    },
+    {
+     "year": 2025,
+     "month": 9,
+     "value": "316.042"
+    },
+    {
+     "year": 2025,
+     "month": 8,
+     "value": "314.608"
+    },
+    {
+     "year": 2025,
+     "month": 7,
+     "value": "313.263"
+    },
+    {
+     "year": 2025,
+     "month": 6,
+     "value": "313.028"
+    },
+    {
+     "year": 2025,
+     "month": 5,
+     "value": "312.491"
+    },
+    {
+     "year": 2025,
+     "month": 4,
+     "value": "311.840"
+    },
+    {
+     "year": 2025,
+     "month": 3,
+     "value": "312.815"
+    },
+    {
+     "year": 2025,
+     "month": 2,
+     "value": "311.284"
+    },
+    {
+     "year": 2025,
+     "month": 1,
+     "value": "310.936"
+    },
+    {
+     "year": 2024,
+     "month": 12,
+     "value": "308.380"
+    },
+    {
+     "year": 2024,
+     "month": 11,
+     "value": "307.972"
+    },
+    {
+     "year": 2024,
+     "month": 10,
+     "value": "308.200"
+    },
+    {
+     "year": 2024,
+     "month": 9,
+     "value": "307.767"
+    },
+    {
+     "year": 2024,
+     "month": 8,
+     "value": "306.402"
+    },
+    {
+     "year": 2024,
+     "month": 7,
+     "value": "306.643"
+    },
+    {
+     "year": 2024,
+     "month": 6,
+     "value": "305.752"
+    },
+    {
+     "year": 2024,
+     "month": 5,
+     "value": "305.679"
+    },
+    {
+     "year": 2024,
+     "month": 4,
+     "value": "305.707"
+    },
+    {
+     "year": 2024,
+     "month": 3,
+     "value": "305.426"
+    },
+    {
+     "year": 2024,
+     "month": 2,
+     "value": "305.469"
+    },
+    {
+     "year": 2024,
+     "month": 1,
+     "value": "305.037"
+    },
+    {
+     "year": 2023,
+     "month": 12,
+     "value": "303.005"
+    },
+    {
+     "year": 2023,
+     "month": 11,
+     "value": "303.224"
+    },
+    {
+     "year": 2023,
+     "month": 10,
+     "value": "304.788"
+    },
+    {
+     "year": 2023,
+     "month": 9,
+     "value": "303.925"
+    },
+    {
+     "year": 2023,
+     "month": 8,
+     "value": "303.716"
+    },
+    {
+     "year": 2023,
+     "month": 7,
+     "value": "303.455"
+    },
+    {
+     "year": 2023,
+     "month": 6,
+     "value": "302.335"
+    },
+    {
+     "year": 2023,
+     "month": 5,
+     "value": "302.535"
+    },
+    {
+     "year": 2023,
+     "month": 4,
+     "value": "302.328"
+    },
+    {
+     "year": 2023,
+     "month": 3,
+     "value": "301.918"
+    },
+    {
+     "year": 2023,
+     "month": 2,
+     "value": "302.483"
+    },
+    {
+     "year": 2023,
+     "month": 1,
+     "value": "301.435"
+    },
+    {
+     "year": 2022,
+     "month": 12,
+     "value": "299.089"
+    },
+    {
+     "year": 2022,
+     "month": 11,
+     "value": "298.284"
+    },
+    {
+     "year": 2022,
+     "month": 10,
+     "value": "298.401"
+    },
+    {
+     "year": 2022,
+     "month": 9,
+     "value": "296.771"
+    },
+    {
+     "year": 2022,
+     "month": 8,
+     "value": "295.007"
+    },
+    {
+     "year": 2022,
+     "month": 7,
+     "value": "292.972"
+    },
+    {
+     "year": 2022,
+     "month": 6,
+     "value": "288.884"
+    },
+    {
+     "year": 2022,
+     "month": 5,
+     "value": "285.953"
+    },
+    {
+     "year": 2022,
+     "month": 4,
+     "value": "282.161"
+    },
+    {
+     "year": 2022,
+     "month": 3,
+     "value": "278.612"
+    },
+    {
+     "year": 2022,
+     "month": 2,
+     "value": "274.568"
+    },
+    {
+     "year": 2022,
+     "month": 1,
+     "value": "270.711"
+    },
+    {
+     "year": 2021,
+     "month": 12,
+     "value": "267.555"
+    },
+    {
+     "year": 2021,
+     "month": 11,
+     "value": "266.384"
+    },
+    {
+     "year": 2021,
+     "month": 10,
+     "value": "265.478"
+    },
+    {
+     "year": 2021,
+     "month": 9,
+     "value": "262.695"
+    },
+    {
+     "year": 2021,
+     "month": 8,
+     "value": "259.825"
+    },
+    {
+     "year": 2021,
+     "month": 7,
+     "value": "259.022"
+    },
+    {
+     "year": 2021,
+     "month": 6,
+     "value": "257.412"
+    },
+    {
+     "year": 2021,
+     "month": 5,
+     "value": "255.516"
+    },
+    {
+     "year": 2021,
+     "month": 4,
+     "value": "254.760"
+    },
+    {
+     "year": 2021,
+     "month": 3,
+     "value": "253.231"
+    },
+    {
+     "year": 2021,
+     "month": 2,
+     "value": "252.716"
+    },
+    {
+     "year": 2021,
+     "month": 1,
+     "value": "252.107"
+    },
+    {
+     "year": 2020,
+     "month": 12,
+     "value": "251.253"
+    },
+    {
+     "year": 2020,
+     "month": 11,
+     "value": "250.407"
+    },
+    {
+     "year": 2020,
+     "month": 10,
+     "value": "251.937"
+    },
+    {
+     "year": 2020,
+     "month": 9,
+     "value": "251.369"
+    },
+    {
+     "year": 2020,
+     "month": 8,
+     "value": "252.352"
+    },
+    {
+     "year": 2020,
+     "month": 7,
+     "value": "252.563"
+    },
+    {
+     "year": 2020,
+     "month": 6,
+     "value": "255.042"
+    },
+    {
+     "year": 2020,
+     "month": 5,
+     "value": "253.827"
+    },
+    {
+     "year": 2020,
+     "month": 4,
+     "value": "251.717"
+    },
+    {
+     "year": 2020,
+     "month": 3,
+     "value": "245.163"
+    },
+    {
+     "year": 2020,
+     "month": 2,
+     "value": "244.054"
+    },
+    {
+     "year": 2020,
+     "month": 1,
+     "value": "243.110"
+    },
+    {
+     "year": 2019,
+     "month": 12,
+     "value": "241.750"
+    },
+    {
+     "year": 2019,
+     "month": 11,
+     "value": "241.726"
+    },
+    {
+     "year": 2019,
+     "month": 10,
+     "value": "242.340"
+    },
+    {
+     "year": 2019,
+     "month": 9,
+     "value": "241.543"
+    },
+    {
+     "year": 2019,
+     "month": 8,
+     "value": "241.153"
+    },
+    {
+     "year": 2019,
+     "month": 7,
+     "value": "241.359"
+    },
+    {
+     "year": 2019,
+     "month": 6,
+     "value": "241.407"
+    },
+    {
+     "year": 2019,
+     "month": 5,
+     "value": "242.145"
+    },
+    {
+     "year": 2019,
+     "month": 4,
+     "value": "241.878"
+    },
+    {
+     "year": 2019,
+     "month": 3,
+     "value": "242.555"
+    },
+    {
+     "year": 2019,
+     "month": 2,
+     "value": "242.057"
+    },
+    {
+     "year": 2019,
+     "month": 1,
+     "value": "241.381"
+    }
+   ]
+  },
+  {
+   "seriesID": "CUSR0000SAF11",
+   "title": "U.S. city average food at home (SA)",
+   "data": [
+    {
+     "year": 2026,
+     "month": 7,
+     "value": "321.216"
+    },
+    {
+     "year": 2026,
+     "month": 6,
+     "value": "321.446"
+    },
+    {
+     "year": 2026,
+     "month": 5,
+     "value": "320.836"
+    },
+    {
+     "year": 2026,
+     "month": 4,
+     "value": "320.633"
+    },
+    {
+     "year": 2026,
+     "month": 3,
+     "value": "318.462"
+    },
+    {
+     "year": 2026,
+     "month": 2,
+     "value": "318.985"
+    },
+    {
+     "year": 2026,
+     "month": 1,
+     "value": "317.589"
+    },
+    {
+     "year": 2025,
+     "month": 12,
+     "value": "316.982"
+    },
+    {
+     "year": 2025,
+     "month": 11,
+     "value": "315.000"
+    },
+    {
+     "year": 2025,
+     "month": 10,
+     "value": "-"
+    },
+    {
+     "year": 2025,
+     "month": 9,
+     "value": "315.540"
+    },
+    {
+     "year": 2025,
+     "month": 8,
+     "value": "314.647"
+    },
+    {
+     "year": 2025,
+     "month": 7,
+     "value": "313.035"
+    },
+    {
+     "year": 2025,
+     "month": 6,
+     "value": "312.982"
+    },
+    {
+     "year": 2025,
+     "month": 5,
+     "value": "312.296"
+    },
+    {
+     "year": 2025,
+     "month": 4,
+     "value": "311.440"
+    },
+    {
+     "year": 2025,
+     "month": 3,
+     "value": "312.154"
+    },
+    {
+     "year": 2025,
+     "month": 2,
+     "value": "310.955"
+    },
+    {
+     "year": 2025,
+     "month": 1,
+     "value": "310.817"
+    },
+    {
+     "year": 2024,
+     "month": 12,
+     "value": "309.767"
+    },
+    {
+     "year": 2024,
+     "month": 11,
+     "value": "309.093"
+    },
+    {
+     "year": 2024,
+     "month": 10,
+     "value": "307.867"
+    },
+    {
+     "year": 2024,
+     "month": 9,
+     "value": "307.258"
+    },
+    {
+     "year": 2024,
+     "month": 8,
+     "value": "306.399"
+    },
+    {
+     "year": 2024,
+     "month": 7,
+     "value": "306.285"
+    },
+    {
+     "year": 2024,
+     "month": 6,
+     "value": "305.582"
+    },
+    {
+     "year": 2024,
+     "month": 5,
+     "value": "305.414"
+    },
+    {
+     "year": 2024,
+     "month": 4,
+     "value": "305.354"
+    },
+    {
+     "year": 2024,
+     "month": 3,
+     "value": "305.010"
+    },
+    {
+     "year": 2024,
+     "month": 2,
+     "value": "305.432"
+    },
+    {
+     "year": 2024,
+     "month": 1,
+     "value": "305.187"
+    },
+    {
+     "year": 2023,
+     "month": 12,
+     "value": "304.505"
+    },
+    {
+     "year": 2023,
+     "month": 11,
+     "value": "304.332"
+    },
+    {
+     "year": 2023,
+     "month": 10,
+     "value": "304.366"
+    },
+    {
+     "year": 2023,
+     "month": 9,
+     "value": "303.449"
+    },
+    {
+     "year": 2023,
+     "month": 8,
+     "value": "303.631"
+    },
+    {
+     "year": 2023,
+     "month": 7,
+     "value": "302.984"
+    },
+    {
+     "year": 2023,
+     "month": 6,
+     "value": "302.057"
+    },
+    {
+     "year": 2023,
+     "month": 5,
+     "value": "302.184"
+    },
+    {
+     "year": 2023,
+     "month": 4,
+     "value": "301.811"
+    },
+    {
+     "year": 2023,
+     "month": 3,
+     "value": "301.467"
+    },
+    {
+     "year": 2023,
+     "month": 2,
+     "value": "302.444"
+    },
+    {
+     "year": 2023,
+     "month": 1,
+     "value": "301.676"
+    },
+    {
+     "year": 2022,
+     "month": 12,
+     "value": "300.576"
+    },
+    {
+     "year": 2022,
+     "month": 11,
+     "value": "299.449"
+    },
+    {
+     "year": 2022,
+     "month": 10,
+     "value": "297.966"
+    },
+    {
+     "year": 2022,
+     "month": 9,
+     "value": "296.403"
+    },
+    {
+     "year": 2022,
+     "month": 8,
+     "value": "294.884"
+    },
+    {
+     "year": 2022,
+     "month": 7,
+     "value": "292.455"
+    },
+    {
+     "year": 2022,
+     "month": 6,
+     "value": "288.568"
+    },
+    {
+     "year": 2022,
+     "month": 5,
+     "value": "285.522"
+    },
+    {
+     "year": 2022,
+     "month": 4,
+     "value": "281.593"
+    },
+    {
+     "year": 2022,
+     "month": 3,
+     "value": "278.333"
+    },
+    {
+     "year": 2022,
+     "month": 2,
+     "value": "274.728"
+    },
+    {
+     "year": 2022,
+     "month": 1,
+     "value": "271.176"
+    },
+    {
+     "year": 2021,
+     "month": 12,
+     "value": "268.985"
+    },
+    {
+     "year": 2021,
+     "month": 11,
+     "value": "267.473"
+    },
+    {
+     "year": 2021,
+     "month": 10,
+     "value": "265.084"
+    },
+    {
+     "year": 2021,
+     "month": 9,
+     "value": "262.459"
+    },
+    {
+     "year": 2021,
+     "month": 8,
+     "value": "259.613"
+    },
+    {
+     "year": 2021,
+     "month": 7,
+     "value": "258.491"
+    },
+    {
+     "year": 2021,
+     "month": 6,
+     "value": "257.058"
+    },
+    {
+     "year": 2021,
+     "month": 5,
+     "value": "255.043"
+    },
+    {
+     "year": 2021,
+     "month": 4,
+     "value": "254.125"
+    },
+    {
+     "year": 2021,
+     "month": 3,
+     "value": "252.933"
+    },
+    {
+     "year": 2021,
+     "month": 2,
+     "value": "252.822"
+    },
+    {
+     "year": 2021,
+     "month": 1,
+     "value": "252.541"
+    },
+    {
+     "year": 2020,
+     "month": 12,
+     "value": "252.536"
+    },
+    {
+     "year": 2020,
+     "month": 11,
+     "value": "251.365"
+    },
+    {
+     "year": 2020,
+     "month": 10,
+     "value": "251.641"
+    },
+    {
+     "year": 2020,
+     "month": 9,
+     "value": "251.166"
+    },
+    {
+     "year": 2020,
+     "month": 8,
+     "value": "252.148"
+    },
+    {
+     "year": 2020,
+     "month": 7,
+     "value": "252.003"
+    },
+    {
+     "year": 2020,
+     "month": 6,
+     "value": "254.674"
+    },
+    {
+     "year": 2020,
+     "month": 5,
+     "value": "253.230"
+    },
+    {
+     "year": 2020,
+     "month": 4,
+     "value": "251.063"
+    },
+    {
+     "year": 2020,
+     "month": 3,
+     "value": "245.017"
+    },
+    {
+     "year": 2020,
+     "month": 2,
+     "value": "244.200"
+    },
+    {
+     "year": 2020,
+     "month": 1,
+     "value": "243.511"
+    },
+    {
+     "year": 2019,
+     "month": 12,
+     "value": "242.887"
+    },
+    {
+     "year": 2019,
+     "month": 11,
+     "value": "242.726"
+    },
+    {
+     "year": 2019,
+     "month": 10,
+     "value": "241.999"
+    },
+    {
+     "year": 2019,
+     "month": 9,
+     "value": "241.409"
+    },
+    {
+     "year": 2019,
+     "month": 8,
+     "value": "240.943"
+    },
+    {
+     "year": 2019,
+     "month": 7,
+     "value": "240.988"
+    },
+    {
+     "year": 2019,
+     "month": 6,
+     "value": "241.214"
+    },
+    {
+     "year": 2019,
+     "month": 5,
+     "value": "241.642"
+    },
+    {
+     "year": 2019,
+     "month": 4,
+     "value": "241.219"
+    },
+    {
+     "year": 2019,
+     "month": 3,
+     "value": "242.482"
+    },
+    {
+     "year": 2019,
+     "month": 2,
+     "value": "242.111"
+    },
+    {
+     "year": 2019,
+     "month": 1,
+     "value": "241.581"
+    }
+   ]
+  },
+  {
+   "seriesID": "CUUR0200SEFV",
+   "title": "Midwest food away from home (NSA)",
+   "data": [
+    {
+     "year": 2026,
+     "month": 7,
+     "value": "389.656"
+    },
+    {
+     "year": 2026,
+     "month": 6,
+     "value": "389.079"
+    },
+    {
+     "year": 2026,
+     "month": 5,
+     "value": "387.155"
+    },
+    {
+     "year": 2026,
+     "month": 4,
+     "value": "385.943"
+    },
+    {
+     "year": 2026,
+     "month": 3,
+     "value": "384.821"
+    },
+    {
+     "year": 2026,
+     "month": 2,
+     "value": "383.264"
+    },
+    {
+     "year": 2026,
+     "month": 1,
+     "value": "381.559"
+    },
+    {
+     "year": 2025,
+     "month": 12,
+     "value": "380.834"
+    },
+    {
+     "year": 2025,
+     "month": 11,
+     "value": "379.056"
+    },
+    {
+     "year": 2025,
+     "month": 10,
+     "value": "-"
+    },
+    {
+     "year": 2025,
+     "month": 9,
+     "value": "377.181"
+    },
+    {
+     "year": 2025,
+     "month": 8,
+     "value": "376.666"
+    },
+    {
+     "year": 2025,
+     "month": 7,
+     "value": "375.610"
+    },
+    {
+     "year": 2025,
+     "month": 6,
+     "value": "374.352"
+    },
+    {
+     "year": 2025,
+     "month": 5,
+     "value": "373.201"
+    },
+    {
+     "year": 2025,
+     "month": 4,
+     "value": "372.135"
+    },
+    {
+     "year": 2025,
+     "month": 3,
+     "value": "370.579"
+    },
+    {
+     "year": 2025,
+     "month": 2,
+     "value": "369.069"
+    },
+    {
+     "year": 2025,
+     "month": 1,
+     "value": "367.631"
+    },
+    {
+     "year": 2024,
+     "month": 12,
+     "value": "366.314"
+    },
+    {
+     "year": 2024,
+     "month": 11,
+     "value": "365.247"
+    },
+    {
+     "year": 2024,
+     "month": 10,
+     "value": "365.086"
+    },
+    {
+     "year": 2024,
+     "month": 9,
+     "value": "364.579"
+    },
+    {
+     "year": 2024,
+     "month": 8,
+     "value": "363.576"
+    },
+    {
+     "year": 2024,
+     "month": 7,
+     "value": "362.442"
+    },
+    {
+     "year": 2024,
+     "month": 6,
+     "value": "361.152"
+    },
+    {
+     "year": 2024,
+     "month": 5,
+     "value": "360.325"
+    },
+    {
+     "year": 2024,
+     "month": 4,
+     "value": "359.267"
+    },
+    {
+     "year": 2024,
+     "month": 3,
+     "value": "357.805"
+    },
+    {
+     "year": 2024,
+     "month": 2,
+     "value": "357.532"
+    },
+    {
+     "year": 2024,
+     "month": 1,
+     "value": "357.780"
+    },
+    {
+     "year": 2023,
+     "month": 12,
+     "value": "355.446"
+    },
+    {
+     "year": 2023,
+     "month": 11,
+     "value": "355.077"
+    },
+    {
+     "year": 2023,
+     "month": 10,
+     "value": "354.347"
+    },
+    {
+     "year": 2023,
+     "month": 9,
+     "value": "352.499"
+    },
+    {
+     "year": 2023,
+     "month": 8,
+     "value": "351.118"
+    },
+    {
+     "year": 2023,
+     "month": 7,
+     "value": "350.428"
+    },
+    {
+     "year": 2023,
+     "month": 6,
+     "value": "349.927"
+    },
+    {
+     "year": 2023,
+     "month": 5,
+     "value": "348.483"
+    },
+    {
+     "year": 2023,
+     "month": 4,
+     "value": "345.657"
+    },
+    {
+     "year": 2023,
+     "month": 3,
+     "value": "345.890"
+    },
+    {
+     "year": 2023,
+     "month": 2,
+     "value": "343.973"
+    },
+    {
+     "year": 2023,
+     "month": 1,
+     "value": "342.565"
+    },
+    {
+     "year": 2022,
+     "month": 12,
+     "value": "341.267"
+    },
+    {
+     "year": 2022,
+     "month": 11,
+     "value": "340.248"
+    },
+    {
+     "year": 2022,
+     "month": 10,
+     "value": "338.681"
+    },
+    {
+     "year": 2022,
+     "month": 9,
+     "value": "336.646"
+    },
+    {
+     "year": 2022,
+     "month": 8,
+     "value": "331.994"
+    },
+    {
+     "year": 2022,
+     "month": 7,
+     "value": "327.058"
+    },
+    {
+     "year": 2022,
+     "month": 6,
+     "value": "324.360"
+    },
+    {
+     "year": 2022,
+     "month": 5,
+     "value": "323.169"
+    },
+    {
+     "year": 2022,
+     "month": 4,
+     "value": "320.291"
+    },
+    {
+     "year": 2022,
+     "month": 3,
+     "value": "316.829"
+    },
+    {
+     "year": 2022,
+     "month": 2,
+     "value": "314.608"
+    },
+    {
+     "year": 2022,
+     "month": 1,
+     "value": "312.702"
+    },
+    {
+     "year": 2021,
+     "month": 12,
+     "value": "313.604"
+    },
+    {
+     "year": 2021,
+     "month": 11,
+     "value": "311.731"
+    },
+    {
+     "year": 2021,
+     "month": 10,
+     "value": "307.993"
+    },
+    {
+     "year": 2021,
+     "month": 9,
+     "value": "306.560"
+    },
+    {
+     "year": 2021,
+     "month": 8,
+     "value": "303.828"
+    },
+    {
+     "year": 2021,
+     "month": 7,
+     "value": "301.855"
+    },
+    {
+     "year": 2021,
+     "month": 6,
+     "value": "300.104"
+    },
+    {
+     "year": 2021,
+     "month": 5,
+     "value": "296.906"
+    },
+    {
+     "year": 2021,
+     "month": 4,
+     "value": "293.123"
+    },
+    {
+     "year": 2021,
+     "month": 3,
+     "value": "292.365"
+    },
+    {
+     "year": 2021,
+     "month": 2,
+     "value": "292.202"
+    },
+    {
+     "year": 2021,
+     "month": 1,
+     "value": "292.106"
+    },
+    {
+     "year": 2020,
+     "month": 12,
+     "value": "291.304"
+    },
+    {
+     "year": 2020,
+     "month": 11,
+     "value": "290.913"
+    },
+    {
+     "year": 2020,
+     "month": 10,
+     "value": "291.593"
+    },
+    {
+     "year": 2020,
+     "month": 9,
+     "value": "291.003"
+    },
+    {
+     "year": 2020,
+     "month": 8,
+     "value": "287.265"
+    },
+    {
+     "year": 2020,
+     "month": 7,
+     "value": "286.524"
+    },
+    {
+     "year": 2020,
+     "month": 6,
+     "value": "284.520"
+    },
+    {
+     "year": 2020,
+     "month": 5,
+     "value": "282.357"
+    },
+    {
+     "year": 2020,
+     "month": 4,
+     "value": "281.716"
+    },
+    {
+     "year": 2020,
+     "month": 3,
+     "value": "283.705"
+    },
+    {
+     "year": 2020,
+     "month": 2,
+     "value": "283.349"
+    },
+    {
+     "year": 2020,
+     "month": 1,
+     "value": "283.255"
+    },
+    {
+     "year": 2019,
+     "month": 12,
+     "value": "283.025"
+    },
+    {
+     "year": 2019,
+     "month": 11,
+     "value": "282.151"
+    },
+    {
+     "year": 2019,
+     "month": 10,
+     "value": "281.449"
+    },
+    {
+     "year": 2019,
+     "month": 9,
+     "value": "280.653"
+    },
+    {
+     "year": 2019,
+     "month": 8,
+     "value": "280.215"
+    },
+    {
+     "year": 2019,
+     "month": 7,
+     "value": "280.046"
+    },
+    {
+     "year": 2019,
+     "month": 6,
+     "value": "279.497"
+    },
+    {
+     "year": 2019,
+     "month": 5,
+     "value": "278.434"
+    },
+    {
+     "year": 2019,
+     "month": 4,
+     "value": "277.182"
+    },
+    {
+     "year": 2019,
+     "month": 3,
+     "value": "276.762"
+    },
+    {
+     "year": 2019,
+     "month": 2,
+     "value": "276.590"
+    },
+    {
+     "year": 2019,
+     "month": 1,
+     "value": "276.128"
+    }
+   ]
+  },
+  {
+   "seriesID": "CUUR0200SA0",
+   "title": "Midwest all items (NSA)",
+   "data": [
+    {
+     "year": 2026,
+     "month": 7,
+     "value": "310.304"
+    },
+    {
+     "year": 2026,
+     "month": 6,
+     "value": "310.937"
+    },
+    {
+     "year": 2026,
+     "month": 5,
+     "value": "312.352"
+    },
+    {
+     "year": 2026,
+     "month": 4,
+     "value": "308.889"
+    },
+    {
+     "year": 2026,
+     "month": 3,
+     "value": "306.366"
+    },
+    {
+     "year": 2026,
+     "month": 2,
+     "value": "303.490"
+    },
+    {
+     "year": 2026,
+     "month": 1,
+     "value": "301.591"
+    },
+    {
+     "year": 2025,
+     "month": 12,
+     "value": "300.404"
+    },
+    {
+     "year": 2025,
+     "month": 11,
+     "value": "300.771"
+    },
+    {
+     "year": 2025,
+     "month": 10,
+     "value": "-"
+    },
+    {
+     "year": 2025,
+     "month": 9,
+     "value": "301.579"
+    },
+    {
+     "year": 2025,
+     "month": 8,
+     "value": "300.753"
+    },
+    {
+     "year": 2025,
+     "month": 7,
+     "value": "299.836"
+    },
+    {
+     "year": 2025,
+     "month": 6,
+     "value": "299.529"
+    },
+    {
+     "year": 2025,
+     "month": 5,
+     "value": "297.342"
+    },
+    {
+     "year": 2025,
+     "month": 4,
+     "value": "296.688"
+    },
+    {
+     "year": 2025,
+     "month": 3,
+     "value": "296.227"
+    },
+    {
+     "year": 2025,
+     "month": 2,
+     "value": "295.232"
+    },
+    {
+     "year": 2025,
+     "month": 1,
+     "value": "294.404"
+    },
+    {
+     "year": 2024,
+     "month": 12,
+     "value": "292.533"
+    },
+    {
+     "year": 2024,
+     "month": 11,
+     "value": "292.022"
+    },
+    {
+     "year": 2024,
+     "month": 10,
+     "value": "292.291"
+    },
+    {
+     "year": 2024,
+     "month": 9,
+     "value": "292.547"
+    },
+    {
+     "year": 2024,
+     "month": 8,
+     "value": "292.559"
+    },
+    {
+     "year": 2024,
+     "month": 7,
+     "value": "292.256"
+    },
+    {
+     "year": 2024,
+     "month": 6,
+     "value": "290.779"
+    },
+    {
+     "year": 2024,
+     "month": 5,
+     "value": "290.355"
+    },
+    {
+     "year": 2024,
+     "month": 4,
+     "value": "289.718"
+    },
+    {
+     "year": 2024,
+     "month": 3,
+     "value": "288.301"
+    },
+    {
+     "year": 2024,
+     "month": 2,
+     "value": "286.346"
+    },
+    {
+     "year": 2024,
+     "month": 1,
+     "value": "284.731"
+    },
+    {
+     "year": 2023,
+     "month": 12,
+     "value": "283.908"
+    },
+    {
+     "year": 2023,
+     "month": 11,
+     "value": "284.539"
+    },
+    {
+     "year": 2023,
+     "month": 10,
+     "value": "284.981"
+    },
+    {
+     "year": 2023,
+     "month": 9,
+     "value": "285.276"
+    },
+    {
+     "year": 2023,
+     "month": 8,
+     "value": "285.122"
+    },
+    {
+     "year": 2023,
+     "month": 7,
+     "value": "284.640"
+    },
+    {
+     "year": 2023,
+     "month": 6,
+     "value": "283.741"
+    },
+    {
+     "year": 2023,
+     "month": 5,
+     "value": "282.656"
+    },
+    {
+     "year": 2023,
+     "month": 4,
+     "value": "281.927"
+    },
+    {
+     "year": 2023,
+     "month": 3,
+     "value": "280.330"
+    },
+    {
+     "year": 2023,
+     "month": 2,
+     "value": "278.672"
+    },
+    {
+     "year": 2023,
+     "month": 1,
+     "value": "277.332"
+    },
+    {
+     "year": 2022,
+     "month": 12,
+     "value": "275.182"
+    },
+    {
+     "year": 2022,
+     "month": 11,
+     "value": "276.436"
+    },
+    {
+     "year": 2022,
+     "month": 10,
+     "value": "276.908"
+    },
+    {
+     "year": 2022,
+     "month": 9,
+     "value": "276.549"
+    },
+    {
+     "year": 2022,
+     "month": 8,
+     "value": "275.875"
+    },
+    {
+     "year": 2022,
+     "month": 7,
+     "value": "276.525"
+    },
+    {
+     "year": 2022,
+     "month": 6,
+     "value": "277.072"
+    },
+    {
+     "year": 2022,
+     "month": 5,
+     "value": "272.673"
+    },
+    {
+     "year": 2022,
+     "month": 4,
+     "value": "268.639"
+    },
+    {
+     "year": 2022,
+     "month": 3,
+     "value": "267.312"
+    },
+    {
+     "year": 2022,
+     "month": 2,
+     "value": "263.988"
+    },
+    {
+     "year": 2022,
+     "month": 1,
+     "value": "261.657"
+    },
+    {
+     "year": 2021,
+     "month": 12,
+     "value": "259.609"
+    },
+    {
+     "year": 2021,
+     "month": 11,
+     "value": "258.911"
+    },
+    {
+     "year": 2021,
+     "month": 10,
+     "value": "257.793"
+    },
+    {
+     "year": 2021,
+     "month": 9,
+     "value": "255.709"
+    },
+    {
+     "year": 2021,
+     "month": 8,
+     "value": "255.142"
+    },
+    {
+     "year": 2021,
+     "month": 7,
+     "value": "254.671"
+    },
+    {
+     "year": 2021,
+     "month": 6,
+     "value": "253.042"
+    },
+    {
+     "year": 2021,
+     "month": 5,
+     "value": "250.582"
+    },
+    {
+     "year": 2021,
+     "month": 4,
+     "value": "248.169"
+    },
+    {
+     "year": 2021,
+     "month": 3,
+     "value": "246.246"
+    },
+    {
+     "year": 2021,
+     "month": 2,
+     "value": "244.477"
+    },
+    {
+     "year": 2021,
+     "month": 1,
+     "value": "242.552"
+    },
+    {
+     "year": 2020,
+     "month": 12,
+     "value": "241.453"
+    },
+    {
+     "year": 2020,
+     "month": 11,
+     "value": "241.316"
+    },
+    {
+     "year": 2020,
+     "month": 10,
+     "value": "241.740"
+    },
+    {
+     "year": 2020,
+     "month": 9,
+     "value": "241.878"
+    },
+    {
+     "year": 2020,
+     "month": 8,
+     "value": "241.362"
+    },
+    {
+     "year": 2020,
+     "month": 7,
+     "value": "240.430"
+    },
+    {
+     "year": 2020,
+     "month": 6,
+     "value": "239.259"
+    },
+    {
+     "year": 2020,
+     "month": 5,
+     "value": "237.291"
+    },
+    {
+     "year": 2020,
+     "month": 4,
+     "value": "236.474"
+    },
+    {
+     "year": 2020,
+     "month": 3,
+     "value": "239.163"
+    },
+    {
+     "year": 2020,
+     "month": 2,
+     "value": "240.421"
+    },
+    {
+     "year": 2020,
+     "month": 1,
+     "value": "239.690"
+    },
+    {
+     "year": 2019,
+     "month": 12,
+     "value": "238.734"
+    },
+    {
+     "year": 2019,
+     "month": 11,
+     "value": "238.850"
+    },
+    {
+     "year": 2019,
+     "month": 10,
+     "value": "239.243"
+    },
+    {
+     "year": 2019,
+     "month": 9,
+     "value": "238.847"
+    },
+    {
+     "year": 2019,
+     "month": 8,
+     "value": "238.786"
+    },
+    {
+     "year": 2019,
+     "month": 7,
+     "value": "238.760"
+    },
+    {
+     "year": 2019,
+     "month": 6,
+     "value": "238.288"
+    },
+    {
+     "year": 2019,
+     "month": 5,
+     "value": "238.219"
+    },
+    {
+     "year": 2019,
+     "month": 4,
+     "value": "237.510"
+    },
+    {
+     "year": 2019,
+     "month": 3,
+     "value": "236.793"
+    },
+    {
+     "year": 2019,
+     "month": 2,
+     "value": "235.444"
+    },
+    {
+     "year": 2019,
+     "month": 1,
+     "value": "233.837"
+    }
+   ]
+  },
+  {
+   "seriesID": "CUUR0000SA0",
+   "title": "U.S. city average all items (NSA)",
+   "data": [
+    {
+     "year": 2026,
+     "month": 7,
+     "value": "333.918"
+    },
+    {
+     "year": 2026,
+     "month": 6,
+     "value": "333.952"
+    },
+    {
+     "year": 2026,
+     "month": 5,
+     "value": "335.123"
+    },
+    {
+     "year": 2026,
+     "month": 4,
+     "value": "333.020"
+    },
+    {
+     "year": 2026,
+     "month": 3,
+     "value": "330.213"
+    },
+    {
+     "year": 2026,
+     "month": 2,
+     "value": "326.785"
+    },
+    {
+     "year": 2026,
+     "month": 1,
+     "value": "325.252"
+    },
+    {
+     "year": 2025,
+     "month": 12,
+     "value": "324.054"
+    },
+    {
+     "year": 2025,
+     "month": 11,
+     "value": "324.122"
+    },
+    {
+     "year": 2025,
+     "month": 10,
+     "value": "-"
+    },
+    {
+     "year": 2025,
+     "month": 9,
+     "value": "324.800"
+    },
+    {
+     "year": 2025,
+     "month": 8,
+     "value": "323.976"
+    },
+    {
+     "year": 2025,
+     "month": 7,
+     "value": "323.048"
+    },
+    {
+     "year": 2025,
+     "month": 6,
+     "value": "322.561"
+    },
+    {
+     "year": 2025,
+     "month": 5,
+     "value": "321.465"
+    },
+    {
+     "year": 2025,
+     "month": 4,
+     "value": "320.795"
+    },
+    {
+     "year": 2025,
+     "month": 3,
+     "value": "319.799"
+    },
+    {
+     "year": 2025,
+     "month": 2,
+     "value": "319.082"
+    },
+    {
+     "year": 2025,
+     "month": 1,
+     "value": "317.671"
+    },
+    {
+     "year": 2024,
+     "month": 12,
+     "value": "315.605"
+    },
+    {
+     "year": 2024,
+     "month": 11,
+     "value": "315.493"
+    },
+    {
+     "year": 2024,
+     "month": 10,
+     "value": "315.664"
+    },
+    {
+     "year": 2024,
+     "month": 9,
+     "value": "315.301"
+    },
+    {
+     "year": 2024,
+     "month": 8,
+     "value": "314.796"
+    },
+    {
+     "year": 2024,
+     "month": 7,
+     "value": "314.540"
+    },
+    {
+     "year": 2024,
+     "month": 6,
+     "value": "314.175"
+    },
+    {
+     "year": 2024,
+     "month": 5,
+     "value": "314.069"
+    },
+    {
+     "year": 2024,
+     "month": 4,
+     "value": "313.548"
+    },
+    {
+     "year": 2024,
+     "month": 3,
+     "value": "312.332"
+    },
+    {
+     "year": 2024,
+     "month": 2,
+     "value": "310.326"
+    },
+    {
+     "year": 2024,
+     "month": 1,
+     "value": "308.417"
+    },
+    {
+     "year": 2023,
+     "month": 12,
+     "value": "306.746"
+    },
+    {
+     "year": 2023,
+     "month": 11,
+     "value": "307.051"
+    },
+    {
+     "year": 2023,
+     "month": 10,
+     "value": "307.671"
+    },
+    {
+     "year": 2023,
+     "month": 9,
+     "value": "307.789"
+    },
+    {
+     "year": 2023,
+     "month": 8,
+     "value": "307.026"
+    },
+    {
+     "year": 2023,
+     "month": 7,
+     "value": "305.691"
+    },
+    {
+     "year": 2023,
+     "month": 6,
+     "value": "305.109"
+    },
+    {
+     "year": 2023,
+     "month": 5,
+     "value": "304.127"
+    },
+    {
+     "year": 2023,
+     "month": 4,
+     "value": "303.363"
+    },
+    {
+     "year": 2023,
+     "month": 3,
+     "value": "301.836"
+    },
+    {
+     "year": 2023,
+     "month": 2,
+     "value": "300.840"
+    },
+    {
+     "year": 2023,
+     "month": 1,
+     "value": "299.170"
+    },
+    {
+     "year": 2022,
+     "month": 12,
+     "value": "296.797"
+    },
+    {
+     "year": 2022,
+     "month": 11,
+     "value": "297.711"
+    },
+    {
+     "year": 2022,
+     "month": 10,
+     "value": "298.012"
+    },
+    {
+     "year": 2022,
+     "month": 9,
+     "value": "296.808"
+    },
+    {
+     "year": 2022,
+     "month": 8,
+     "value": "296.171"
+    },
+    {
+     "year": 2022,
+     "month": 7,
+     "value": "296.276"
+    },
+    {
+     "year": 2022,
+     "month": 6,
+     "value": "296.311"
+    },
+    {
+     "year": 2022,
+     "month": 5,
+     "value": "292.296"
+    },
+    {
+     "year": 2022,
+     "month": 4,
+     "value": "289.109"
+    },
+    {
+     "year": 2022,
+     "month": 3,
+     "value": "287.504"
+    },
+    {
+     "year": 2022,
+     "month": 2,
+     "value": "283.716"
+    },
+    {
+     "year": 2022,
+     "month": 1,
+     "value": "281.148"
+    },
+    {
+     "year": 2021,
+     "month": 12,
+     "value": "278.802"
+    },
+    {
+     "year": 2021,
+     "month": 11,
+     "value": "277.948"
+    },
+    {
+     "year": 2021,
+     "month": 10,
+     "value": "276.589"
+    },
+    {
+     "year": 2021,
+     "month": 9,
+     "value": "274.310"
+    },
+    {
+     "year": 2021,
+     "month": 8,
+     "value": "273.567"
+    },
+    {
+     "year": 2021,
+     "month": 7,
+     "value": "273.003"
+    },
+    {
+     "year": 2021,
+     "month": 6,
+     "value": "271.696"
+    },
+    {
+     "year": 2021,
+     "month": 5,
+     "value": "269.195"
+    },
+    {
+     "year": 2021,
+     "month": 4,
+     "value": "267.054"
+    },
+    {
+     "year": 2021,
+     "month": 3,
+     "value": "264.877"
+    },
+    {
+     "year": 2021,
+     "month": 2,
+     "value": "263.014"
+    },
+    {
+     "year": 2021,
+     "month": 1,
+     "value": "261.582"
+    },
+    {
+     "year": 2020,
+     "month": 12,
+     "value": "260.474"
+    },
+    {
+     "year": 2020,
+     "month": 11,
+     "value": "260.229"
+    },
+    {
+     "year": 2020,
+     "month": 10,
+     "value": "260.388"
+    },
+    {
+     "year": 2020,
+     "month": 9,
+     "value": "260.280"
+    },
+    {
+     "year": 2020,
+     "month": 8,
+     "value": "259.918"
+    },
+    {
+     "year": 2020,
+     "month": 7,
+     "value": "259.101"
+    },
+    {
+     "year": 2020,
+     "month": 6,
+     "value": "257.797"
+    },
+    {
+     "year": 2020,
+     "month": 5,
+     "value": "256.394"
+    },
+    {
+     "year": 2020,
+     "month": 4,
+     "value": "256.389"
+    },
+    {
+     "year": 2020,
+     "month": 3,
+     "value": "258.115"
+    },
+    {
+     "year": 2020,
+     "month": 2,
+     "value": "258.678"
+    },
+    {
+     "year": 2020,
+     "month": 1,
+     "value": "257.971"
+    },
+    {
+     "year": 2019,
+     "month": 12,
+     "value": "256.974"
+    },
+    {
+     "year": 2019,
+     "month": 11,
+     "value": "257.208"
+    },
+    {
+     "year": 2019,
+     "month": 10,
+     "value": "257.346"
+    },
+    {
+     "year": 2019,
+     "month": 9,
+     "value": "256.759"
+    },
+    {
+     "year": 2019,
+     "month": 8,
+     "value": "256.558"
+    },
+    {
+     "year": 2019,
+     "month": 7,
+     "value": "256.571"
+    },
+    {
+     "year": 2019,
+     "month": 6,
+     "value": "256.143"
+    },
+    {
+     "year": 2019,
+     "month": 5,
+     "value": "256.092"
+    },
+    {
+     "year": 2019,
+     "month": 4,
+     "value": "255.548"
+    },
+    {
+     "year": 2019,
+     "month": 3,
+     "value": "254.202"
+    },
+    {
+     "year": 2019,
+     "month": 2,
+     "value": "252.776"
+    },
+    {
+     "year": 2019,
+     "month": 1,
+     "value": "251.712"
+    }
+   ]
+  },
+  {
+   "seriesID": "CUUR0200SAH1",
+   "title": "Midwest shelter (NSA)",
+   "data": [
+    {
+     "year": 2026,
+     "month": 7,
+     "value": "385.015"
+    },
+    {
+     "year": 2026,
+     "month": 6,
+     "value": "383.297"
+    },
+    {
+     "year": 2026,
+     "month": 5,
+     "value": "382.757"
+    },
+    {
+     "year": 2026,
+     "month": 4,
+     "value": "381.798"
+    },
+    {
+     "year": 2026,
+     "month": 3,
+     "value": "377.851"
+    },
+    {
+     "year": 2026,
+     "month": 2,
+     "value": "376.263"
+    },
+    {
+     "year": 2026,
+     "month": 1,
+     "value": "374.359"
+    },
+    {
+     "year": 2025,
+     "month": 12,
+     "value": "372.496"
+    },
+    {
+     "year": 2025,
+     "month": 11,
+     "value": "372.064"
+    },
+    {
+     "year": 2025,
+     "month": 10,
+     "value": "-"
+    },
+    {
+     "year": 2025,
+     "month": 9,
+     "value": "371.365"
+    },
+    {
+     "year": 2025,
+     "month": 8,
+     "value": "369.611"
+    },
+    {
+     "year": 2025,
+     "month": 7,
+     "value": "368.499"
+    },
+    {
+     "year": 2025,
+     "month": 6,
+     "value": "367.531"
+    },
+    {
+     "year": 2025,
+     "month": 5,
+     "value": "365.681"
+    },
+    {
+     "year": 2025,
+     "month": 4,
+     "value": "364.335"
+    },
+    {
+     "year": 2025,
+     "month": 3,
+     "value": "363.701"
+    },
+    {
+     "year": 2025,
+     "month": 2,
+     "value": "361.995"
+    },
+    {
+     "year": 2025,
+     "month": 1,
+     "value": "359.714"
+    },
+    {
+     "year": 2024,
+     "month": 12,
+     "value": "358.975"
+    },
+    {
+     "year": 2024,
+     "month": 11,
+     "value": "357.747"
+    },
+    {
+     "year": 2024,
+     "month": 10,
+     "value": "356.519"
+    },
+    {
+     "year": 2024,
+     "month": 9,
+     "value": "355.991"
+    },
+    {
+     "year": 2024,
+     "month": 8,
+     "value": "355.828"
+    },
+    {
+     "year": 2024,
+     "month": 7,
+     "value": "354.016"
+    },
+    {
+     "year": 2024,
+     "month": 6,
+     "value": "351.984"
+    },
+    {
+     "year": 2024,
+     "month": 5,
+     "value": "350.596"
+    },
+    {
+     "year": 2024,
+     "month": 4,
+     "value": "347.648"
+    },
+    {
+     "year": 2024,
+     "month": 3,
+     "value": "345.444"
+    },
+    {
+     "year": 2024,
+     "month": 2,
+     "value": "343.183"
+    },
+    {
+     "year": 2024,
+     "month": 1,
+     "value": "341.513"
+    },
+    {
+     "year": 2023,
+     "month": 12,
+     "value": "340.120"
+    },
+    {
+     "year": 2023,
+     "month": 11,
+     "value": "338.643"
+    },
+    {
+     "year": 2023,
+     "month": 10,
+     "value": "337.211"
+    },
+    {
+     "year": 2023,
+     "month": 9,
+     "value": "336.337"
+    },
+    {
+     "year": 2023,
+     "month": 8,
+     "value": "334.737"
+    },
+    {
+     "year": 2023,
+     "month": 7,
+     "value": "336.212"
+    },
+    {
+     "year": 2023,
+     "month": 6,
+     "value": "332.532"
+    },
+    {
+     "year": 2023,
+     "month": 5,
+     "value": "330.151"
+    },
+    {
+     "year": 2023,
+     "month": 4,
+     "value": "327.503"
+    },
+    {
+     "year": 2023,
+     "month": 3,
+     "value": "326.090"
+    },
+    {
+     "year": 2023,
+     "month": 2,
+     "value": "323.149"
+    },
+    {
+     "year": 2023,
+     "month": 1,
+     "value": "320.948"
+    },
+    {
+     "year": 2022,
+     "month": 12,
+     "value": "319.195"
+    },
+    {
+     "year": 2022,
+     "month": 11,
+     "value": "317.131"
+    },
+    {
+     "year": 2022,
+     "month": 10,
+     "value": "315.262"
+    },
+    {
+     "year": 2022,
+     "month": 9,
+     "value": "313.166"
+    },
+    {
+     "year": 2022,
+     "month": 8,
+     "value": "312.253"
+    },
+    {
+     "year": 2022,
+     "month": 7,
+     "value": "311.079"
+    },
+    {
+     "year": 2022,
+     "month": 6,
+     "value": "309.877"
+    },
+    {
+     "year": 2022,
+     "month": 5,
+     "value": "307.740"
+    },
+    {
+     "year": 2022,
+     "month": 4,
+     "value": "305.815"
+    },
+    {
+     "year": 2022,
+     "month": 3,
+     "value": "305.136"
+    },
+    {
+     "year": 2022,
+     "month": 2,
+     "value": "303.249"
+    },
+    {
+     "year": 2022,
+     "month": 1,
+     "value": "301.535"
+    },
+    {
+     "year": 2021,
+     "month": 12,
+     "value": "301.055"
+    },
+    {
+     "year": 2021,
+     "month": 11,
+     "value": "300.638"
+    },
+    {
+     "year": 2021,
+     "month": 10,
+     "value": "299.370"
+    },
+    {
+     "year": 2021,
+     "month": 9,
+     "value": "297.995"
+    },
+    {
+     "year": 2021,
+     "month": 8,
+     "value": "297.007"
+    },
+    {
+     "year": 2021,
+     "month": 7,
+     "value": "296.222"
+    },
+    {
+     "year": 2021,
+     "month": 6,
+     "value": "294.263"
+    },
+    {
+     "year": 2021,
+     "month": 5,
+     "value": "292.571"
+    },
+    {
+     "year": 2021,
+     "month": 4,
+     "value": "291.656"
+    },
+    {
+     "year": 2021,
+     "month": 3,
+     "value": "290.464"
+    },
+    {
+     "year": 2021,
+     "month": 2,
+     "value": "289.397"
+    },
+    {
+     "year": 2021,
+     "month": 1,
+     "value": "288.325"
+    },
+    {
+     "year": 2020,
+     "month": 12,
+     "value": "288.195"
+    },
+    {
+     "year": 2020,
+     "month": 11,
+     "value": "287.663"
+    },
+    {
+     "year": 2020,
+     "month": 10,
+     "value": "287.428"
+    },
+    {
+     "year": 2020,
+     "month": 9,
+     "value": "286.953"
+    },
+    {
+     "year": 2020,
+     "month": 8,
+     "value": "287.179"
+    },
+    {
+     "year": 2020,
+     "month": 7,
+     "value": "286.463"
+    },
+    {
+     "year": 2020,
+     "month": 6,
+     "value": "286.137"
+    },
+    {
+     "year": 2020,
+     "month": 5,
+     "value": "285.288"
+    },
+    {
+     "year": 2020,
+     "month": 4,
+     "value": "284.083"
+    },
+    {
+     "year": 2020,
+     "month": 3,
+     "value": "285.236"
+    },
+    {
+     "year": 2020,
+     "month": 2,
+     "value": "285.087"
+    },
+    {
+     "year": 2020,
+     "month": 1,
+     "value": "284.095"
+    },
+    {
+     "year": 2019,
+     "month": 12,
+     "value": "283.184"
+    },
+    {
+     "year": 2019,
+     "month": 11,
+     "value": "281.961"
+    },
+    {
+     "year": 2019,
+     "month": 10,
+     "value": "281.992"
+    },
+    {
+     "year": 2019,
+     "month": 9,
+     "value": "281.723"
+    },
+    {
+     "year": 2019,
+     "month": 8,
+     "value": "280.599"
+    },
+    {
+     "year": 2019,
+     "month": 7,
+     "value": "280.794"
+    },
+    {
+     "year": 2019,
+     "month": 6,
+     "value": "280.235"
+    },
+    {
+     "year": 2019,
+     "month": 5,
+     "value": "279.672"
+    },
+    {
+     "year": 2019,
+     "month": 4,
+     "value": "278.535"
+    },
+    {
+     "year": 2019,
+     "month": 3,
+     "value": "278.067"
+    },
+    {
+     "year": 2019,
+     "month": 2,
+     "value": "276.593"
+    },
+    {
+     "year": 2019,
+     "month": 1,
+     "value": "275.220"
+    }
+   ]
+  },
+  {
+   "seriesID": "CUUR0200SETB01",
+   "title": "Midwest gasoline, all types (NSA)",
+   "data": [
+    {
+     "year": 2026,
+     "month": 7,
+     "value": "341.985"
+    },
+    {
+     "year": 2026,
+     "month": 6,
+     "value": "353.327"
+    },
+    {
+     "year": 2026,
+     "month": 5,
+     "value": "400.856"
+    },
+    {
+     "year": 2026,
+     "month": 4,
+     "value": "345.763"
+    },
+    {
+     "year": 2026,
+     "month": 3,
+     "value": "310.954"
+    },
+    {
+     "year": 2026,
+     "month": 2,
+     "value": "248.101"
+    },
+    {
+     "year": 2026,
+     "month": 1,
+     "value": "242.232"
+    },
+    {
+     "year": 2025,
+     "month": 12,
+     "value": "248.817"
+    },
+    {
+     "year": 2025,
+     "month": 11,
+     "value": "267.487"
+    },
+    {
+     "year": 2025,
+     "month": 10,
+     "value": "264.682"
+    },
+    {
+     "year": 2025,
+     "month": 9,
+     "value": "278.181"
+    },
+    {
+     "year": 2025,
+     "month": 8,
+     "value": "281.891"
+    },
+    {
+     "year": 2025,
+     "month": 7,
+     "value": "277.751"
+    },
+    {
+     "year": 2025,
+     "month": 6,
+     "value": "279.088"
+    },
+    {
+     "year": 2025,
+     "month": 5,
+     "value": "276.541"
+    },
+    {
+     "year": 2025,
+     "month": 4,
+     "value": "278.712"
+    },
+    {
+     "year": 2025,
+     "month": 3,
+     "value": "269.396"
+    },
+    {
+     "year": 2025,
+     "month": 2,
+     "value": "268.487"
+    },
+    {
+     "year": 2025,
+     "month": 1,
+     "value": "272.634"
+    },
+    {
+     "year": 2024,
+     "month": 12,
+     "value": "266.731"
+    },
+    {
+     "year": 2024,
+     "month": 11,
+     "value": "264.784"
+    },
+    {
+     "year": 2024,
+     "month": 10,
+     "value": "278.599"
+    },
+    {
+     "year": 2024,
+     "month": 9,
+     "value": "283.640"
+    },
+    {
+     "year": 2024,
+     "month": 8,
+     "value": "308.498"
+    },
+    {
+     "year": 2024,
+     "month": 7,
+     "value": "315.723"
+    },
+    {
+     "year": 2024,
+     "month": 6,
+     "value": "309.081"
+    },
+    {
+     "year": 2024,
+     "month": 5,
+     "value": "315.942"
+    },
+    {
+     "year": 2024,
+     "month": 4,
+     "value": "317.962"
+    },
+    {
+     "year": 2024,
+     "month": 3,
+     "value": "305.786"
+    },
+    {
+     "year": 2024,
+     "month": 2,
+     "value": "280.811"
+    },
+    {
+     "year": 2024,
+     "month": 1,
+     "value": "260.002"
+    },
+    {
+     "year": 2023,
+     "month": 12,
+     "value": "262.478"
+    },
+    {
+     "year": 2023,
+     "month": 11,
+     "value": "287.423"
+    },
+    {
+     "year": 2023,
+     "month": 10,
+     "value": "304.596"
+    },
+    {
+     "year": 2023,
+     "month": 9,
+     "value": "330.836"
+    },
+    {
+     "year": 2023,
+     "month": 8,
+     "value": "334.089"
+    },
+    {
+     "year": 2023,
+     "month": 7,
+     "value": "312.966"
+    },
+    {
+     "year": 2023,
+     "month": 6,
+     "value": "319.887"
+    },
+    {
+     "year": 2023,
+     "month": 5,
+     "value": "316.615"
+    },
+    {
+     "year": 2023,
+     "month": 4,
+     "value": "323.175"
+    },
+    {
+     "year": 2023,
+     "month": 3,
+     "value": "299.336"
+    },
+    {
+     "year": 2023,
+     "month": 2,
+     "value": "295.646"
+    },
+    {
+     "year": 2023,
+     "month": 1,
+     "value": "295.119"
+    },
+    {
+     "year": 2022,
+     "month": 12,
+     "value": "275.513"
+    },
+    {
+     "year": 2022,
+     "month": 11,
+     "value": "327.613"
+    },
+    {
+     "year": 2022,
+     "month": 10,
+     "value": "343.362"
+    },
+    {
+     "year": 2022,
+     "month": 9,
+     "value": "330.352"
+    },
+    {
+     "year": 2022,
+     "month": 8,
+     "value": "345.689"
+    },
+    {
+     "year": 2022,
+     "month": 7,
+     "value": "406.130"
+    },
+    {
+     "year": 2022,
+     "month": 6,
+     "value": "445.094"
+    },
+    {
+     "year": 2022,
+     "month": 5,
+     "value": "387.676"
+    },
+    {
+     "year": 2022,
+     "month": 4,
+     "value": "352.539"
+    },
+    {
+     "year": 2022,
+     "month": 3,
+     "value": "357.348"
+    },
+    {
+     "year": 2022,
+     "month": 2,
+     "value": "299.352"
+    },
+    {
+     "year": 2022,
+     "month": 1,
+     "value": "280.991"
+    },
+    {
+     "year": 2021,
+     "month": 12,
+     "value": "280.384"
+    },
+    {
+     "year": 2021,
+     "month": 11,
+     "value": "291.916"
+    },
+    {
+     "year": 2021,
+     "month": 10,
+     "value": "286.005"
+    },
+    {
+     "year": 2021,
+     "month": 9,
+     "value": "276.092"
+    },
+    {
+     "year": 2021,
+     "month": 8,
+     "value": "275.912"
+    },
+    {
+     "year": 2021,
+     "month": 7,
+     "value": "276.714"
+    },
+    {
+     "year": 2021,
+     "month": 6,
+     "value": "270.762"
+    },
+    {
+     "year": 2021,
+     "month": 5,
+     "value": "261.379"
+    },
+    {
+     "year": 2021,
+     "month": 4,
+     "value": "252.459"
+    },
+    {
+     "year": 2021,
+     "month": 3,
+     "value": "244.693"
+    },
+    {
+     "year": 2021,
+     "month": 2,
+     "value": "222.543"
+    },
+    {
+     "year": 2021,
+     "month": 1,
+     "value": "204.864"
+    },
+    {
+     "year": 2020,
+     "month": 12,
+     "value": "188.417"
+    },
+    {
+     "year": 2020,
+     "month": 11,
+     "value": "179.169"
+    },
+    {
+     "year": 2020,
+     "month": 10,
+     "value": "186.878"
+    },
+    {
+     "year": 2020,
+     "month": 9,
+     "value": "189.403"
+    },
+    {
+     "year": 2020,
+     "month": 8,
+     "value": "191.645"
+    },
+    {
+     "year": 2020,
+     "month": 7,
+     "value": "193.576"
+    },
+    {
+     "year": 2020,
+     "month": 6,
+     "value": "186.295"
+    },
+    {
+     "year": 2020,
+     "month": 5,
+     "value": "163.573"
+    },
+    {
+     "year": 2020,
+     "month": 4,
+     "value": "143.600"
+    },
+    {
+     "year": 2020,
+     "month": 3,
+     "value": "188.548"
+    },
+    {
+     "year": 2020,
+     "month": 2,
+     "value": "215.217"
+    },
+    {
+     "year": 2020,
+     "month": 1,
+     "value": "224.003"
+    },
+    {
+     "year": 2019,
+     "month": 12,
+     "value": "225.330"
+    },
+    {
+     "year": 2019,
+     "month": 11,
+     "value": "223.631"
+    },
+    {
+     "year": 2019,
+     "month": 10,
+     "value": "230.121"
+    },
+    {
+     "year": 2019,
+     "month": 9,
+     "value": "233.374"
+    },
+    {
+     "year": 2019,
+     "month": 8,
+     "value": "237.091"
+    },
+    {
+     "year": 2019,
+     "month": 7,
+     "value": "248.612"
+    },
+    {
+     "year": 2019,
+     "month": 6,
+     "value": "243.457"
+    },
+    {
+     "year": 2019,
+     "month": 5,
+     "value": "252.987"
+    },
+    {
+     "year": 2019,
+     "month": 4,
+     "value": "249.602"
+    },
+    {
+     "year": 2019,
+     "month": 3,
+     "value": "228.058"
+    },
+    {
+     "year": 2019,
+     "month": 2,
+     "value": "203.708"
+    },
+    {
+     "year": 2019,
+     "month": 1,
+     "value": "185.866"
+    }
+   ]
+  },
+  {
+   "seriesID": "CUUR0200SA0E",
+   "title": "Midwest energy (NSA)",
+   "data": [
+    {
+     "year": 2026,
+     "month": 7,
+     "value": "300.403"
+    },
+    {
+     "year": 2026,
+     "month": 6,
+     "value": "306.208"
+    },
+    {
+     "year": 2026,
+     "month": 5,
+     "value": "324.276"
+    },
+    {
+     "year": 2026,
+     "month": 4,
+     "value": "294.740"
+    },
+    {
+     "year": 2026,
+     "month": 3,
+     "value": "278.745"
+    },
+    {
+     "year": 2026,
+     "month": 2,
+     "value": "255.290"
+    },
+    {
+     "year": 2026,
+     "month": 1,
+     "value": "248.928"
+    },
+    {
+     "year": 2025,
+     "month": 12,
+     "value": "250.030"
+    },
+    {
+     "year": 2025,
+     "month": 11,
+     "value": "255.488"
+    },
+    {
+     "year": 2025,
+     "month": 10,
+     "value": "-"
+    },
+    {
+     "year": 2025,
+     "month": 9,
+     "value": "259.510"
+    },
+    {
+     "year": 2025,
+     "month": 8,
+     "value": "263.429"
+    },
+    {
+     "year": 2025,
+     "month": 7,
+     "value": "263.011"
+    },
+    {
+     "year": 2025,
+     "month": 6,
+     "value": "263.912"
+    },
+    {
+     "year": 2025,
+     "month": 5,
+     "value": "255.799"
+    },
+    {
+     "year": 2025,
+     "month": 4,
+     "value": "254.743"
+    },
+    {
+     "year": 2025,
+     "month": 3,
+     "value": "250.401"
+    },
+    {
+     "year": 2025,
+     "month": 2,
+     "value": "248.755"
+    },
+    {
+     "year": 2025,
+     "month": 1,
+     "value": "249.642"
+    },
+    {
+     "year": 2024,
+     "month": 12,
+     "value": "243.448"
+    },
+    {
+     "year": 2024,
+     "month": 11,
+     "value": "240.223"
+    },
+    {
+     "year": 2024,
+     "month": 10,
+     "value": "247.821"
+    },
+    {
+     "year": 2024,
+     "month": 9,
+     "value": "252.351"
+    },
+    {
+     "year": 2024,
+     "month": 8,
+     "value": "264.171"
+    },
+    {
+     "year": 2024,
+     "month": 7,
+     "value": "267.668"
+    },
+    {
+     "year": 2024,
+     "month": 6,
+     "value": "263.706"
+    },
+    {
+     "year": 2024,
+     "month": 5,
+     "value": "263.738"
+    },
+    {
+     "year": 2024,
+     "month": 4,
+     "value": "263.114"
+    },
+    {
+     "year": 2024,
+     "month": 3,
+     "value": "258.778"
+    },
+    {
+     "year": 2024,
+     "month": 2,
+     "value": "249.882"
+    },
+    {
+     "year": 2024,
+     "month": 1,
+     "value": "240.205"
+    },
+    {
+     "year": 2023,
+     "month": 12,
+     "value": "238.716"
+    },
+    {
+     "year": 2023,
+     "month": 11,
+     "value": "248.681"
+    },
+    {
+     "year": 2023,
+     "month": 10,
+     "value": "254.858"
+    },
+    {
+     "year": 2023,
+     "month": 9,
+     "value": "268.255"
+    },
+    {
+     "year": 2023,
+     "month": 8,
+     "value": "271.180"
+    },
+    {
+     "year": 2023,
+     "month": 7,
+     "value": "262.385"
+    },
+    {
+     "year": 2023,
+     "month": 6,
+     "value": "265.945"
+    },
+    {
+     "year": 2023,
+     "month": 5,
+     "value": "260.060"
+    },
+    {
+     "year": 2023,
+     "month": 4,
+     "value": "263.178"
+    },
+    {
+     "year": 2023,
+     "month": 3,
+     "value": "257.197"
+    },
+    {
+     "year": 2023,
+     "month": 2,
+     "value": "257.853"
+    },
+    {
+     "year": 2023,
+     "month": 1,
+     "value": "260.465"
+    },
+    {
+     "year": 2022,
+     "month": 12,
+     "value": "253.118"
+    },
+    {
+     "year": 2022,
+     "month": 11,
+     "value": "272.717"
+    },
+    {
+     "year": 2022,
+     "month": 10,
+     "value": "283.218"
+    },
+    {
+     "year": 2022,
+     "month": 9,
+     "value": "285.462"
+    },
+    {
+     "year": 2022,
+     "month": 8,
+     "value": "290.436"
+    },
+    {
+     "year": 2022,
+     "month": 7,
+     "value": "314.399"
+    },
+    {
+     "year": 2022,
+     "month": 6,
+     "value": "333.543"
+    },
+    {
+     "year": 2022,
+     "month": 5,
+     "value": "298.959"
+    },
+    {
+     "year": 2022,
+     "month": 4,
+     "value": "275.275"
+    },
+    {
+     "year": 2022,
+     "month": 3,
+     "value": "275.376"
+    },
+    {
+     "year": 2022,
+     "month": 2,
+     "value": "250.795"
+    },
+    {
+     "year": 2022,
+     "month": 1,
+     "value": "240.746"
+    },
+    {
+     "year": 2021,
+     "month": 12,
+     "value": "240.486"
+    },
+    {
+     "year": 2021,
+     "month": 11,
+     "value": "245.627"
+    },
+    {
+     "year": 2021,
+     "month": 10,
+     "value": "243.658"
+    },
+    {
+     "year": 2021,
+     "month": 9,
+     "value": "238.393"
+    },
+    {
+     "year": 2021,
+     "month": 8,
+     "value": "236.320"
+    },
+    {
+     "year": 2021,
+     "month": 7,
+     "value": "236.105"
+    },
+    {
+     "year": 2021,
+     "month": 6,
+     "value": "232.432"
+    },
+    {
+     "year": 2021,
+     "month": 5,
+     "value": "223.383"
+    },
+    {
+     "year": 2021,
+     "month": 4,
+     "value": "217.170"
+    },
+    {
+     "year": 2021,
+     "month": 3,
+     "value": "212.902"
+    },
+    {
+     "year": 2021,
+     "month": 2,
+     "value": "201.571"
+    },
+    {
+     "year": 2021,
+     "month": 1,
+     "value": "192.598"
+    },
+    {
+     "year": 2020,
+     "month": 12,
+     "value": "184.125"
+    },
+    {
+     "year": 2020,
+     "month": 11,
+     "value": "179.638"
+    },
+    {
+     "year": 2020,
+     "month": 10,
+     "value": "182.841"
+    },
+    {
+     "year": 2020,
+     "month": 9,
+     "value": "187.227"
+    },
+    {
+     "year": 2020,
+     "month": 8,
+     "value": "186.154"
+    },
+    {
+     "year": 2020,
+     "month": 7,
+     "value": "186.542"
+    },
+    {
+     "year": 2020,
+     "month": 6,
+     "value": "183.717"
+    },
+    {
+     "year": 2020,
+     "month": 5,
+     "value": "170.732"
+    },
+    {
+     "year": 2020,
+     "month": 4,
+     "value": "159.976"
+    },
+    {
+     "year": 2020,
+     "month": 3,
+     "value": "181.240"
+    },
+    {
+     "year": 2020,
+     "month": 2,
+     "value": "194.298"
+    },
+    {
+     "year": 2020,
+     "month": 1,
+     "value": "198.499"
+    },
+    {
+     "year": 2019,
+     "month": 12,
+     "value": "198.773"
+    },
+    {
+     "year": 2019,
+     "month": 11,
+     "value": "197.989"
+    },
+    {
+     "year": 2019,
+     "month": 10,
+     "value": "201.417"
+    },
+    {
+     "year": 2019,
+     "month": 9,
+     "value": "204.625"
+    },
+    {
+     "year": 2019,
+     "month": 8,
+     "value": "208.437"
+    },
+    {
+     "year": 2019,
+     "month": 7,
+     "value": "213.389"
+    },
+    {
+     "year": 2019,
+     "month": 6,
+     "value": "210.885"
+    },
+    {
+     "year": 2019,
+     "month": 5,
+     "value": "212.344"
+    },
+    {
+     "year": 2019,
+     "month": 4,
+     "value": "209.577"
+    },
+    {
+     "year": 2019,
+     "month": 3,
+     "value": "200.004"
+    },
+    {
+     "year": 2019,
+     "month": 2,
+     "value": "189.411"
+    },
+    {
+     "year": 2019,
+     "month": 1,
+     "value": "182.886"
+    }
+   ]
+  },
+  {
+   "seriesID": "CUURS24ASA0",
+   "title": "Minneapolis-St. Paul all items (NSA, bimonthly)",
+   "data": [
+    {
+     "year": 2026,
+     "month": 7,
+     "value": "317.850"
+    },
+    {
+     "year": 2026,
+     "month": 5,
+     "value": "319.899"
+    },
+    {
+     "year": 2026,
+     "month": 3,
+     "value": "312.610"
+    },
+    {
+     "year": 2026,
+     "month": 1,
+     "value": "310.428"
+    },
+    {
+     "year": 2025,
+     "month": 11,
+     "value": "308.116"
+    },
+    {
+     "year": 2025,
+     "month": 9,
+     "value": "310.400"
+    },
+    {
+     "year": 2025,
+     "month": 7,
+     "value": "307.881"
+    },
+    {
+     "year": 2025,
+     "month": 5,
+     "value": "305.618"
+    },
+    {
+     "year": 2025,
+     "month": 3,
+     "value": "304.173"
+    },
+    {
+     "year": 2025,
+     "month": 1,
+     "value": "305.019"
+    },
+    {
+     "year": 2024,
+     "month": 11,
+     "value": "300.531"
+    },
+    {
+     "year": 2024,
+     "month": 9,
+     "value": "302.414"
+    },
+    {
+     "year": 2024,
+     "month": 7,
+     "value": "302.458"
+    },
+    {
+     "year": 2024,
+     "month": 5,
+     "value": "298.528"
+    },
+    {
+     "year": 2024,
+     "month": 3,
+     "value": "297.769"
+    },
+    {
+     "year": 2024,
+     "month": 1,
+     "value": "296.135"
+    },
+    {
+     "year": 2023,
+     "month": 11,
+     "value": "295.511"
+    },
+    {
+     "year": 2023,
+     "month": 9,
+     "value": "296.730"
+    },
+    {
+     "year": 2023,
+     "month": 7,
+     "value": "292.223"
+    },
+    {
+     "year": 2023,
+     "month": 5,
+     "value": "291.001"
+    },
+    {
+     "year": 2023,
+     "month": 3,
+     "value": "289.968"
+    },
+    {
+     "year": 2023,
+     "month": 1,
+     "value": "288.761"
+    },
+    {
+     "year": 2022,
+     "month": 11,
+     "value": "287.396"
+    },
+    {
+     "year": 2022,
+     "month": 9,
+     "value": "290.325"
+    },
+    {
+     "year": 2022,
+     "month": 7,
+     "value": "289.265"
+    },
+    {
+     "year": 2022,
+     "month": 5,
+     "value": "285.784"
+    },
+    {
+     "year": 2022,
+     "month": 3,
+     "value": "280.388"
+    },
+    {
+     "year": 2022,
+     "month": 1,
+     "value": "274.725"
+    },
+    {
+     "year": 2021,
+     "month": 11,
+     "value": "272.859"
+    },
+    {
+     "year": 2021,
+     "month": 9,
+     "value": "270.240"
+    },
+    {
+     "year": 2021,
+     "month": 7,
+     "value": "267.241"
+    },
+    {
+     "year": 2021,
+     "month": 5,
+     "value": "262.898"
+    },
+    {
+     "year": 2021,
+     "month": 3,
+     "value": "259.187"
+    },
+    {
+     "year": 2021,
+     "month": 1,
+     "value": "256.379"
+    },
+    {
+     "year": 2020,
+     "month": 11,
+     "value": "255.362"
+    },
+    {
+     "year": 2020,
+     "month": 9,
+     "value": "256.280"
+    },
+    {
+     "year": 2020,
+     "month": 7,
+     "value": "250.986"
+    },
+    {
+     "year": 2020,
+     "month": 5,
+     "value": "251.243"
+    },
+    {
+     "year": 2020,
+     "month": 3,
+     "value": "251.570"
+    },
+    {
+     "year": 2020,
+     "month": 1,
+     "value": "252.447"
+    },
+    {
+     "year": 2019,
+     "month": 11,
+     "value": "250.997"
+    },
+    {
+     "year": 2019,
+     "month": 9,
+     "value": "251.416"
+    },
+    {
+     "year": 2019,
+     "month": 7,
+     "value": "251.802"
+    },
+    {
+     "year": 2019,
+     "month": 5,
+     "value": "251.171"
+    },
+    {
+     "year": 2019,
+     "month": 3,
+     "value": "248.706"
+    },
+    {
+     "year": 2019,
+     "month": 1,
+     "value": "245.200"
+    }
+   ]
+  },
+  {
+   "seriesID": "CUURS24ASAF11",
+   "title": "Minneapolis-St. Paul food at home (NSA, bimonthly)",
+   "data": [
+    {
+     "year": 2026,
+     "month": 7,
+     "value": "326.821"
+    },
+    {
+     "year": 2026,
+     "month": 6,
+     "value": "326.379"
+    },
+    {
+     "year": 2026,
+     "month": 5,
+     "value": "328.542"
+    },
+    {
+     "year": 2026,
+     "month": 4,
+     "value": "323.077"
+    },
+    {
+     "year": 2026,
+     "month": 3,
+     "value": "322.119"
+    },
+    {
+     "year": 2026,
+     "month": 2,
+     "value": "321.756"
+    },
+    {
+     "year": 2026,
+     "month": 1,
+     "value": "322.802"
+    },
+    {
+     "year": 2025,
+     "month": 12,
+     "value": "323.260"
+    },
+    {
+     "year": 2025,
+     "month": 11,
+     "value": "320.705"
+    },
+    {
+     "year": 2025,
+     "month": 10,
+     "value": "-"
+    },
+    {
+     "year": 2025,
+     "month": 9,
+     "value": "324.119"
+    },
+    {
+     "year": 2025,
+     "month": 8,
+     "value": "325.907"
+    },
+    {
+     "year": 2025,
+     "month": 7,
+     "value": "323.095"
+    },
+    {
+     "year": 2025,
+     "month": 6,
+     "value": "322.917"
+    },
+    {
+     "year": 2025,
+     "month": 5,
+     "value": "321.578"
+    },
+    {
+     "year": 2025,
+     "month": 4,
+     "value": "318.674"
+    },
+    {
+     "year": 2025,
+     "month": 3,
+     "value": "318.668"
+    },
+    {
+     "year": 2025,
+     "month": 2,
+     "value": "314.162"
+    },
+    {
+     "year": 2025,
+     "month": 1,
+     "value": "314.406"
+    },
+    {
+     "year": 2024,
+     "month": 12,
+     "value": "311.987"
+    },
+    {
+     "year": 2024,
+     "month": 11,
+     "value": "312.065"
+    },
+    {
+     "year": 2024,
+     "month": 10,
+     "value": "311.919"
+    },
+    {
+     "year": 2024,
+     "month": 9,
+     "value": "312.028"
+    },
+    {
+     "year": 2024,
+     "month": 8,
+     "value": "311.038"
+    },
+    {
+     "year": 2024,
+     "month": 7,
+     "value": "311.704"
+    },
+    {
+     "year": 2024,
+     "month": 6,
+     "value": "309.314"
+    },
+    {
+     "year": 2024,
+     "month": 5,
+     "value": "308.482"
+    },
+    {
+     "year": 2024,
+     "month": 4,
+     "value": "309.356"
+    },
+    {
+     "year": 2024,
+     "month": 3,
+     "value": "305.808"
+    },
+    {
+     "year": 2024,
+     "month": 2,
+     "value": "307.524"
+    },
+    {
+     "year": 2024,
+     "month": 1,
+     "value": "310.237"
+    },
+    {
+     "year": 2023,
+     "month": 12,
+     "value": "306.160"
+    },
+    {
+     "year": 2023,
+     "month": 11,
+     "value": "308.287"
+    },
+    {
+     "year": 2023,
+     "month": 10,
+     "value": "308.830"
+    },
+    {
+     "year": 2023,
+     "month": 9,
+     "value": "308.961"
+    },
+    {
+     "year": 2023,
+     "month": 8,
+     "value": "310.516"
+    },
+    {
+     "year": 2023,
+     "month": 7,
+     "value": "309.994"
+    },
+    {
+     "year": 2023,
+     "month": 6,
+     "value": "310.605"
+    },
+    {
+     "year": 2023,
+     "month": 5,
+     "value": "309.762"
+    },
+    {
+     "year": 2023,
+     "month": 4,
+     "value": "309.218"
+    },
+    {
+     "year": 2023,
+     "month": 3,
+     "value": "312.507"
+    },
+    {
+     "year": 2023,
+     "month": 2,
+     "value": "310.439"
+    },
+    {
+     "year": 2023,
+     "month": 1,
+     "value": "312.589"
+    },
+    {
+     "year": 2022,
+     "month": 12,
+     "value": "308.792"
+    },
+    {
+     "year": 2022,
+     "month": 11,
+     "value": "306.756"
+    },
+    {
+     "year": 2022,
+     "month": 10,
+     "value": "304.726"
+    },
+    {
+     "year": 2022,
+     "month": 9,
+     "value": "307.310"
+    },
+    {
+     "year": 2022,
+     "month": 8,
+     "value": "307.733"
+    },
+    {
+     "year": 2022,
+     "month": 7,
+     "value": "306.316"
+    },
+    {
+     "year": 2022,
+     "month": 6,
+     "value": "292.960"
+    },
+    {
+     "year": 2022,
+     "month": 5,
+     "value": "294.168"
+    },
+    {
+     "year": 2022,
+     "month": 4,
+     "value": "286.111"
+    },
+    {
+     "year": 2022,
+     "month": 3,
+     "value": "277.230"
+    },
+    {
+     "year": 2022,
+     "month": 2,
+     "value": "277.129"
+    },
+    {
+     "year": 2022,
+     "month": 1,
+     "value": "274.683"
+    },
+    {
+     "year": 2021,
+     "month": 12,
+     "value": "267.844"
+    },
+    {
+     "year": 2021,
+     "month": 11,
+     "value": "266.603"
+    },
+    {
+     "year": 2021,
+     "month": 10,
+     "value": "269.944"
+    },
+    {
+     "year": 2021,
+     "month": 9,
+     "value": "270.355"
+    },
+    {
+     "year": 2021,
+     "month": 8,
+     "value": "265.787"
+    },
+    {
+     "year": 2021,
+     "month": 7,
+     "value": "264.104"
+    },
+    {
+     "year": 2021,
+     "month": 6,
+     "value": "259.188"
+    },
+    {
+     "year": 2021,
+     "month": 5,
+     "value": "257.953"
+    },
+    {
+     "year": 2021,
+     "month": 4,
+     "value": "256.044"
+    },
+    {
+     "year": 2021,
+     "month": 3,
+     "value": "258.456"
+    },
+    {
+     "year": 2021,
+     "month": 2,
+     "value": "257.756"
+    },
+    {
+     "year": 2021,
+     "month": 1,
+     "value": "255.581"
+    },
+    {
+     "year": 2020,
+     "month": 12,
+     "value": "250.708"
+    },
+    {
+     "year": 2020,
+     "month": 11,
+     "value": "251.277"
+    },
+    {
+     "year": 2020,
+     "month": 10,
+     "value": "255.867"
+    },
+    {
+     "year": 2020,
+     "month": 9,
+     "value": "252.487"
+    },
+    {
+     "year": 2020,
+     "month": 8,
+     "value": "254.864"
+    },
+    {
+     "year": 2020,
+     "month": 7,
+     "value": "253.447"
+    },
+    {
+     "year": 2020,
+     "month": 6,
+     "value": "256.282"
+    },
+    {
+     "year": 2020,
+     "month": 5,
+     "value": "253.796"
+    },
+    {
+     "year": 2020,
+     "month": 4,
+     "value": "251.758"
+    },
+    {
+     "year": 2020,
+     "month": 3,
+     "value": "249.456"
+    },
+    {
+     "year": 2020,
+     "month": 2,
+     "value": "247.859"
+    },
+    {
+     "year": 2020,
+     "month": 1,
+     "value": "246.746"
+    },
+    {
+     "year": 2019,
+     "month": 12,
+     "value": "246.304"
+    },
+    {
+     "year": 2019,
+     "month": 11,
+     "value": "245.759"
+    },
+    {
+     "year": 2019,
+     "month": 10,
+     "value": "249.107"
+    },
+    {
+     "year": 2019,
+     "month": 9,
+     "value": "247.293"
+    },
+    {
+     "year": 2019,
+     "month": 8,
+     "value": "249.176"
+    },
+    {
+     "year": 2019,
+     "month": 7,
+     "value": "245.440"
+    },
+    {
+     "year": 2019,
+     "month": 6,
+     "value": "245.144"
+    },
+    {
+     "year": 2019,
+     "month": 5,
+     "value": "248.120"
+    },
+    {
+     "year": 2019,
+     "month": 4,
+     "value": "245.550"
+    },
+    {
+     "year": 2019,
+     "month": 3,
+     "value": "248.732"
+    },
+    {
+     "year": 2019,
+     "month": 2,
+     "value": "250.015"
+    },
+    {
+     "year": 2019,
+     "month": 1,
+     "value": "247.050"
+    }
+   ]
+  }
+ ]
+}
