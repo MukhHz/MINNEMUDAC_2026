@@ -1,0 +1,13 @@
+dataset,column,rule,values_changed
+Organization,City,Trim outer whitespace; blank strings become missing,31
+Organization,State,Trim outer whitespace; blank strings become missing,1
+Organization,MailCity,Trim outer whitespace; blank strings become missing,23
+Organization,MailState,Trim outer whitespace; blank strings become missing,2
+Organization,Conditions,Trim outer whitespace; blank strings become missing,4
+Organization,AgencyType,Trim outer whitespace; blank strings become missing,6
+Incoming Call,BestContactMethod,Trim outer whitespace; blank strings become missing,1
+Incoming Call,County,Trim outer whitespace; blank strings become missing,5
+Incoming Call,PrimaryReasonForCall,Trim outer whitespace; blank strings become missing,11
+Incoming Call,SNAP Status,Trim outer whitespace; blank strings become missing,2
+Incoming Call,ReferralInfoEntry,Trim outer whitespace; blank strings become missing,44
+Incoming Call,Referral Source,Trim outer whitespace; blank strings become missing,439
