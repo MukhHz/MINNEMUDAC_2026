@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Need vs. Food Shelf Activity</title>
+<style>
+:root {
+  --bg: #f7f6f2; --surface: #ffffff; --ink: #1d1d1b; --muted: #5f5e5a; --faint: #8a8984; --rule: #dedcd5;
+  --lower: #eb6834; --lower-t: #fdeee7; --higher: #2a78d6; --higher-t: #e8f1fb; --none: #e9e8e3; --nofs: #c9c7bf;
+  --near: #dcd7f5; --mid: #9b8fe3; --far: #4a37b0; --mobile: #0f8f63; --site: #2b2b29;
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink); background: var(--bg);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); }
+header { display: flex; align-items: center; gap: 24px; padding: 14px 28px 10px; border-bottom: 1px solid var(--rule); background: var(--surface); }
+header h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -0.01em; white-space: nowrap; }
+nav { display: flex; gap: 6px; margin-left: auto; }
+nav button { font: inherit; font-size: 15px; padding: 8px 16px; border-radius: 8px; border: 1px solid var(--rule); background: var(--surface); color: var(--muted); cursor: pointer; }
+nav button .k { display: inline-block; font-size: 12px; color: var(--faint); border: 1px solid var(--rule); border-radius: 4px; padding: 0 5px; margin-right: 6px; }
+nav button.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+nav button.on .k { color: #ddd; border-color: #555; }
+main { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(340px, 1fr); gap: 20px; padding: 16px 28px 20px; height: calc(100vh - 62px); }
+.mapwrap { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+svg.map { width: 100%; height: 100%; display: block; }
+.panel { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 20px 24px; overflow-y: auto; }
+.tab { display: none; } .tab.on { display: contents; }
+h2 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
+.sub { color: var(--muted); font-size: 15px; margin: 0 0 14px; line-height: 1.45; }
+.badge { display: inline-block; font-size: 15px; font-weight: 600; padding: 4px 10px; border-radius: 999px; margin-bottom: 14px; }
+.badge.lower { background: var(--lower-t); color: #a8401a; } .badge.higher { background: var(--higher-t); color: #1a5aa6; }
+.badge.nofs { background: #eeede8; color: var(--muted); } .badge.none { background: #eeede8; color: var(--muted); }
+.big { font-size: 44px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; }
+.bigline { display: flex; align-items: baseline; gap: 12px; margin: 6px 0 4px; }
+.bigline .lab { font-size: 16px; color: var(--muted); line-height: 1.35; }
+.dest { margin: 14px 0 6px; border-top: 1px solid var(--rule); }
+.dest div { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--rule); font-size: 16px; }
+.dest .pct { font-weight: 700; min-width: 48px; }
+.dest .t { color: var(--muted); text-align: right; }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; margin: 16px 0; }
+.stats div { font-size: 13px; color: var(--muted); } .stats b { display: block; font-size: 20px; color: var(--ink); font-weight: 650; }
+.story { font-size: 16px; line-height: 1.5; background: var(--bg); border-radius: 8px; padding: 12px 14px; margin: 8px 0 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 12px; }
+.chips .grp { width: 100%; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); margin-top: 6px; }
+.chip { font: inherit; font-size: 14px; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--rule); background: var(--surface); cursor: pointer; color: var(--ink); }
+.chip.lower { border-color: #f3b79c; } .chip.higher { border-color: #a9c8ef; }
+.chip.on { color: #fff; } .chip.lower.on { background: var(--lower); border-color: var(--lower); } .chip.higher.on { background: var(--higher); border-color: var(--higher); }
+.chip.nofs.on { background: var(--muted); border-color: var(--muted); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 14px; color: var(--muted); margin: 10px 0; }
+.legend span { display: inline-flex; align-items: center; gap: 7px; }
+.sw { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.toggles { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+.toggles label { font-size: 15px; display: flex; gap: 10px; align-items: center; cursor: pointer; }
+.toggles input { width: 18px; height: 18px; accent-color: var(--ink); }
+.key { border-left: 4px solid var(--ink); padding: 4px 0 4px 12px; margin: 14px 0; font-size: 16px; line-height: 1.5; }
+.note { font-size: 12.5px; color: var(--faint); line-height: 1.45; margin-top: 14px; }
+.tip { position: absolute; pointer-events: none; background: var(--ink); color: #fff; font-size: 14px; line-height: 1.4; padding: 8px 11px; border-radius: 8px; opacity: 0; transition: opacity .1s; max-width: 260px; }
+.tip b { font-size: 15px; }
+.slider { margin: 18px 0 8px; }
+.slider input { width: 100%; accent-color: var(--ink); height: 28px; }
+.ticks { display: flex; justify-content: space-between; font-size: 14px; color: var(--muted); }
+.ticks span.on { color: var(--ink); font-weight: 700; }
+.list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.list h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 6px; }
+.list ul { list-style: none; padding: 0; margin: 0; } .list li { font-size: 15px; padding: 4px 0; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; }
+.list li.new { font-weight: 650; }
+.list li .x { color: var(--muted); }
+.diff { font-size: 14px; color: var(--muted); margin-top: 12px; line-height: 1.5; }
+.county { stroke: #fff; stroke-width: .8; vector-effect: non-scaling-stroke; }
+.home { position: absolute; top: 14px; left: 14px; font: inherit; font-size: 14px; padding: 7px 13px; border-radius: 8px; border: 1px solid var(--rule); background: var(--surface); cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.county.click { cursor: pointer; }
+.county.click:hover { filter: brightness(0.93); }
+.sel { fill: none; stroke: var(--ink); stroke-width: 2.6; pointer-events: none; vector-effect: non-scaling-stroke; }
+.dest-outline { fill: none; stroke: var(--ink); stroke-width: 1.8; stroke-dasharray: 5 4; pointer-events: none; vector-effect: non-scaling-stroke; }
+.lbl { font-size: 10px; fill: var(--ink); font-weight: 600; pointer-events: none; paint-order: stroke; stroke: rgba(255,255,255,.85); stroke-width: 3px; text-anchor: middle; }
+.lbl.small { font-size: 9px; font-weight: 500; }
+.flow { fill: none; stroke: var(--ink); stroke-linecap: round; opacity: .85; pointer-events: none; }
+.flowlbl { font-size: 12px; font-weight: 700; fill: var(--ink); paint-order: stroke; stroke: #fff; stroke-width: 4px; text-anchor: middle; pointer-events: none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Need vs. food shelf activity: Minnesota, 2022–2024</h1>
+  <nav>
+    <button data-tab="t3" class="on"><span class="k">1</span>Which counties?</button>
+    <button data-tab="t1"><span class="k">2</span>Cross-county</button>
+    <button data-tab="t2"><span class="k">3</span>Distance &amp; mobile pantries</button>
+  </nav>
+</header>
+<main>
+  <!-- TAB 1 -->
+  <div class="tab" id="t1">
+    <div class="mapwrap"><svg class="map" id="m1"></svg><button class="home" id="home1">← Statewide view</button></div>
+    <div class="panel">
+      <div class="chips" id="chips1"></div>
+      <div id="p1"></div>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--lower)"></i>Records less than expected</span>
+        <span><i class="sw" style="background:var(--higher)"></i>Records more than expected</span>
+        <span><i class="dot" style="background:var(--site);opacity:.55"></i>Food shelf (size = visits)</span>
+      </div>
+      <div class="toggles"><label><input type="checkbox" id="showSites" checked>Show food shelves</label></div>
+      <p class="note">Arrows: share of the county's residents whose <b>nearest</b> fixed food shelf is in that county (Census 2020 block-group population centers; straight-line distance). Nearest isn't always where people go; client ZIP codes would confirm it.</p>
+    </div>
+  </div>
+  <!-- TAB 2 -->
+  <div class="tab" id="t2">
+    <div class="mapwrap"><svg class="map" id="m2"></svg><div class="tip" id="tip2"></div></div>
+    <div class="panel">
+      <h2>How far do people live from a food shelf?</h2>
+      <p class="sub">Each dot is a neighborhood (Census block group, 1,000–3,000 people), colored by straight-line distance to the nearest fixed food shelf.</p>
+      <div class="legend">
+        <span><i class="dot" style="background:var(--near)"></i>Under 5 miles</span>
+        <span><i class="dot" style="background:var(--mid)"></i>5–10 miles</span>
+        <span><i class="dot" style="background:var(--far)"></i>Over 10 miles</span>
+      </div>
+      <div class="toggles">
+        <label><input type="checkbox" id="tLower" checked>Outline lower-than-expected counties <i class="sw" style="background:none;border:2.5px solid var(--lower)"></i></label>
+        <label><input type="checkbox" id="tMobile">Outline counties with a mobile pantry <i class="sw" style="background:none;border:2.5px solid var(--mobile)"></i></label>
+        <label><input type="checkbox" id="tSites">Show fixed food shelves <i class="dot" style="background:var(--site)"></i></label>
+      </div>
+      <div class="chips" id="chips2"></div>
+      <div id="p2"></div>
+    </div>
+  </div>
+  <!-- TAB 3 -->
+  <div class="tab on" id="t3">
+    <div class="mapwrap"><svg class="map" id="m3"></svg></div>
+    <div class="panel">
+      <h2>Which counties break the pattern?</h2>
+      <p class="sub">Each county is compared with counties that have a <b>similar number of food-insecure people</b>. It's shortlisted when it records at least <b>2×</b> (or ½ or less) of what they record, on 2+ metrics, in 2+ of 3 years, confirmed by a second method.</p>
+      <p class="sub" style="margin-top:-6px">Move the slider to test a stricter or looser cutoff:</p>
+      <div class="slider"><input type="range" id="cut" min="0" max="4" step="1" value="2"></div>
+      <div class="ticks" id="ticks"></div>
+      <div class="bigline"><span class="big" id="n3"></span><span class="lab" id="n3lab"></span></div>
+      <div class="list"><div><h3 style="color:#a8401a">Lower than expected</h3><ul id="l3"></ul></div><div><h3 style="color:#1a5aa6">Higher than expected</h3><ul id="h3"></ul></div></div>
+      <div class="diff" id="d3"></div>
+      <div class="key">Steele, Washington and Rice stay on the list at <b>every</b> cutoff, and Nicollet and Pope up to 2.5×. The core finding doesn't depend on the exact cutoff.</div>
+    </div>
+  </div>
+</main>
+<script>
+const D = __DATA__;
+const NS = "http://www.w3.org/2000/svg";
+const C = Object.fromEntries(D.counties.map(c => [c.fips, c]));
+const byName = Object.fromEntries(D.counties.map(c => [c.name, c]));
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const fmtX = t => t == null ? "n/a" : (t >= 1 ? t.toFixed(t >= 10 ? 0 : 2) : t.toFixed(2)) + "×";
+const statusFill = s => s === "lower" ? css("--lower") : s === "higher" ? css("--higher") : s === "nofs" ? "url(#hatch)" : css("--none");
+
+const STORY = {
+  "Nicollet": "Very few food shelves. For most residents the nearest one is across the line in <b>Blue Earth (Mankato)</b>, which records <b>1.89×</b> expected from a few very busy sites. Consistent with residents being served next door.",
+  "Pope": "Few, quiet sites; 20% of residents' nearest food shelf is in another county. North Country Food Bank network.",
+  "Lac qui Parle": "<b>Distance:</b> 36% of residents live more than 10 miles from a fixed food shelf, and there's no mobile pantry.",
+  "Norman": "Many sites, but the quietest in the state; 30% of residents live more than 10 miles away; no mobile pantry.",
+  "Roseau": "<b>Distance:</b> 38% of residents live more than 10 miles away; remote county; no mobile pantry.",
+  "Steele": "A few <b>very busy</b> sites close to residents (Owatonna), rising every year. Large sites may draw people from beyond the county.",
+  "Washington": "The busiest sites in Minnesota (~1,750 visits per site per month), everyone within 10 miles, and 55% of food-insecure residents earn too much for SNAP.",
+  "Rice": "Busy sites and short distances; 45% of food-insecure residents earn too much for SNAP.",
+  "Renville": "<b>Counterexample:</b> busy sites despite long distances and 28% of residents' nearest food shelf being in another county.",
+  "Mahnomen": "Highest poverty of the focus counties (19.9%), with many sites and short distances.",
+  "Pipestone": "Above-median poverty (11.6%) with busy sites.",
+  "Olmsted": "Rochester: few but very busy sites, short distances; 48% of food-insecure residents earn too much for SNAP.",
+  "Wilkin": "<b>No food shelf in the data.</b> Every resident's nearest food shelf is in another county (about 19 miles on average). Yet the helpline logged 9 calls from Wilkin and <b>referred 6 to a food shelf</b>, which must be in a neighboring county."
+};
+
+function baseMap(svg, opts = {}) {
+  const id = svg.id;
+  svg.setAttribute("viewBox", `-12 -12 ${D.W + 24} ${D.H + 24}`);
+  svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+  const defs = el("defs", {}, svg);
+  const pat = el("pattern", { id: "hatch-" + id, width: 6, height: 6, patternUnits: "userSpaceOnUse", patternTransform: "rotate(45)" }, defs);
+  el("rect", { width: 6, height: 6, fill: css("--none") }, pat);
+  el("line", { x1: 0, y1: 0, x2: 0, y2: 6, stroke: css("--nofs"), "stroke-width": 2.2 }, pat);
+  const mk = el("marker", { id: "arrow-" + id, viewBox: "0 0 10 10", refX: 8.5, refY: 5, markerWidth: 2.8, markerHeight: 2.8, orient: "auto-start-reverse" }, defs);
+  el("path", { d: "M0,0 L10,5 L0,10 z", fill: css("--ink") }, mk);
+  const g = el("g", {}, svg);
+  const paths = {};
+  for (const c of D.counties) paths[c.fips] = el("path", { d: c.path, class: "county", fill: opts.fill ? opts.fill(c).replace("#hatch", "#hatch-" + id) : css("--none") }, g);
+  return { g, paths };
+}
+
+/* ---------------- TAB 1: cross-county ---------------- */
+const m1 = document.getElementById("m1");
+const b1 = baseMap(m1, { fill: c => D.focus.includes(c.fips) && c.status !== "none" ? statusFill(c.status) : css("--none") });
+const siteLayer = el("g", { opacity: .5 }, m1);
+const siteDots = D.sites.map(([x, y, v]) => el("circle", { cx: x, cy: y, r: 1, fill: css("--site"), "data-r": Math.max(1, Math.sqrt(v) * 0.16) }, siteLayer));
+const over1 = el("g", {}, m1);
+const lbl1 = el("g", {}, m1);
+const focusLabels = D.focus.map(f => { const c = C[f]; const t = el("text", { x: c.cx, y: c.cy, dy: "0.35em", class: "lbl" }, lbl1); t.textContent = c.name; return t; });
+for (const f of D.focus) { const p = b1.paths[f]; p.classList.add("click"); p.addEventListener("click", () => select1(f)); }
+document.getElementById("showSites").addEventListener("change", e => siteLayer.style.display = e.target.checked ? "" : "none");
+
+/* zoom: animate the viewBox; text, arrows and dots are resized so they stay readable at any zoom */
+const FULL = [-12, -12, D.W + 24, D.H + 24];
+let vb1 = FULL.slice();
+function sizeFor(k) {
+  const f = Math.pow(k, 0.9);
+  focusLabels.forEach(t => { t.style.fontSize = (10 / f).toFixed(2) + "px"; t.style.strokeWidth = (3 / f).toFixed(2) + "px"; });
+  siteDots.forEach(d => d.setAttribute("r", (+d.dataset.r / Math.pow(k, 0.8)).toFixed(2)));
+  over1.querySelectorAll("[data-fs]").forEach(t => { t.style.fontSize = (+t.dataset.fs / f).toFixed(2) + "px"; t.style.strokeWidth = (+t.dataset.sw / f).toFixed(2) + "px"; });
+  over1.querySelectorAll("[data-w]").forEach(p => p.setAttribute("stroke-width", (+p.dataset.w / Math.pow(k, 0.8)).toFixed(2)));
+}
+function zoomTo(target, ms = 700) {
+  const from = vb1.slice(), t0 = performance.now();
+  const token = (zoomTo.token = (zoomTo.token || 0) + 1);
+  sizeFor(FULL[2] / target[2]);
+  function step(t) {
+    if (zoomTo.token !== token) return;
+    let p = Math.min(1, (t - t0) / ms); p = p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+    vb1 = from.map((a, i) => a + (target[i] - a) * p);
+    m1.setAttribute("viewBox", vb1.map(n => n.toFixed(1)).join(" "));
+    if (p < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+  setTimeout(() => { if (zoomTo.token === token) { vb1 = target.slice(); m1.setAttribute("viewBox", vb1.map(n => n.toFixed(1)).join(" ")); } }, ms + 80);
+}
+function boxFor(list) {
+  let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+  for (const f of list) { const b = C[f].bbox; x0 = Math.min(x0, b[0]); y0 = Math.min(y0, b[1]); x1 = Math.max(x1, b[2]); y1 = Math.max(y1, b[3]); }
+  const r = m1.getBoundingClientRect(), aspect = r.width && r.height ? r.width / r.height : 1;
+  let w = (x1 - x0) * 1.45 + 30, h = (y1 - y0) * 1.45 + 30;
+  w = Math.max(w, 170); h = Math.max(h, 170);
+  if (w / h < aspect) w = h * aspect; else h = w / aspect;
+  const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+  return [cx - w / 2, cy - h / 2, w, h];
+}
+
+const chips1 = document.getElementById("chips1");
+const groups1 = [["Lower than expected", "lower"], ["Higher than expected", "higher"], ["No food shelf", "nofs"]];
+for (const [label, s] of groups1) {
+  const fs = D.focus.filter(f => C[f].status === s).sort((a, b) => (C[a].times ?? 0) - (C[b].times ?? 0));
+  if (s === "higher") fs.reverse();
+  const h = document.createElement("div"); h.className = "grp"; h.textContent = label; chips1.appendChild(h);
+  for (const f of fs) { const b = document.createElement("button"); b.className = "chip " + s; b.textContent = C[f].name; b.dataset.f = f; b.onclick = () => select1(f); chips1.appendChild(b); }
+}
+
+const intro1 = `
+  <h2>Where is the nearest food shelf?</h2>
+  <p class="sub">Food shelf activity is counted where the food shelf is, not where clients live. So a county can look "low" while its residents are served next door.</p>
+  <div class="bigline"><span class="big">12</span><span class="lab">counties record at least 2× more, or ½ or less,<br>than counties with similar need</span></div>
+  <p class="sub" style="margin-top:10px">Click a county on the map or a button above to see where its residents' nearest food shelf is.</p>`;
+function statewide1() {
+  over1.innerHTML = ""; [...chips1.querySelectorAll(".chip")].forEach(b => b.classList.remove("on"));
+  document.getElementById("p1").innerHTML = intro1; document.getElementById("home1").style.display = "none";
+  zoomTo(FULL);
+}
+document.getElementById("home1").onclick = statewide1;
+
+function select1(f) {
+  const c = C[f], fl = D.flows[f];
+  over1.innerHTML = "";
+  [...chips1.querySelectorAll(".chip")].forEach(b => b.classList.toggle("on", b.dataset.f === f));
+  for (const d of fl.to) el("path", { d: C[d.fips].path, class: "dest-outline" }, over1);
+  el("path", { d: c.path, class: "sel" }, over1);
+  for (const d of fl.to) {
+    const t = C[d.fips];
+    const x1 = c.cx, y1 = c.cy, x2 = t.cx, y2 = t.cy, dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy);
+    const mx = (x1 + x2) / 2 - dy * 0.18, my = (y1 + y2) / 2 + dx * 0.18;
+    el("path", { d: `M${x1},${y1} Q${mx},${my} ${x2 - dx / len * 3},${y2 - dy / len * 3}`, class: "flow", "data-w": 1.5 + d.share / 9, "marker-end": "url(#arrow-m1)" }, over1);
+    const qx = 0.25 * x1 + 0.5 * mx + 0.25 * x2, qy = 0.25 * y1 + 0.5 * my + 0.25 * y2;
+    const lt = el("text", { x: qx, y: qy, dy: "0.35em", class: "flowlbl", "data-fs": 15, "data-sw": 5 }, over1); lt.textContent = d.share + "%";
+    const nt = el("text", { x: t.cx, y: t.cy, dy: "-0.8em", class: "lbl small", "data-fs": 11, "data-sw": 3 }, over1); nt.textContent = t.name + (t.times ? " · " + fmtX(t.times) : "");
+  }
+  zoomTo(boxFor([f, ...fl.to.map(d => d.fips)]));
+  document.getElementById("home1").style.display = "";
+  const badge = c.status === "nofs" ? `<span class="badge nofs">No food shelf in the data</span>`
+    : `<span class="badge ${c.status}">Records ${fmtX(c.times)} expected</span>`;
+  const destRows = fl.to.map(d => { const t = C[d.fips];
+    const tx = t.times == null ? "no food shelf" : `records ${fmtX(t.times)} expected`;
+    return `<div><span><span class="pct">${d.share}%</span> ${t.name}</span><span class="t">${tx}</span></div>`; }).join("");
+  document.getElementById("p1").innerHTML = `
+    <h2>${c.name}</h2>${badge}
+    <div class="bigline"><span class="big">${Math.round(100 - fl.own)}%</span><span class="lab">of residents' nearest food shelf<br>is in <b>another county</b></span></div>
+    ${fl.to.length ? `<div class="dest">${destRows}</div>` : ""}
+    <div class="stats">
+      <div>Avg. miles to nearest food shelf<b>${c.dist}</b></div>
+      <div>Residents over 10 miles away<b>${c.far}%</b></div>
+      <div>Food shelves per 10k residents<b>${c.sites10k}</b></div>
+      <div>Visits per site per month<b>${c.vps == null ? "–" : c.vps.toLocaleString()}</b></div>
+    </div>
+    <p class="story">${STORY[c.name] || ""}</p>`;
+}
+sizeFor(1);
+statewide1();
+
+/* ---------------- TAB 2: distance ---------------- */
+const m2 = document.getElementById("m2");
+const b2 = baseMap(m2, { fill: () => "#fbfbf9" });
+for (const p of Object.values(b2.paths)) { p.setAttribute("stroke", "#cfcdc5"); p.setAttribute("stroke-width", ".6"); }
+const bandCol = [css("--near"), css("--mid"), css("--far")];
+const dotLayer = el("g", { "pointer-events": "none" }, m2);
+for (const band of [0, 1, 2]) for (const [x, y, b] of D.bg) if (b === band) el("circle", { cx: x, cy: y, r: band === 0 ? 1.3 : 1.9, fill: bandCol[b] }, dotLayer);
+const site2 = el("g", { "pointer-events": "none", style: "display:none" }, m2);
+for (const [x, y] of D.sites) el("circle", { cx: x, cy: y, r: 1.4, fill: css("--site") }, site2);
+const lowerLayer = el("g", { "pointer-events": "none" }, m2), mobileLayer = el("g", { "pointer-events": "none", style: "display:none" }, m2);
+const focus2 = el("g", { "pointer-events": "none" }, m2);
+for (const c of D.counties) {
+  if (c.status === "lower") el("path", { d: c.path, fill: "none", stroke: css("--lower"), "stroke-width": 2.4 }, lowerLayer);
+  if (c.mobile) el("path", { d: c.path, fill: "none", stroke: css("--mobile"), "stroke-width": 2.4, "stroke-dasharray": "5 3" }, mobileLayer);
+}
+const tip2 = document.getElementById("tip2"), wrap2 = m2.parentElement;
+for (const c of D.counties) {
+  const p = b2.paths[c.fips];
+  p.addEventListener("mousemove", e => {
+    const r = wrap2.getBoundingClientRect();
+    const st = c.status === "lower" ? "records less than expected" : c.status === "higher" ? "records more than expected" : c.status === "nofs" ? "no food shelf in the data" : "no persistent mismatch";
+    tip2.innerHTML = `<b>${c.name}</b> · ${c.times ? fmtX(c.times) : "–"}<br>${st}<br>${c.far}% live over 10 miles away (avg ${c.dist} mi)<br>Mobile pantry: ${c.mobile ? "yes (" + c.mobilePct + "% of visits)" : "none"}`;
+    tip2.style.left = Math.min(e.clientX - r.left + 14, r.width - 270) + "px"; tip2.style.top = (e.clientY - r.top + 14) + "px"; tip2.style.opacity = 1;
+  });
+  p.addEventListener("mouseleave", () => tip2.style.opacity = 0);
+  p.addEventListener("click", () => select2(c.fips));
+}
+const tog = (id, layer) => document.getElementById(id).addEventListener("change", e => layer.style.display = e.target.checked ? "" : "none");
+tog("tLower", lowerLayer); tog("tMobile", mobileLayer); tog("tSites", site2);
+
+const FOCUS2 = ["Roseau", "Norman", "Lac qui Parle", "Cook"];
+const chips2 = document.getElementById("chips2");
+const h2g = document.createElement("div"); h2g.className = "grp"; h2g.textContent = "Compare"; chips2.appendChild(h2g);
+for (const n of FOCUS2) { const c = byName[n]; const b = document.createElement("button"); b.className = "chip " + c.status; b.textContent = n; b.dataset.f = c.fips; b.onclick = () => select2(c.fips); chips2.appendChild(b); }
+const overview2 = `
+  <div class="key"><b>84%</b> of Minnesotans live within 5 miles of a fixed food shelf; <b>4%</b> live more than 10 miles away. The typical lower-than-expected county has <b>25%</b> of residents over 10 miles away, vs. 9% elsewhere.</div>
+  <div class="bigline"><span class="big">0 of 10</span><span class="lab">lower-than-expected counties<br>have a mobile pantry</span></div>
+  <p class="sub" style="margin-top:6px">vs. 28% of counties with no mismatch (Fisher p ≈ 0.10, suggestive). Among far-from-a-food-shelf counties, those with a mobile pantry record <b>1.23×</b> expected vs. <b>0.80×</b> without (p ≈ 0.05, 7 counties).</p>
+  <p class="note">Mobile pantries are shown as counties that have one (their stops aren't in the data). Click a county or a button above for details.</p>`;
+function select2(f) {
+  const c = C[f];
+  focus2.innerHTML = ""; el("path", { d: c.path, class: "sel" }, focus2);
+  const t = el("text", { x: c.cx, y: c.cy - 8, class: "lbl" }, focus2); t.textContent = c.name;
+  [...chips2.querySelectorAll(".chip")].forEach(b => b.classList.toggle("on", b.dataset.f === f));
+  const badge = c.status === "nofs" ? `<span class="badge nofs">No food shelf in the data</span>`
+    : c.status === "none" ? `<span class="badge none">No persistent mismatch · ${fmtX(c.times)}</span>`
+    : `<span class="badge ${c.status}">Records ${fmtX(c.times)} expected</span>`;
+  document.getElementById("p2").innerHTML = `
+    <h2>${c.name}</h2>${badge}
+    <div class="bigline"><span class="big">${c.far}%</span><span class="lab">of residents live more than<br>10 miles from a fixed food shelf</span></div>
+    <div class="stats">
+      <div>Avg. miles to nearest food shelf<b>${c.dist}</b></div>
+      <div>Mobile pantry<b>${c.mobile ? "Yes · " + c.mobilePct + "% of visits" : "None"}</b></div>
+    </div>
+    ${c.name === "Cook" ? `<p class="story">Remote like Roseau, but <b>64% of its visits come from mobile pantries</b>, and it records <b>2.4×</b> expected.</p>` : STORY[c.name] ? `<p class="story">${STORY[c.name]}</p>` : ""}
+    <p class="note"><a href="#" id="back2">← Back to overview</a></p>`;
+  document.getElementById("back2").onclick = e => { e.preventDefault(); reset2(); };
+}
+function reset2() { focus2.innerHTML = ""; [...chips2.querySelectorAll(".chip")].forEach(b => b.classList.remove("on")); document.getElementById("p2").innerHTML = overview2; }
+reset2();
+
+/* ---------------- TAB 3: cutoff ---------------- */
+const m3 = document.getElementById("m3");
+const b3 = baseMap(m3);
+const lbl3 = el("g", {}, m3);
+const ticks = document.getElementById("ticks");
+D.cutoffs.forEach((c, i) => { const s = document.createElement("span"); s.textContent = c.t + "×"; s.dataset.i = i; ticks.appendChild(s); });
+const at2 = new Set([...D.cutoffs[2].lower, ...D.cutoffs[2].higher]);
+const cutIn = document.getElementById("cut");
+function render3() {
+  const i = +cutIn.value, cu = D.cutoffs[i], on = new Set([...cu.lower, ...cu.higher]);
+  [...ticks.children].forEach(s => s.classList.toggle("on", +s.dataset.i === i));
+  for (const c of D.counties) b3.paths[c.fips].setAttribute("fill", cu.lower.includes(c.fips) ? css("--lower") : cu.higher.includes(c.fips) ? css("--higher") : css("--none"));
+  lbl3.innerHTML = "";
+  for (const f of on) { const c = C[f]; const t = el("text", { x: c.cx, y: c.cy + 3, class: "lbl" + (on.size > 14 ? " small" : "") }, lbl3); t.textContent = c.name; }
+  document.getElementById("n3").textContent = on.size;
+  document.getElementById("n3lab").innerHTML = `counties shortlisted<br>at <b>${cu.t}×</b>${cu.t === 2 ? " (our cutoff)" : ""}`;
+  const li = f => `<li class="${at2.has(f) ? "" : "new"}"><span>${C[f].name}</span><span class="x">${fmtX(C[f].times)}</span></li>`;
+  document.getElementById("l3").innerHTML = cu.lower.map(li).join("") || "<li><span class='x'>none</span></li>";
+  document.getElementById("h3").innerHTML = cu.higher.map(li).join("") || "<li><span class='x'>none</span></li>";
+  const added = [...on].filter(f => !at2.has(f)).map(f => C[f].name), dropped = [...at2].filter(f => !on.has(f)).map(f => C[f].name);
+  document.getElementById("d3").innerHTML = cu.t === 2 ? "These are the 12 counties in our findings." :
+    (added.length ? `<b>Added vs. 2×</b> (bold in the list): ${added.join(", ")}. ` : "") + (dropped.length ? `<b>Dropped vs. 2×:</b> ${dropped.join(", ")}.` : "");
+}
+cutIn.addEventListener("input", render3);
+ticks.addEventListener("click", e => { if (e.target.dataset.i) { cutIn.value = e.target.dataset.i; render3(); } });
+render3();
+
+/* ---------------- tabs + keys ---------------- */
+function show(id) {
+  document.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", t.id === id));
+  document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.tab === id));
+}
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => show(b.dataset.tab));
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT" && e.target.type === "range" && (e.key === "ArrowLeft" || e.key === "ArrowRight")) return;
+  const KEYTAB = { "1": "t3", "2": "t1", "3": "t2" };
+  if (KEYTAB[e.key]) show(KEYTAB[e.key]);
+  if (document.getElementById("t3").classList.contains("on") && (e.key === "ArrowLeft" || e.key === "ArrowRight")) {
+    cutIn.value = Math.max(0, Math.min(4, +cutIn.value + (e.key === "ArrowRight" ? 1 : -1))); render3();
+  }
+});
+const h = location.hash.replace("#", ""); if (["t1", "t2", "t3"].includes(h)) show(h);
+</script>
+</body>
+</html>
