@@ -63,6 +63,18 @@ Files in `Data/new_extra_data/` (downloaded by a team member; read as data only)
 
 Denominators for D2–D3: Census PEP Vintage 2024 (B1; 2020–2021 from the raw `co-est2024-alldata.csv`, 2025 reuses 2024 and is flagged) and ACS 5-year 2018–22 B09001 (children under 5, lines 3 + 4). Block-group population centers: A7.
 
+## B4. Prices for Q4, added by `04_q4_prices_foodshelf.ipynb`
+
+All: US Bureau of Labor Statistics (BLS), **Consumer Price Index for All Urban Consumers (CPI-U)**, via the keyless Public Data API v2 (`https://api.bls.gov/publicAPI/v2/timeseries/data/`), one request, fetched 2026-10-11. **(3) Time grain:** monthly (Minneapolis–St. Paul all items: odd months only). **Vintage we use:** Jan 2019 – **Jul 2026**; the API already returned August 2026 values, and those were **dropped in memory before saving** (notebook asserts `date.max() <= 2026-07-01`). October 2025 was never collected (federal shutdown) and is filled from Sep/Nov 2025, flagged `oct2025_imputed`. **Publication lag:** ~2 weeks (each month's CPI is released mid-following-month). Raw (filtered) file: `Data/external/bls_cpi/bls_cpi_2019_2026_through_jul2026.json`. Output: `Data/processed/cpi_monthly_2019_2026.csv`.
+
+| # | (1) Exact series | Series ID | (2) Geo grain | Role | (4) Why this, not the alternative |
+|---|---|---|---|---|---|
+| E1 | **Food at home, Midwest, not seasonally adjusted** | `CUUR0200SAF11` | Census Midwest region (includes MN) | **main price series** | Groceries specifically (what food shelf clients would otherwise buy), monthly, for the region that contains Minnesota. The national index is less local; the Minneapolis–St. Paul food index is noisier (smaller sample) and is kept as a check. Not seasonally adjusted because the analysis uses year-over-year changes, which remove seasons. |
+| E2 | Food at home, U.S. city average (NSA / SA) | `CUUR0000SAF11` / `CUSR0000SAF11` | United States | robustness check | Confirms the result doesn't depend on the regional index. |
+| E3 | Food at home, Minneapolis–St. Paul | `CUURS24ASAF11` | Minneapolis–St. Paul–Bloomington metro | robustness check | Most local index available, but metro-only and noisier. |
+| E4 | All items: Midwest, U.S., Minneapolis–St. Paul | `CUUR0200SA0`, `CUUR0000SA0`, `CUURS24ASA0` | region / nation / metro | general cost-of-living comparison | Tests whether food prices or overall prices line up better with food shelf demand (they line up about equally well). |
+| E5 | Midwest food away from home, shelter, gasoline, energy | `CUUR0200SEFV`, `CUUR0200SAH1`, `CUUR0200SETB01`, `CUUR0200SA0E` | Census Midwest region | "other cost pressures" placebo checks | Shows whether the link is specific to groceries or reflects other household costs. |
+
 ## C. Looked at but not used
 
 | Source | Why not |
