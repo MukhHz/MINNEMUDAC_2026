@@ -28,13 +28,14 @@ One page per question, in the order we'd present. Every number below comes from 
 - 2022 → 2024: estimated need +25%, visits +46%, pounds +31%, individuals +60%. [Q1 section 6.1]
 - 12 counties are persistently ≥ 2× above or ≤ ½ of what similar-need counties record: lower = Nicollet, Pope, Lac qui Parle, Norman, Roseau; higher = Steele, Washington, Rice, Renville, Mahnomen, Pipestone, Olmsted. [Q1 section 25]
 - Strongest explanation: % of residents whose nearest food shelf is in another county, ρ = −0.33 with the mismatch gap (regression ≈ −0.26 per SD; Nicollet: 59%, next to Mankato). The characteristics explain 22% of the variation, 34% with the food bank region. 44 more public factors add **nothing that survives correction** (224 tests; best q = 0.12) and no out-of-sample power (leave-one-out R² ≤ 0.11). [Q1 sections 32 and 36; Q1b sections 5, 8c, 9; `q1b_factor_tests.csv`]
+- Mobile pantries (suggestive): none of the 10 lower-than-expected counties has one (Fisher p ≈ 0.10); among counties where many residents live far away, those with a mobile pantry record about 1.23× expected vs 0.80× without (p ≈ 0.05, 7 counties). Cook: 48% of residents > 10 miles away, 64% of visits from mobile pantries, 2.4× expected. [Q1 section 36]
 
 **Interpretation**
 - County need estimates are a **weak guide** to where food shelf activity concentrates; county size and site locations matter more.
 - A county can look underserved when its residents are served **next door** (Nicollet → Blue Earth); hub counties look over-served for the same reason.
 - Hardship can't explain the gap, because MMG is built from hardship. The gap is about **how need turns into recorded visits**.
 
-**Recommended action:** Plan with per-resident, travel-distance and site-level views, not county totals; investigate the five persistently low counties (Nicollet, Pope, Lac qui Parle, Norman, Roseau) with their food banks.
+**Recommended action:** Plan with per-resident, travel-distance and site-level views, not county totals; investigate the five persistently low counties (Nicollet, Pope, Lac qui Parle, Norman, Roseau) with their food banks; pilot **mobile pantry stops in the distance-gap counties** (Lac qui Parle, Norman, Roseau), which have none in the data.
 
 **Limitations:** associations across 86 counties (Wilkin has no food shelf); straight-line distance; cross-county use is inferred, not observed; MMG is a model estimate; the strongest factor is borderline after multiple-testing correction (q = 0.10 over 188 tests, 0.12 over 224).
 
