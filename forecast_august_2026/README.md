@@ -1,41 +1,25 @@
-# Question 7 August 2026 forecast
+# Question 7: August 2026 forecast
 
-This folder contains the isolated prediction pipeline for the three statewide Minnesota food-shelf activity metrics requested in Question 7. The final forecast uses information available through July 31, 2026 only.
+This is the isolated prediction pipeline. Information cutoff: **July 31, 2026**, enforced in code.
 
-## Locked definitions and data policy
+**Final model:** county-by-county selection (`submission/make_submission.py`). Each county uses whichever of five robust forecasts tracked it best over the previous 12 months: seasonal naive, damped YoY, local-model selection, their blend, or the recent 3-month mean.
+- County WAPE is 9.5% / 8.9% / 9.1% (visits / pounds / individuals), about 40% below seasonal naive.
+- Statewide totals: **237,861 visits, 12,994,439 lb, 738,532 individuals**.
 
--   **Visits:** `visits` in the prepared site-month file, derived from `HouseholdsReg`. The source's deprecated `UniqueVisits*` fields are empty.
--   **Pounds distributed:** `pounds`, derived from `PoundsReg`.
--   **Individuals served:** `individuals`, derived from `IndividualsReg`.
--   **Source:** `Data/processed/foodshelf_site_month.csv` only. No external predictors are used.
--   **Outliers:** retain all observations marked `flag_outlier` or `flag_hh_gt_indiv`. Do not trim, winsorize, or remove observations based on backtest performance.
--   **Prior cleaning:** use the project's prepared file, which resolves documented blank/exact duplicates, sums distinct duplicate streams, and corrects documented impossible or clear typo values.
--   **Scoring:** use MAPE provisionally, plus MAE, RMSE, median APE, and WAPE for diagnostics. Re-run selection when the official scoring rule arrives.
+| Folder | Contents |
+|---|---|
+| `submission/` | **The final model**, its county backtest and the filled `Undergraduate_Predictions_Submit.csv`. |
+| `multiagent/` | Shared leakage-safe harness, the five required Q7 reference models, and 101 challenger models (statistical, panel ML, deep learning/foundation, structural). Also the selection rule and the out-of-sample selection check. |
+| `experiments/` | The county-tailoring comparison that chose the final model, and the external predictors (SNAP, calls) that were tested and rejected. |
+| `report/` | `forecasting_report.tex` / `.pdf` (methods and results), `pipeline_flow.tex` / `.pdf` (how the pipeline is structured: stages, scripts, data flow, cutoff checks), and `make_figures.py`. |
 
-## Backtest design
+Run from this folder:
 
-The pipeline pretends to forecast August 2023, 2024, and 2025. Each fold trains only on records through July 31 of that year. The held-out August actual is retrieved only after every model prediction for the fold has been created.
-
-Models:
-
-1.  `seasonal_naive`: previous August.
-2.  `ytd_growth`: previous August multiplied by January-July year-to-date growth.
-3.  `aug_jul_ratio`: current July multiplied by the median historical August/July ratio available before the cutoff.
-4.  `trend_month_regression`: ordinary least-squares linear trend with month-of-year indicators.
-5.  `robust_ensemble`: median of the four forecasts above.
-
-A challenger replaces seasonal naive only if it has lower mean MAPE and lower August absolute percentage error in all three backtest years. This intentionally conservative rule prevents choosing a model that wins only on average because of one year.
-
-## Run
-
-From the project root:
-
-``` powershell
-python forecast_august_2026/forecast.py
+```powershell
+python submission/make_submission.py --team-id ID    # final county forecast and submission file
+python multiagent/harness.py                         # five required reference models + damped YoY
+python multiagent/combine.py                         # pooled leaderboard of the 101-model study
+python experiments/county_tailoring.py               # how the final model was chosen
+python experiments/external_predictors.py            # SNAP / calls predictor tests
+python report/make_figures.py                        # report figures
 ```
-
-The script writes monthly inputs, fold-level predictions, metric summaries, final candidate forecasts, a cutoff audit, and a hashed run manifest to `forecast_august_2026/results/`.
-
-## Cutoff guarantee
-
-The script stops if the source contains any August 2026 or later record. For every backtest and the final run, it also asserts that the training frame ends in July of the target year. August 2026 is never loaded, merged, inferred from an external source, or used as a predictor.
